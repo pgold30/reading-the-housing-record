@@ -188,3 +188,17 @@ a.flow-paper:hover { border-color: var(--blue); }
   .flow { grid-template-columns: 1fr; gap: 14px; }
   .flow-arrow { border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 12px solid var(--blue); border-bottom: 0; }
 }
+
+/* companion theory + terms */
+.theory-card { margin-top: 17px; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); gap: 28px; padding: 28px; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--muted); }
+.theory-card .number { color: var(--muted); font-size: .8rem; font-weight: 760; letter-spacing: .08em; margin-bottom: 16px; }
+.theory-card h3 { margin-bottom: 8px; }
+.theory-sub { color: var(--muted); font-size: .95rem; margin: 0; }
+.theory-body p { color: var(--muted); font-size: .97rem; }
+.theory-body strong { color: var(--ink); }
+.terms-section { padding: 62px 0 70px; background: var(--white); border-top: 1px solid var(--line); }
+.terms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 38px; margin: 8px 0 0; }
+.terms > div { padding: 14px 0; border-top: 1px solid var(--line); }
+.terms dt { font-weight: 700; font-size: .98rem; margin-bottom: 4px; }
+.terms dd { margin: 0; color: var(--muted); font-size: .94rem; line-height: 1.55; }
+@media (max-width: 850px) { .theory-card { grid-template-columns: 1fr; gap: 10px; } .terms { grid-template-columns: 1fr; } }
