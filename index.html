@@ -12,7 +12,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header"><div class="header-inner">
     <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">R</span><span>Reading the<br>Housing Record</span></a>
-    <nav class="site-nav" aria-label="Main navigation"><a href="./" aria-current="page">Overview</a><a href="#papers">Papers</a><a href="#why">Why it matters</a><a href="#validation">Validation</a><a href="#about">About</a></nav>
+    <nav class="site-nav" aria-label="Main navigation"><a href="./" aria-current="page">Overview</a><a href="#papers">Papers</a><a href="#data">Data</a><a href="#why">Why it matters</a><a href="#validation">Validation</a><a href="#about">About</a></nav>
   </div></header>
   <main id="main">
     <section class="hero"><div class="wrap hero-grid">
@@ -26,6 +26,29 @@
         <article class="paper-card"><div class="number">02 / FINANCING LABELS</div><h3>Who Gets the House?</h3><p>Does a recorded cash–mortgage price gap reflect financing, or who buys with cash?</p><p class="card-stat"><strong>9.25 → 4.87</strong>log-point house gap, before and after excluding same-surname deeds</p><div class="card-bottom"><span class="status">Document review pending</span><a href="papers/who-gets-the-house/">Explore paper →</a></div></article>
         <article class="paper-card"><div class="number">03 / TAX DESIGN</div><h3>The Shape of the Tax</h3><p>What charge does the law assign to borrowing, and how did sales shift at the 2019 transfer-tax thresholds?</p><p class="card-stat"><strong>1.41%</strong>of price: statutory mortgage recording charge on observed house loans</p><div class="card-bottom"><span class="status public">Public preprint</span><a href="papers/the-shape-of-the-tax/">Explore paper →</a></div></article>
       </div>
+    </div></section>
+    <section class="data-section" id="data"><div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">The data</p><h2>One public record system, three different slices</h2></div><p>"Same data" means the papers draw on the same free New York City records, not that they share a sample or a result. Each builds its own sample and answers its own question.</p></div>
+      <div class="flow">
+        <div class="flow-col">
+          <p class="flow-label">Two public sources</p>
+          <div class="flow-card"><strong>Department of Finance sales file</strong><span>Every recorded property sale: price, date, address and building class.</span></div>
+          <div class="flow-card"><strong>ACRIS, the city's land registry</strong><span>Every deed and mortgage recorded in Manhattan, the Bronx, Brooklyn and Queens: document type, amount, dates, the parcel it touches, and the names and addresses of the parties.</span></div>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-col">
+          <p class="flow-label">Linked record by record</p>
+          <div class="flow-card flow-key"><strong>Parcel (borough–block–lot) + date + amount</strong><span>A sale is matched to its own deed. A mortgage recorded on the same parcel within days of the deed marks the purchase as financed; none marks it as unfinanced. For condominiums the deed reveals the unit the sales file hides. Where the right answer is known, the match finds the correct parcel 99.6% of the time.</span></div>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-col">
+          <p class="flow-label">Three samples</p>
+          <a class="flow-card flow-paper" href="papers/the-shape-of-the-tax/"><strong>The Shape of the Tax</strong><span>Prices and loan amounts: 172,633 financed purchases; 431,471 sales around the tax thresholds, 2016–2025.</span></a>
+          <a class="flow-card flow-paper" href="papers/who-gets-the-house/"><strong>Who Gets the House?</strong><span>Repeat sales of the same property, with the deed's parties: 6,006 house pairs, 2016–2025.</span></a>
+          <a class="flow-card flow-paper" href="papers/when-a-deed-is-not-a-market-sale/"><strong>When a Deed Is Not a Market Sale</strong><span>Every deed and its parties: 1.47 million deeds, 2003–2025, and 238,290 repeat-sale pairs.</span></a>
+        </div>
+      </div>
+      <p class="data-note">All sources are free NYC Open Data, and each paper's archive records the exact extracts it used. Staten Island deeds are kept by the county clerk, outside ACRIS. Co-operative apartments change hands as shares rather than deeds, so they are largely invisible to deed-based measurement.</p>
     </div></section>
     <section class="why-section" id="why"><div class="wrap"><p class="eyebrow">Why it matters</p><h2>What changes if the records are read carefully</h2><div class="why-grid">
       <div><h3>Price indices</h3><p>Registry amounts are not always prices. Lender take-title deeds pass ordinary screens and shift the timing of a repeat-sales index through the 2008 crisis; the fix is to classify deeds by their parties.</p></div>

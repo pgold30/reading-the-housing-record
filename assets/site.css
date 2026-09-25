@@ -170,3 +170,21 @@ details.data-table th, details.data-table td { text-align: left; padding: 5px 8p
 .about-facts { list-style: none; margin: 4px 0 22px; padding: 0; display: grid; gap: 10px; max-width: 760px; }
 .about-facts li { color: var(--muted); font-size: .95rem; line-height: 1.55; padding-top: 10px; border-top: 1px solid var(--line); }
 .about-facts strong { display: block; color: var(--ink); font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 2px; }
+
+/* data flow */
+.data-section { padding: 66px 0 72px; background: var(--white); border-top: 1px solid var(--line); }
+.flow { display: grid; grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr) 34px minmax(0, 1fr); align-items: start; gap: 0; }
+.flow-col { display: grid; gap: 12px; }
+.flow-label { margin: 0 0 2px; color: var(--blue); font-size: .74rem; font-weight: 750; text-transform: uppercase; letter-spacing: .13em; }
+.flow-card { display: block; padding: 15px 17px; background: var(--paper); border: 1px solid var(--line); border-left: 3px solid var(--muted); color: var(--ink); text-decoration: none; }
+.flow-card strong { display: block; font-size: .98rem; margin-bottom: 5px; }
+.flow-card span { display: block; font-size: .9rem; line-height: 1.5; color: var(--muted); }
+.flow-key { background: var(--pale); border-left-color: var(--blue); }
+.flow-paper { border-left-color: var(--blue); background: var(--white); }
+a.flow-paper:hover { border-color: var(--blue); }
+.flow-arrow { align-self: center; justify-self: center; width: 0; height: 0; border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 12px solid var(--blue); }
+.data-note { margin: 26px 0 0; max-width: 900px; font-size: .9rem; color: var(--muted); }
+@media (max-width: 850px) {
+  .flow { grid-template-columns: 1fr; gap: 14px; }
+  .flow-arrow { border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 12px solid var(--blue); border-bottom: 0; }
+}
