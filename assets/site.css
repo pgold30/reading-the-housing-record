@@ -181,7 +181,7 @@ details.data-table th, details.data-table td { text-align: left; padding: 5px 8p
 .flow-card span { display: block; font-size: .9rem; line-height: 1.5; color: var(--muted); }
 .flow-key { background: var(--pale); border-left-color: var(--blue); }
 .flow-paper { border-left-color: var(--blue); background: var(--white); }
-a.flow-paper:hover { border-color: var(--blue); }
+a.flow-paper:hover, a.flow-card:hover { border-color: var(--blue); }
 .flow-arrow { align-self: center; justify-self: center; width: 0; height: 0; border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 12px solid var(--blue); }
 .data-note { margin: 26px 0 0; max-width: 900px; font-size: .9rem; color: var(--muted); }
 @media (max-width: 850px) {
