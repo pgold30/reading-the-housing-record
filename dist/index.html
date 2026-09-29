@@ -16,16 +16,16 @@
   <meta property="og:image" content="https://pgold30.github.io/reading-the-housing-record/assets/fig/deed-index.png">
   <meta property="og:image:alt" content="Repeat-sales house-price index for New York City, raw and corrected for foreclosure deeds">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=20260929u">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header"><div class="header-inner">
     <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">R</span><span>Reading the<br>Housing Record</span></a>
-    <nav class="site-nav" aria-label="Main navigation"><a href="./" aria-current="page">Overview</a><a href="#papers">Papers</a><a href="data/">Data</a><a href="#why">Why it matters</a><a href="#validation">Validation</a><a href="#about">About</a></nav>
+    <nav class="site-nav" aria-label="Main navigation"><a href="./" aria-current="page">Overview</a><a href="#papers">Papers</a><a href="#why">Why it matters</a><a href="data/">Data</a><a href="#validation">Validation</a><a href="#overview-media">Listen</a><a href="#about">About</a></nav>
   </div></header>
   <main id="main">
-    <div class="latest"><div class="wrap"><span class="latest-tag">Latest</span><span>29 September 2026: <a href="papers/when-a-deed-is-not-a-market-sale/">When a Deed Is Not a Market Sale</a> 1.0.4 shows its index result holds under narrower definitions, and <a href="papers/who-gets-the-house/">Who Gets the House?</a> 3.4 adds a stress test of its financing labels. <a href="papers/the-shape-of-the-tax/">The Shape of the Tax</a> 2.6 is the journal-submission version, and <a href="papers/the-execution-certainty-wedge/">The Execution-Certainty Wedge</a> 6.1 runs its model at New York City proxy values. <a href="assets/reading-the-housing-record-summary.pdf">The program on one page (PDF)</a>.</span></div></div>
+    <div class="latest"><div class="wrap"><span class="latest-tag">Latest</span><span>29 September 2026: <a href="papers/the-execution-certainty-wedge/">The Execution-Certainty Wedge</a> 6.1 runs its model at New York City proxy values.</span></div></div>
     <section class="hero"><div class="wrap hero-grid">
       <div><p class="eyebrow">Research program · New York City</p><h1>Reading the Housing Record</h1><p class="lead">A deed amount, a financing label and a tax liability look like simple facts, but each comes out of a legal or administrative process built for purposes other than measurement. These papers ask what New York City's housing records measure and how tax rules shape the sales they record.</p></div>
       <aside class="hero-visual" aria-label="The three papers">
@@ -53,26 +53,11 @@
         </div>
       </article>
     </div></section>
-    <section class="companion-section" id="overview-media" aria-label="Audio and video overview"><div class="wrap companion-grid">
-      <div class="companion-card">
-        <div class="companion-head"><h2>Listen to an overview</h2><span class="companion-badge">AI-generated discussion / summary of the papers and findings</span></div>
-        <p class="companion-desc">A conversational overview generated from the deposited manuscripts and linked dataset with Google NotebookLM. For exact figures, definitions and caveats, read the papers below.</p>
-        <audio class="companion-audio" controls preload="metadata" src="assets/media/reading-the-housing-record-deep-dive.mp3">Your browser does not support the audio element. <a href="assets/media/reading-the-housing-record-deep-dive.mp3">Download the MP3</a>.</audio>
-        <p class="companion-meta"><span>Self-hosted MP3 · 23 min</span><a href="assets/media/reading-the-housing-record-deep-dive.mp3" download>Download MP3 ↓</a><a href="assets/reading-the-housing-record-summary.pdf">Program on one page (PDF)</a></p>
-      </div>
-      <div class="companion-card">
-        <div class="companion-head"><h2>Visual walkthrough and source notebook</h2><span class="companion-badge">AI-generated summary</span></div>
-        <p class="companion-desc">An eight-minute narrated slide walkthrough of how the three empirical studies, the companion simulation and the 729,047-sale linked dataset fit together.</p>
-        <details class="video-details">
-          <summary>Watch the 8-minute visual walkthrough (8:25)</summary>
-          <div class="video-wrap"><video controls preload="metadata" poster="assets/media/reading-the-housing-record-explainer-poster.jpg" src="assets/media/reading-the-housing-record-explainer.mp4">Your browser does not support the video tag. <a href="assets/media/reading-the-housing-record-explainer.mp4">Download the MP4</a>.</video></div>
-        </details>
-        <div class="resource-pills">
-          <a href="https://notebook.google.com/notebook/2deb785b-2b89-4bbd-b4b6-33fe3ce181b7" target="_blank" rel="noopener">Explore source documents &amp; notes on NotebookLM ↗</a>
-          <a href="assets/media/reading-the-housing-record-explainer.mp4" download>Download video (MP4) ↓</a>
-        </div>
-      </div>
-    </div></section>
+    <section class="why-section" id="why"><div class="wrap"><p class="eyebrow">Why it matters</p><h2>What changes if the records are read carefully</h2><div class="why-grid">
+      <div><h3>Price indices</h3><p>Some registry amounts are not prices. Deeds that record a lender taking title pass the usual screens and shift the timing of a repeat-sales index through the 2008 crisis. Classifying deeds by their parties removes them.</p></div>
+      <div><h3>The cash discount</h3><p>A "cash" label often marks who is buying: companies, relatives, lenders taking title. Much of the observed cash discount comes from that mix, so it is a weak basis for taxing or subsidising a payment method.</p></div>
+      <div><h3>Tax design</h3><p>The records measure two things directly: the tax the law assigns and how sales move around thresholds. A tax-design debate can rely on both. The price gap between cash and financed buyers is not identified well enough to set a rate.</p></div>
+    </div></div></section>
     <section class="data-section" id="data"><div class="wrap">
       <div class="section-head"><div><p class="eyebrow">The data</p><h2>One public record system, three different slices</h2></div><p>"Same data" means the papers draw on the same free New York City records. Each paper builds its own sample from them and answers its own question.</p></div>
       <div class="flow">
@@ -95,25 +80,41 @@
           <a class="flow-card flow-paper" href="papers/when-a-deed-is-not-a-market-sale/"><strong>When a Deed Is Not a Market Sale</strong><span>Every deed and its parties: 1.47 million deeds, 2003–2025, and 238,290 repeat-sale pairs.</span></a>
         </div>
       </div>
-      <p class="data-note">All sources are free NYC Open Data, and each paper's archive records the exact extracts it used. The linked records are also deposited on their own (<a href="https://doi.org/10.5281/zenodo.22977532">doi:10.5281/zenodo.22977532</a>); they reproduce the financing flags of the tax and house papers. The companion theory paper is a simulation and uses no records. Staten Island deeds are kept by the county clerk, outside ACRIS. Co-operative apartments change hands as shares rather than deeds, so they are largely invisible to deed-based measurement.</p>
+      <div class="data-notes">
+        <div><p class="dn-label">Sources</p><p>All sources are free NYC Open Data. Each paper's archive records the exact extracts it used.</p></div>
+        <div><p class="dn-label">Linked dataset</p><p>Deposited on its own (<a href="https://doi.org/10.5281/zenodo.22977532">doi:10.5281/zenodo.22977532</a>); it reproduces the financing flags of the tax and house papers. The companion theory paper is a simulation and uses no records.</p></div>
+        <div><p class="dn-label">Coverage</p><p>Staten Island deeds are kept by the county clerk, outside ACRIS. Co-operative apartments change hands as shares, not deeds, so deed-based measurement largely misses them.</p></div>
+      </div>
     </div></section>
-    <section class="why-section" id="why"><div class="wrap"><p class="eyebrow">Why it matters</p><h2>What changes if the records are read carefully</h2><div class="why-grid">
-      <div><h3>Price indices</h3><p>Some registry amounts are not prices. Deeds that record a lender taking title pass the usual screens and shift the timing of a repeat-sales index through the 2008 crisis. Classifying deeds by their parties removes them.</p></div>
-      <div><h3>The cash discount</h3><p>A "cash" label often marks who is buying: companies, relatives, lenders taking title. Much of the observed cash discount comes from that mix, so it is a weak basis for taxing or subsidising a payment method.</p></div>
-      <div><h3>Tax design</h3><p>The records measure two things directly: the tax the law assigns and how sales move around thresholds. A tax-design debate can rely on both. The price gap between cash and financed buyers is not identified well enough to set a rate.</p></div>
-    </div></div></section>
-    <section class="map-section"><div class="wrap"><p class="eyebrow">Research map</p><h2>What the records can tell us</h2><div class="map-grid">
-      <div class="map-item"><p class="eyebrow">Recorded amount</p><h3>Is it a market price?</h3><p>The deed study finds transfers to lenders whose recorded amount can follow a legal rule instead of a sale price.</p></div>
-      <div class="map-item"><p class="eyebrow">Recorded financing</p><h3>Who is being compared?</h3><p>The house study tests how the mix of buyers and transactions changes the observed gap between cash and mortgage prices.</p></div>
-      <div class="map-item"><p class="eyebrow">Statutory rules</p><h3>Where do sales shift?</h3><p>The tax study calculates legal liabilities and compares transaction patterns before and after the 2019 reform.</p></div>
-    </div></div></section>
-    <section class="terms-section" id="terms"><div class="wrap"><p class="eyebrow">Terms</p><h2>Terms used in the papers</h2><dl class="terms"><div><dt>Log points</dt><dd>100 × the difference in logarithms. For small values it is close to a percentage: 9.25 log points ≈ 9.7%.</dd></div><div><dt>Repeat sales</dt><dd>Comparing two sale prices of the same property, so fixed features of the home (size, location) cancel out.</dd></div><div><dt>Deed and consideration</dt><dd>A deed transfers ownership; the consideration is the amount recorded on it, usually but not always the price.</dd></div><div><dt>ACRIS</dt><dd>New York City's public land registry, where deeds and mortgages for four of the five boroughs are recorded.</dd></div><div><dt>Referee's deed · deed in lieu</dt><dd>Ways a lender takes title in foreclosure: at a court-ordered auction, or by the owner handing the property over.</dd></div><div><dt>Notch</dt><dd>A tax that jumps on the whole price once a threshold is crossed: a $999,999 sale owes no mansion tax, a $1,000,000 sale owes $10,000.</dd></div><div><dt>Bunching</dt><dd>Sales piling up just below a notch, and thinning out just above it.</dd></div><div><dt>Statutory vs economic incidence</dt><dd>Who the law says pays a tax, versus who ends up bearing its cost once prices and terms adjust.</dd></div><div><dt>Static costing</dt><dd>Revenue computed with transactions held fixed: the size of a change, not a forecast of how people respond.</dd></div><div><dt>Concept DOI</dt><dd>A permanent link that always resolves to the latest version of a paper on Zenodo.</dd></div></dl></div></section>
     <section class="note-section" id="validation"><div class="wrap note-grid"><div><p class="eyebrow">Validation status</p><h2>How the records were checked</h2></div><div><p>Both empirical papers now report a document review of a probability sample: 400 deeds for the deed paper and 53 repeat-sale pairs for the house paper. The original protocols called for two human readers; these versions use AI instead: ChatGPT read the deed and mortgage images, and Claude then checked every reading against the city's open data. The results measure agreement with those readings, not accuracy against a verified record. In each case the answer key was opened only after the readings were locked and matches a hash published beforehand. Among resolved reviewed deeds, 99.3% of those the deed classifier flags are read as non-market; in the house paper's review of 53 pairs (40 drawn at random, 13 targeted), the documents confirm 54 of 56 financed labels, and the headline moves from 9.25 to 9.40 log points once the pairs with a documented error are dropped.</p><p>The tax paper's statutory calculations and reform comparison do not depend on these document audits. Versions 2.1 and 2.2 of its preprint add placebo-based inference and a year-by-year event study and reorganise the paper around the 2019 reform: each new threshold's response is larger than at any of sixteen never-taxed round prices, and it starts with the 2019 reform. From version 2.5 it treats those comparisons as reference points, not exact tests. Its condominium loan figures, which its own archive could not rebuild, are now reproduced exactly by the published linked dataset, and version 2.3 costs condominium purchases on those loans.</p></div></div></section>
+    <section class="companion-section" id="overview-media" aria-label="Audio and video overview"><div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">Listen or watch</p><h2>The program in 23 or 8 minutes</h2></div><p>Both are AI-generated with Google NotebookLM from the deposited papers and dataset. For exact figures, definitions and caveats, read the papers.</p></div>
+      <div class="companion-grid">
+        <div class="companion-card companion-audio-card">
+          <p class="companion-kind"><span class="kind-icon" aria-hidden="true">♪</span>Audio · 23 min · AI-generated</p>
+          <h3>A conversation about the findings</h3>
+          <p class="companion-desc">A conversational overview of the three empirical papers, the companion simulation and the linked dataset.</p>
+          <audio class="companion-audio" controls preload="metadata" src="assets/media/reading-the-housing-record-deep-dive.mp3">Your browser does not support the audio element. <a href="assets/media/reading-the-housing-record-deep-dive.mp3">Download the MP3</a>.</audio>
+          <p class="companion-meta"><a href="assets/media/reading-the-housing-record-deep-dive.mp3" download>Download MP3 ↓</a><a href="assets/reading-the-housing-record-summary.pdf">Program on one page (PDF)</a></p>
+        </div>
+        <div class="companion-card companion-video-card">
+          <p class="companion-kind"><span class="kind-icon" aria-hidden="true">▶</span>Video · 8 min · AI-generated</p>
+          <h3>A visual walkthrough</h3>
+          <p class="companion-desc">Narrated slides on how the studies, the simulation and the 729,047-sale dataset fit together.</p>
+          <div class="video-wrap"><video controls preload="none" poster="assets/media/reading-the-housing-record-explainer-poster.jpg" src="assets/media/reading-the-housing-record-explainer.mp4">Your browser does not support the video tag. <a href="assets/media/reading-the-housing-record-explainer.mp4">Download the MP4</a>.</video></div>
+          <div class="resource-pills">
+            <a href="https://notebook.google.com/notebook/2deb785b-2b89-4bbd-b4b6-33fe3ce181b7" target="_blank" rel="noopener">Source notebook on NotebookLM ↗</a>
+            <a href="assets/media/reading-the-housing-record-explainer.mp4" download>Download MP4 ↓</a>
+          </div>
+        </div>
+      </div>
+    </div></section>
+    <section class="terms-section" id="terms"><div class="wrap"><p class="eyebrow">Terms</p><h2>Terms used in the papers</h2><dl class="terms"><div><dt>Log points</dt><dd>100 × the difference in logarithms. For small values it is close to a percentage: 9.25 log points ≈ 9.7%.</dd></div><div><dt>Repeat sales</dt><dd>Comparing two sale prices of the same property, so fixed features of the home (size, location) cancel out.</dd></div><div><dt>Deed and consideration</dt><dd>A deed transfers ownership; the consideration is the amount recorded on it, usually but not always the price.</dd></div><div><dt>ACRIS</dt><dd>New York City's public land registry, where deeds and mortgages for four of the five boroughs are recorded.</dd></div><div><dt>Referee's deed · deed in lieu</dt><dd>Ways a lender takes title in foreclosure: at a court-ordered auction, or by the owner handing the property over.</dd></div><div><dt>Notch</dt><dd>A tax that jumps on the whole price once a threshold is crossed: a $999,999 sale owes no mansion tax, a $1,000,000 sale owes $10,000.</dd></div><div><dt>Bunching</dt><dd>Sales piling up just below a notch, and thinning out just above it.</dd></div><div><dt>Statutory vs economic incidence</dt><dd>Who the law says pays a tax, versus who ends up bearing its cost once prices and terms adjust.</dd></div><div><dt>Static costing</dt><dd>Revenue computed with transactions held fixed: the size of a change, not a forecast of how people respond.</dd></div><div><dt>Concept DOI</dt><dd>A permanent link that always resolves to the latest version of a paper on Zenodo.</dd></div></dl></div></section>
     <section class="about-section" id="about"><div class="wrap about-grid"><div><img class="about-photo" src="assets/img/pablo-loschi.jpg" alt="Portrait of Pablo Loschi" width="160" height="160" loading="lazy"><p class="eyebrow">About</p><h2>Pablo Loschi</h2><p class="about-role">Lawyer (UBA) · Executive MBA candidate (Quantic)<br>Principal Systems Engineer · Independent researcher · Berlin</p></div><div>
       <p>Pablo Loschi is a Principal Systems Engineer at Verve in Berlin and an independent researcher in housing economics and tax design. After more than fifteen years building large-scale cloud and data platforms, first in Argentina and for the past seven years in Germany, he brings an engineer's habits to empirical work: pipelines that reconcile every record against its source, versioned releases, and replication archives that rebuild each number from public data. Trained as a lawyer at the University of Buenos Aires, he reads the statutes behind the records, and each of these papers starts from one.</p>
       <p>Housing finance is also a practical interest. He founded <a href="https://www.holacasaclara.com/">HolaCasaClara</a>, a free, independent comparator of Argentine mortgage loans that turns banks' fine print into total borrowing costs; its launch was covered by iProfesional and elDiarioAR, and Ámbito Financiero used it as a source.</p>
       <ul class="about-facts">
-        <li><strong>Education</strong>Law degree (Abogacía), University of Buenos Aires (UBA)<br>Executive MBA candidate, Quantic School of Business and Technology</li>
+        <li><strong>Education</strong>Law degree (Abogacía), University of Buenos Aires (UBA)<br>Executive MBA, Quantic School of Business and Technology (in progress, graduating April 2027)</li>
       </ul>
       <div class="about-links"><a href="https://orcid.org/0009-0004-9455-4713">ORCID ↗</a><a href="https://scholar.google.com/citations?user=bdzZzDoAAAAJ&amp;hl=en">Google Scholar ↗</a><a href="https://www.linkedin.com/in/pabloloschi/">LinkedIn ↗</a><a href="https://medium.com/@pgold30">Medium ↗</a><a href="https://www.holacasaclara.com/">HolaCasaClara ↗</a><a href="https://github.com/pgold30">GitHub ↗</a><a href="https://zenodo.org/search?q=creators.name%3A%22Loschi%2C%20Pablo%22">Zenodo records ↗</a><a href="mailto:loschi.pablo@gmail.com">loschi.pablo@gmail.com</a></div>
     </div></div></section>
