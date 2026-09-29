@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://pgold30.github.io/reading-the-housing-record/sitemap.xml
