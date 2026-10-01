@@ -21,4 +21,6 @@ Journal submission names and references were supplied by Pablo on 1 October 2026
 
 ## Deployment
 
+Paper and dataset findings use full-width rows so that their qualifications remain readable. Paper pages put the PDF and replication links below the title. The shared layout has been checked at 390, 768, 1024 and 1440 pixels; tables and citations scroll within their own containers. Keep long findings out of narrow statistic cards.
+
 GitHub Pages serves `main` at the repository root. `dist/` mirrors the public files for the existing secondary hosting setup. Keep both copies in sync when editing. The website has no added tracking or contact form. Email links use Pablo's public address; preparing pitches does not send messages.

@@ -16,8 +16,8 @@
   <meta property="og:image" content="https://pgold30.github.io/reading-the-housing-record/assets/fig/deed-index.png">
   <meta property="og:image:alt" content="Repeat-sales house-price index for New York City, raw and corrected for foreclosure deeds">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../assets/site.css?v=20260929u">
-<link rel="stylesheet" href="../assets/stories.css?v=20261001">
+  <link rel="stylesheet" href="../assets/site.css?v=20261001layout">
+<link rel="stylesheet" href="../assets/stories.css?v=20261001layout">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -31,6 +31,7 @@
       <p class="eyebrow">Dataset · Public records</p><h1>NYC sales linked to deeds and mortgages</h1>
       <p class="article-subtitle">Every New York City house, condominium and co-operative sale recorded in 2016–2025, with its deed where one can be matched, whether a mortgage was recorded near the sale, and flags for the kind of deed it was</p>
       <div class="article-meta"><span>By Pablo Loschi</span><span>Version 1.0.1 · 30 September 2026</span><span>CC BY 4.0</span><span class="status public">Public dataset</span></div>
+      <div class="article-actions"><a href="https://zenodo.org/records/23047979">Get dataset and code</a></div>
     </div></section>
     <div class="article-body"><div class="wrap article-layout">
       <div><section class="content-section"><h2>Why it exists</h2><p>New York City publishes its property sales and its recorded deeds and mortgages as separate open datasets, and the two do not join directly. The Department of Finance sales file has the price and date but no document number. ACRIS, the city register, has the deeds and mortgages but not the sales. Condominiums are the hardest case: the sales file usually identifies a unit by the building's billing lot, while ACRIS records its deed and mortgage under the unit's own lot, so a join on the parcel number misses most of them.</p><p>This dataset does the join once, with fixed and documented rules, so the three papers on this site, and anyone else, can work from the same linked records. It contains no party names.</p></section>
