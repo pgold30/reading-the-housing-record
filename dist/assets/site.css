@@ -342,3 +342,6 @@ figure.chart { margin-top: 24px; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+.card-new { margin: 0 0 14px; font-size: .9rem; line-height: 1.5; color: var(--ink); }
+.card-new span { display: block; margin-bottom: 2px; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
