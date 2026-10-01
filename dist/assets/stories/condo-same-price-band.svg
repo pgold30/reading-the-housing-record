@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="504pt" viewBox="0 0 864 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-01T12:04:20.666060</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 864 504 
+L 864 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 216 393.12 
+L 794.88 393.12 
+L 794.88 131.04 
+L 216 131.04 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 216 393.12 
+L 216 131.04 
+" clip-path="url(#p4be5012c63)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.13; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m9e605be008" d="M 0 0 
+L 0 3.5 
+" style="stroke: #536774; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m9e605be008" x="216" y="393.12" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #536774" x="216" y="408.477422" transform="rotate(-0 216 408.477422)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 331.776 393.12 
+L 331.776 131.04 
+" clip-path="url(#p4be5012c63)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.13; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m9e605be008" x="331.776" y="393.12" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #536774" x="331.776" y="408.477422" transform="rotate(-0 331.776 408.477422)">20</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 447.552 393.12 
+L 447.552 131.04 
+" clip-path="url(#p4be5012c63)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.13; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m9e605be008" x="447.552" y="393.12" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #536774" x="447.552" y="408.477422" transform="rotate(-0 447.552 408.477422)">40</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 563.328 393.12 
+L 563.328 131.04 
+" clip-path="url(#p4be5012c63)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.13; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m9e605be008" x="563.328" y="393.12" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #536774" x="563.328" y="408.477422" transform="rotate(-0 563.328 408.477422)">60</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 679.104 393.12 
+L 679.104 131.04 
+" clip-path="url(#p4be5012c63)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.13; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m9e605be008" x="679.104" y="393.12" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #536774" x="679.104" y="408.477422" transform="rotate(-0 679.104 408.477422)">80</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 794.88 393.12 
+L 794.88 131.04 
+" clip-path="url(#p4be5012c63)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.13; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m9e605be008" x="794.88" y="393.12" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #536774" x="794.88" y="408.477422" transform="rotate(-0 794.88 408.477422)">100</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142a3a" x="505.44" y="423.478281" transform="rotate(-0 505.44 423.478281)">Share with one matched deed (%)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <defs>
+       <path id="mba79a3fe2c" d="M 0 0 
+L -3.5 0 
+" style="stroke: #142a3a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mba79a3fe2c" x="216" y="161.409065" style="fill: #142a3a; stroke: #142a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #142a3a" transform="translate(149.747813 159.537239)">Manhattan</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #142a3a" transform="translate(102.764062 172.740247)">2,036 eligible sales</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mba79a3fe2c" x="216" y="228.523022" style="fill: #142a3a; stroke: #142a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #142a3a" transform="translate(176.960781 226.650766)">Bronx</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #142a3a" transform="translate(102.764062 239.853774)">3,539 eligible sales</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#mba79a3fe2c" x="216" y="295.636978" style="fill: #142a3a; stroke: #142a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #142a3a" transform="translate(160.804531 293.765152)">Brooklyn</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #142a3a" transform="translate(102.764062 306.96816)">5,079 eligible sales</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#mba79a3fe2c" x="216" y="362.750935" style="fill: #142a3a; stroke: #142a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #142a3a" transform="translate(167.13125 360.878679)">Queens</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #142a3a" transform="translate(102.764062 374.081687)">6,423 eligible sales</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 216 142.952727 
+L 661.81721 142.952727 
+L 661.81721 179.865403 
+L 216 179.865403 
+z
+" clip-path="url(#p4be5012c63)" style="fill: #145f83"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 216 210.066684 
+L 449.74386 210.066684 
+L 449.74386 246.97936 
+L 216 246.97936 
+z
+" clip-path="url(#p4be5012c63)" style="fill: #145f83"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 216 277.18064 
+L 659.705422 277.18064 
+L 659.705422 314.093316 
+L 216 314.093316 
+z
+" clip-path="url(#p4be5012c63)" style="fill: #145f83"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 216 344.294597 
+L 632.923382 344.294597 
+L 632.923382 381.207273 
+L 216 381.207273 
+z
+" clip-path="url(#p4be5012c63)" style="fill: #145f83"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 216 393.12 
+L 794.88 393.12 
+" style="fill: none; stroke: #cad5dc; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142a3a" x="667.60601" y="164.266487" transform="rotate(-0 667.60601 164.266487)">77.0%</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142a3a" x="455.53266" y="231.380444" transform="rotate(-0 455.53266 231.380444)">40.4%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142a3a" x="665.494222" y="298.4944" transform="rotate(-0 665.494222 298.4944)">76.6%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142a3a" x="638.712182" y="365.608357" transform="rotate(-0 638.712182 365.608357)">72.0%</text>
+   </g>
+  </g>
+  <g id="text_16">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #145f83" x="47.52" y="27.72" transform="rotate(-0 47.52 27.72)">READING THE HOUSING RECORD</text>
+  </g>
+  <g id="text_17">
+   <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142a3a" x="47.52" y="60.48" transform="rotate(-0 47.52 60.48)">A coverage gap within the same price band</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #536774" x="47.52" y="91.728" transform="rotate(-0 47.52 91.728)">Condo sales from $100,000 to under $500,000, using the same matching rule.</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #536774" transform="translate(47.52 445.14)">Manhattan, Bronx, Brooklyn and Queens; 2016-2025. Denominators shown beside each borough.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #536774" transform="translate(47.52 458.64)">Source: frozen dataset v1.0.1, new borough-by-price comparison. This does not explain why links are missing.</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #536774" x="47.52" y="486.36" transform="rotate(-0 47.52 486.36)">Pablo Loschi | reading-the-housing-record | CC BY 4.0</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4be5012c63">
+   <rect x="216" y="131.04" width="578.88" height="262.08"/>
+  </clipPath>
+ </defs>
+</svg>

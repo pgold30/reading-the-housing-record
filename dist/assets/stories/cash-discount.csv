@@ -1,0 +1,4 @@
+sample,estimate,low,high,unit,source,period,interval
+All house pairs,9.25,7.17,11.35,"financed minus cash, log points",Who Gets the House? v3.5,2016-2025,95% bootstrap
+Excluding shared-surname deeds,4.87,2.69,6.76,"financed minus cash, log points",Who Gets the House? v3.5,2016-2025,95% bootstrap
+Cash buyer is a company,1.53,-1.79,5.44,"financed minus cash, log points",Who Gets the House? v3.5,2016-2025,95% bootstrap
