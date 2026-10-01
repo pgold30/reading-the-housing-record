@@ -9,7 +9,7 @@ Research website for Pablo Loschi's work on New York City housing records:
 
 Live site: https://pgold30.github.io/reading-the-housing-record/
 
-Static HTML and CSS, no build step. Numbers on the site come from the public Zenodo versions named on each page.
+Static HTML and CSS, no build step. Numbers on the site come from the linked public paper releases. Release identifiers remain in citation metadata and download filenames; page summaries omit revision logs.
 
 ## Housing Stories
 
@@ -24,3 +24,9 @@ Journal submission names and references were supplied by Pablo on 1 October 2026
 Paper and dataset findings use full-width rows so that their qualifications remain readable. Paper pages put the PDF and replication links below the title. The shared layout has been checked at 390, 768, 1024 and 1440 pixels; tables and citations scroll within their own containers. Keep long findings out of narrow statistic cards.
 
 GitHub Pages serves `main` at the repository root. `dist/` mirrors the public files for the existing secondary hosting setup. Keep both copies in sync when editing. The website has no added tracking or contact form. Email links use Pablo's public address; preparing pitches does not send messages.
+
+## Paper page conventions
+
+Each paper page presents a short finding, one PDF action, one replication action and section navigation. Replication links identify the fixed public release behind the displayed findings. Citation metadata retains the paper DOI. Keep substantive interpretation limits in a short scope note; document audit detail and revision history belong in the linked manuscript/archive. Do not describe audit agreement as independently verified accuracy. New review scenarios remain off the public site until incorporated into a public paper release.
+
+The primary navigation is Overview, Stories, Papers, Data and About. Paper sidebars link to the matching general-reader story and shared dataset page, avoiding repeated Zenodo links. LinkedIn, Medium and the generic Zenodo-profile link are omitted from the About links at Pablo's request.
