@@ -388,3 +388,14 @@ figure.chart { margin-top: 24px; }
 figure.chart:has(svg) { max-width: 100%; overflow-x: auto; }
 @media (max-width: 560px) { figure.chart svg { min-width: 560px; } }
 .figure-link { display: block; }
+
+/* Reader entry point, 9 October 2026. */
+.reader-feature { padding: 38px 0; border-bottom: 1px solid var(--line); }
+.reader-feature-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.8fr); align-items: center; gap: 48px; }
+.reader-feature h2 { margin-bottom: 14px; font-size: clamp(1.8rem,3vw,2.5rem); }
+.reader-feature h2 a { color: var(--ink); text-decoration: none; }
+.reader-feature h2 a:hover { text-decoration: underline; }
+.reader-feature p:not(.eyebrow) { color: var(--muted); max-width: 620px; }
+.reader-feature img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: #fff; }
+.download-note { max-width: 800px; margin: 13px 0 0; color: var(--muted); font-size: .85rem; }
+@media(max-width:850px) { .reader-feature-grid { grid-template-columns: minmax(0,1fr); gap: 20px; } .reader-feature img { max-width: 620px; } }

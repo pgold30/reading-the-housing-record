@@ -21,3 +21,9 @@ Keep the two included .py files together, then run:
 python condo_coverage_check.py /path/to/dataset/build --output results
 This produces the full price-band counts and annual Manhattan/Bronx coverage gap.
 The published within-price comparison uses the 100k–<500k rows.
+
+Website stories reviewed 9 October 2026. Chart data and graphics are unchanged.
+Deed series from v1.0.6 remain unchanged in v1.0.8. Reviewed website manuscripts
+clarify interpretation and are separate from the fixed Zenodo analysis archives.
+The both-endpoint graphic's joint band differs from the main sample's per-definition
+whole-path band. Preserve the sample and band definition when quoting either.

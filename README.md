@@ -30,3 +30,19 @@ GitHub Pages serves `main` at the repository root. `dist/` mirrors the public fi
 Each paper page presents a short finding, one PDF action, one replication action and section navigation. Replication links identify the fixed public release behind the displayed findings. Citation metadata retains the paper DOI. Keep substantive interpretation limits in a short scope note; document audit detail and revision history belong in the linked manuscript/archive. Do not describe audit agreement as independently verified accuracy. New review scenarios remain off the public site until incorporated into a public paper release.
 
 The primary navigation is Overview, Stories, Papers, Data and About. Paper sidebars link to the matching general-reader story and shared dataset page, avoiding repeated Zenodo links. LinkedIn, Medium and the generic Zenodo-profile link are omitted from the About links at Pablo's request.
+
+## 9 October editorial correspondence update
+
+The website links reviewed author-named PDFs for house, tax and deed, plus the
+focused deed note and dataset article. These are website manuscript copies;
+the Zenodo analysis archives and their numerical findings have not changed.
+Keep the old PDF URLs for incoming citations. The older wedge page retains
+its archived identity and distinguishes the separate benchmark-audit methods paper.
+No anonymous journal manuscript is exposed as a public preprint.
+
+House review counts from a mixed random/targeted queue are not population error
+rates. Deed bands condition on classification; the narrower headline now shows
+its whole-path band, while the stricter story graphic keeps its different joint
+band definition. The tax landing card uses a local-density ratio instead of
+counts over unequal periods. The featured story remains an editorial choice;
+no private guest-post invitation is described as an accepted publication.
