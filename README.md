@@ -46,3 +46,19 @@ its whole-path band, while the stricter story graphic keeps its different joint
 band definition. The tax landing card uses a local-density ratio instead of
 counts over unequal periods. The featured story remains an editorial choice;
 no private guest-post invitation is described as an accepted publication.
+
+## 9 October public release refresh
+
+The primary PDF actions and fixed archive links now use house 3.6, tax 2.7
+(replication 1.10), deed 1.0.9 and dataset documentation 1.0.2. The benchmark
+audit 1.0 is linked separately from the older wedge simulation. House 3.6
+resolves the earlier cross-reference, reports the locked probability sample
+and retains the headline series; two sampled financing corrections give 9.23
+log points, with 18 endpoints still unresolved. No independent accuracy claim.
+
+Preserve the story and paper landing-page paths for incoming Housing Notes
+links. Old PDFs remain available but current downloads drive the sitemap.
+Keep GitHub Pages and this static stack for any later custom-domain change;
+configure and verify the owned domain before changing canonical URLs. No
+domain has been purchased or configured. A guest-post invitation is not an
+accepted or published article and must not be presented as one.
