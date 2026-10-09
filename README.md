@@ -80,6 +80,10 @@ GitHub approved the TLS certificate after a single documented provisioning resta
 
 ## Resource-page roles
 
-Stories is the editorial index and keeps the full explanations. Press resources contains contact, the graphics pack and individual chart downloads grouped by topic; it does not repeat the findings or embed the same charts again. The old `/stories/#reporters` anchor remains as a compact pointer to `/press/`. Keep resource headings compact and reading text within roughly 65 characters per line.
+Stories is the editorial index and keeps the full explanations. Press resources contains contact, the graphics pack and individual chart downloads grouped by topic; it does not repeat the findings or embed the same charts again. The old `/stories/#reporters` anchor remains as a compact pointer to `/press/`. Keep resource headings compact. Page shells use the available viewport with consistent responsive gutters; avoid reintroducing fixed page-width caps. The Explorer and historical tax tables become labelled rows on phones, while chart geometry is redrawn for the actual panel width.
 
 Performance: the optional audio uses `preload="none"` so the 22 MB MP3 is requested when the reader starts playback. Cloudflare field metrics include development visits; interpret them separately from PageSpeed laboratory tests.
+
+## Editorial voice
+
+Stories lead with the concrete finding and explain what a buyer or data user can learn from it. Keep scope, unresolved evidence and incidence limits with the claims they qualify. The tax story raises the fairness of an additional statutory charge on borrowing; it does not describe double taxation as an established finding. Preserve source URLs, archived graphics and research estimates when editing site prose.

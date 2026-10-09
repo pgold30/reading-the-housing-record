@@ -12,19 +12,28 @@ function value(row,metric){return metric==='coverage' ? (row.eligible ? 100*row.
 function format(v,metric){return v===null ? 'Not available' : metric==='median' ? dollars.format(v) : metric==='coverage' ? v.toFixed(1)+'%' : number.format(v);}
 function node(tag,attrs={},text){const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;return n;}
 function draw(metric,title,unit){
-  const svg=node('svg',{viewBox:'0 0 900 330',role:'img','aria-label':title+' by year for '+document.querySelector('#selection-label').textContent,xmlns:'http://www.w3.org/2000/svg'});
-  svg.append(node('rect',{width:900,height:330,fill:'#fff'}));
-  svg.append(node('title',{},title+' — '+document.querySelector('#selection-label').textContent));
-  svg.append(node('text',{x:90,y:25,fill:'#4c6170','font-size':14,'font-family':'sans-serif'},unit));
+  const container=document.querySelector('#chart-'+metric);
+  const width=Math.max(220,Math.round(container.clientWidth||900));
+  const small=width<600, left=small?62:90, right=20, plot=width-left-right;
+  const filterText=document.querySelector('#selection-label').textContent;
+  const footer=[filterText,'NYC Housing Data · DOF / ACRIS · frozen extract 26 Sep 2026','Recorded prices describe the transaction mix; not a price index.'];
+  const lines=[];
+  for(const text of footer){let line='';for(const word of text.split(' ')){if(line.length+word.length+1>Math.max(24,Math.floor((width-24)/6))){lines.push(line);line=word;}else line+=(line?' ':'')+word;}if(line)lines.push(line);}
+  const height=310+lines.length*16;
+  const svg=node('svg',{viewBox:`0 0 ${width} ${height}`,width,height,role:'img','aria-label':title+' by year for '+filterText,xmlns:'http://www.w3.org/2000/svg'});
+  svg.append(node('rect',{width,height,fill:'#fff'}));
+  svg.append(node('title',{},title+' — '+filterText));
+  svg.append(node('text',{x:left,y:25,fill:'#4c6170','font-size':13,'font-family':'sans-serif'},unit));
   const vals=series.map(r=>value(r,metric));
   const max=metric==='coverage'?100:Math.max(...vals.filter(v=>v!==null),1)*1.12;
-  const x=i=>100+(i+.5)*760/series.length;
+  const x=i=>left+(i+.5)*plot/series.length;
   const y=v=>265-220*v/max;
-  for(let i=0;i<=4;i++){const v=max*i/4;svg.append(node('line',{x1:90,x2:870,y1:y(v),y2:y(v),stroke:'#d9e2e5'}));svg.append(node('text',{x:80,y:y(v)+5,'text-anchor':'end',fill:'#4c6170','font-size':13,'font-family':'sans-serif'},metric==='median'?'$'+number.format(Math.round(v)):metric==='coverage'?v+'%':number.format(Math.round(v))));}
-  vals.forEach((v,i)=>{if(v!==null){const bar=node('rect',{x:x(i)-Math.min(25,260/series.length),y:y(v),width:Math.min(50,520/series.length),height:265-y(v),fill:metric==='median'?'#a75a32':'#145f83'});bar.append(node('title',{},series[i].year+': '+format(v,metric)));svg.append(bar);}else svg.append(node('text',{x:x(i),y:250,'text-anchor':'middle',fill:'#4c6170','font-size':13},'n/a'));svg.append(node('text',{x:x(i),y:288,'text-anchor':'middle',fill:'#142a3a','font-size':14,'font-family':'sans-serif'},series[i].year));});
-  svg.append(node('text',{x:90,y:309,fill:'#4c6170','font-size':11,'font-family':'sans-serif'},document.querySelector('#selection-label').textContent));
-  svg.append(node('text',{x:90,y:327,fill:'#4c6170','font-size':11,'font-family':'sans-serif'},'NYC Housing Data · DOF / ACRIS · frozen extract 26 Sep 2026 · recorded prices, not a price index'));
-  document.querySelector('#chart-'+metric).replaceChildren(svg);
+  const compact=new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1});
+  for(let i=0;i<=4;i++){const v=max*i/4;svg.append(node('line',{x1:left,x2:width-right,y1:y(v),y2:y(v),stroke:'#d9e2e5'}));const label=metric==='coverage'?v+'%':(metric==='median'?'$':'')+(small?compact.format(v):number.format(Math.round(v)));svg.append(node('text',{x:left-8,y:y(v)+5,'text-anchor':'end',fill:'#4c6170','font-size':12,'font-family':'sans-serif'},label));}
+  const barWidth=Math.min(70,plot/series.length*.62);
+  vals.forEach((v,i)=>{if(v!==null){const bar=node('rect',{x:x(i)-barWidth/2,y:y(v),width:barWidth,height:265-y(v),fill:metric==='median'?'#a75a32':'#145f83'});bar.append(node('title',{},series[i].year+': '+format(v,metric)));svg.append(bar);}else svg.append(node('text',{x:x(i),y:250,'text-anchor':'middle',fill:'#4c6170','font-size':12},'n/a'));svg.append(node('text',{x:x(i),y:288,'text-anchor':'middle',fill:'#142a3a','font-size':small?11:14,'font-family':'sans-serif'},small&&series.length>5?'’'+series[i].year.slice(-2):series[i].year));});
+  lines.forEach((line,i)=>svg.append(node('text',{x:12,y:310+i*16,fill:'#4c6170','font-size':11,'font-family':'sans-serif'},line)));
+  container.replaceChildren(svg);
 }
 function download(text,type,name){const u=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
 function csv(metric){const cols=['year','recorded_transactions','median_recorded_price_usd','eligible_for_deed_link','unique_deed_links','unmatched_deed_links','ambiguous_deed_links','mortgage_measurement_records','mortgage_matches','unique_deed_coverage_pct','mortgage_match_pct','borough_filter','property_filter','price_band_filter','data_version','source_snapshot'];const rows=series.map(r=>[r.year,r.n,r.median??'',r.eligible,r.unique,r.none,r.ambiguous,r.measured,r.mortgage,r.eligible?(100*r.unique/r.eligible).toFixed(4):'',r.measured?(100*r.mortgage/r.measured).toFixed(4):'',selection.borough,selection.property,selection.band,dataset.meta.data_version,dataset.meta.retrieved]);download([cols,...rows].map(r=>r.join(',')).join('\r\n')+'\r\n','text/csv;charset=utf-8','nyc-housing-'+metric+'.csv');}
@@ -42,7 +51,8 @@ function render(){
   document.querySelector('#record-count-note').textContent=r.n===0?'No positive-price records in this selection.':r.n<20?'Small selection: fewer than 20 recorded transactions. Treat the median cautiously.':'Counts include nominal, related and other transfers; no market-sale screen is applied.';
   const years=selection.year==='all'?dataset.meta.years.map(String):[selection.year];
   series=years.map(year=>({...empty,...selection,year,...lookup.get(key({...selection,year}))}));
-  const tbody=document.querySelector('#data-rows');tbody.replaceChildren();for(const row of series){const tr=document.createElement('tr');for(const v of [row.year,number.format(row.n),format(row.median,'median'),percent(row.unique,row.eligible),number.format(row.eligible),percent(row.mortgage,row.measured),number.format(row.measured)]){const td=document.createElement('td');td.textContent=v;tr.append(td);}tbody.append(tr);}
+  const cellLabels=['Year','Recorded transactions','Median price','Deed coverage','Eligible records','Mortgage matches','Financing flag records'];
+  const tbody=document.querySelector('#data-rows');tbody.replaceChildren();for(const row of series){let cellIndex=0;const tr=document.createElement('tr');for(const v of [row.year,number.format(row.n),format(row.median,'median'),percent(row.unique,row.eligible),number.format(row.eligible),percent(row.mortgage,row.measured),number.format(row.measured)]){const td=document.createElement('td');td.dataset.label=cellLabels[cellIndex++];td.textContent=v;tr.append(td);}tbody.append(tr);}
   charts.forEach(c=>draw(...c));document.querySelector('#explore-status').textContent='Showing '+number.format(r.n)+' recorded transactions. The table and downloads reflect these filters.';
 }
 try{
@@ -51,3 +61,5 @@ try{
   form.addEventListener('change',render);form.addEventListener('submit',e=>e.preventDefault());document.querySelector('#reset-filters').addEventListener('click',()=>{for(const d of dims)form.elements[d].value=defaults[d];render();});document.querySelector('#share-view').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);document.querySelector('#explore-status').textContent='Link copied. It opens this selection.';}catch{document.querySelector('#explore-status').textContent='Copy the address in your browser to share this selection.';}});
   document.querySelectorAll('[data-csv]').forEach(b=>b.addEventListener('click',()=>csv(b.dataset.csv)));document.querySelectorAll('[data-svg]').forEach(b=>b.addEventListener('click',()=>download(new XMLSerializer().serializeToString(document.querySelector('#chart-'+b.dataset.svg+' svg')),'image/svg+xml','nyc-housing-'+b.dataset.svg+'.svg')));render();
 }catch(e){document.querySelector('#explore-status').textContent='The interactive data could not load. Download the aggregate CSV below or try again.';document.querySelector('#explore-status').className='tool-error';form.querySelectorAll('select').forEach(s=>s.disabled=true);document.querySelectorAll('#reset-filters,#share-view,[data-csv],[data-svg]').forEach(b=>b.disabled=true);}
+
+let resizeFrame;window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(series)charts.forEach(c=>draw(...c));});});

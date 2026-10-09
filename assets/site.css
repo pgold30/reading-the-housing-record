@@ -16,20 +16,22 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; }
+body { margin: 0; min-width: 0; min-height: 100vh; display: flex; flex-direction: column; }
+body > main { flex: 1; }
+:root { --page-gutter: clamp(18px, 2.5vw, 64px); }
 a { color: var(--blue-dark); text-underline-offset: .18em; }
 a:hover { color: #0a709e; }
 a:focus-visible { outline: 3px solid #e29833; outline-offset: 4px; border-radius: 2px; }
 .skip { position: absolute; top: -80px; left: 16px; z-index: 20; padding: 10px 14px; background: var(--white); }
 .skip:focus { top: 12px; }
 .site-header { background: var(--white); border-bottom: 1px solid var(--line); }
-.header-inner { max-width: 1236px; margin: auto; padding: 19px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.header-inner { width: 100%; margin: auto; padding: 19px var(--page-gutter); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); font-weight: 720; letter-spacing: -.02em; line-height: 1.08; }
 .brand-mark { display: inline-grid; place-items: center; height: 38px; width: 38px; flex: none; color: var(--white); background: var(--ink); border-radius: 2px; font-family: Georgia, serif; font-size: 24px; }
 .site-nav { display: flex; gap: 24px; font-size: .92rem; font-weight: 650; }
 .site-nav a { text-decoration: none; }
 .site-nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 7px; }
-.wrap { width: min(100% - 56px, 1180px); margin-inline: auto; }
+.wrap { width: calc(100% - 2 * var(--page-gutter)); margin-inline: auto; }
 .eyebrow { margin: 0 0 16px; color: var(--blue); font-size: .76rem; font-weight: 750; text-transform: uppercase; letter-spacing: .15em; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -.035em; }
@@ -107,7 +109,7 @@ p { line-height: 1.63; }
   .section-head { align-items: start; flex-direction: column; }
 }
 @media (max-width: 560px) {
-  .wrap { width: min(100% - 36px, 1104px); }
+  .wrap { width: calc(100% - 2 * var(--page-gutter)); }
   .header-inner { padding: 15px 18px; align-items: start; flex-direction: column; gap: 14px; }
   .site-nav { gap: 20px; }
   .hero { padding: 54px 0; }
