@@ -1,6 +1,6 @@
 Housing Stories graphics and chart data, 1 October 2026
 
-Credit: Pablo Loschi, Reading the Housing Record.
+Credit: Pablo Loschi, NYC Housing Data (nychousingdata.com).
 Original graphics and new story text: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
 State source, version, sample and dates when reusing. Indicate any edits.
 Underlying paper and dataset releases retain their own terms.
