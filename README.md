@@ -7,7 +7,7 @@ Research website for Pablo Loschi's work on New York City housing records:
 - *The Shape of the Tax: Transaction Shifting at New York City's 2019 Transfer-Tax Notches and the Mortgage Recording Tax* — [10.5281/zenodo.22925301](https://doi.org/10.5281/zenodo.22925301)
 - *The Execution-Certainty Wedge* — model and replication links on its paper page.
 
-Live site: https://pgold30.github.io/reading-the-housing-record/
+Live site: https://nychousingdata.com/
 
 Static HTML and CSS, no build step. Numbers on the site come from the linked public paper releases. Release identifiers remain in citation metadata and download filenames; page summaries omit revision logs.
 
@@ -59,6 +59,9 @@ log points, with 18 endpoints still unresolved. No independent accuracy claim.
 Preserve the story and paper landing-page paths for incoming Housing Notes
 links. Old PDFs remain available but current downloads drive the sitemap.
 Keep GitHub Pages and this static stack for any later custom-domain change;
-configure and verify the owned domain before changing canonical URLs. No
-domain has been purchased or configured. A guest-post invitation is not an
+configure and verify the owned domain before changing canonical URLs. The custom domain nychousingdata.com was purchased and verified on 9 October 2026. A guest-post invitation is not an
 accepted or published article and must not be presented as one.
+
+## Custom domain
+
+The primary address is https://nychousingdata.com/. GitHub Pages serves the same repository and paths; keep both root and dist/CNAME set to nychousingdata.com. Canonical, citation, social-preview, sitemap and Atom URLs use the custom domain. Old download files remain in place. The domain uses Spaceship DNS, four GitHub Pages A records at the apex and a www CNAME to pgold30.github.io. Keep the GitHub ownership TXT record. Free GitHub Pages hosting continues.
