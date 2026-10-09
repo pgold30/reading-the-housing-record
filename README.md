@@ -77,3 +77,9 @@ NYC Housing Data is the site name; Reading the Housing Record remains the resear
 Cloudflare Web Analytics is configured for the owned domain. The public beacon token in `assets/analytics.js` is not an API credential. It runs only on the production domain and is skipped for DNT/GPC. Privacy details are in `privacy/`. No DNS proxy or paid analytics plan is needed. Google Search Console ownership is verified by the apex TXT record; retain that record and the separate GitHub ownership TXT. Submit the root sitemap after publishing new routes. Search-engine inclusion is not guaranteed.
 
 GitHub approved the TLS certificate after a single documented provisioning restart on 9 October 2026. HTTPS enforcement is enabled. Check apex, www redirect and old GitHub paths when changing the domain configuration.
+
+## Resource-page roles
+
+Stories is the editorial index and keeps the full explanations. Press resources contains contact, the graphics pack and individual chart downloads grouped by topic; it does not repeat the findings or embed the same charts again. The old `/stories/#reporters` anchor remains as a compact pointer to `/press/`. Keep resource headings compact and reading text within roughly 65 characters per line.
+
+Performance: the optional audio uses `preload="none"` so the 22 MB MP3 is requested when the reader starts playback. Cloudflare field metrics include development visits; interpret them separately from PageSpeed laboratory tests.
