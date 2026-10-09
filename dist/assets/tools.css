@@ -109,3 +109,13 @@ figure.chart svg { min-width: 0; }
 @media(max-width:650px) { .reader-takeaway { padding: 18px; } .hero:has(.home-intro) { padding-block: 28px; } }
 
 @media(min-width:851px) { .story-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+/* Paper introduction: native controls, no autoplay or media preload. */
+.paper-video-intro { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.2fr); gap: 30px; align-items: center; padding: 26px; margin: 0 0 24px; background: var(--white); border: 1px solid var(--line); }
+.paper-video-intro > * { min-width: 0; }
+.paper-video-intro h3 { font-size: clamp(1.55rem,2.5vw,2rem); }
+.paper-video-intro figure { margin: 0; }
+.paper-video-intro video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #10171b; }
+.paper-video-intro figcaption { color: var(--muted); font-size: .8rem; line-height: 1.6; margin-top: 12px; }
+.paper-video-intro a { font-size: .88rem; }
+@media(max-width:850px) { .paper-video-intro { grid-template-columns: minmax(0,1fr); gap: 20px; padding: 20px; } }
