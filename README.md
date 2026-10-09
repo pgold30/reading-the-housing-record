@@ -23,13 +23,13 @@ Journal submission names and references were supplied by Pablo on 1 October 2026
 
 Paper and dataset findings use full-width rows so that their qualifications remain readable. Paper pages put the PDF and replication links below the title. The shared layout has been checked at 390, 768, 1024 and 1440 pixels; tables and citations scroll within their own containers. Keep long findings out of narrow statistic cards.
 
-GitHub Pages serves `main` at the repository root. `dist/` mirrors the public files for the existing secondary hosting setup. Keep both copies in sync when editing. The website has no added tracking or contact form. Email links use Pablo's public address; preparing pitches does not send messages.
+GitHub Pages serves `main` at the repository root. `dist/` mirrors the public files for the existing secondary hosting setup. Keep both copies in sync when editing. The website uses Cloudflare Web Analytics without tracking cookies; the local loader respects Do Not Track and Global Privacy Control. There is no contact form. Email links use Pablo's public address; preparing pitches does not send messages.
 
 ## Paper page conventions
 
 Each paper page presents a short finding, one PDF action, one replication action and section navigation. Replication links identify the fixed public release behind the displayed findings. Citation metadata retains the paper DOI. Keep substantive interpretation limits in a short scope note; document audit detail and revision history belong in the linked manuscript/archive. Do not describe audit agreement as independently verified accuracy. New review scenarios remain off the public site until incorporated into a public paper release.
 
-The primary navigation is Overview, Stories, Papers, Data and About. Paper sidebars link to the matching general-reader story and shared dataset page, avoiding repeated Zenodo links. LinkedIn, Medium and the generic Zenodo-profile link are omitted from the About links at Pablo's request.
+The primary navigation is Explore data, Stories, Research, For journalists and About. Paper sidebars link to the matching general-reader story and shared dataset page, avoiding repeated Zenodo links. LinkedIn, Medium and the generic Zenodo-profile link are omitted from the About links at Pablo's request.
 
 ## 9 October editorial correspondence update
 
@@ -65,3 +65,15 @@ accepted or published article and must not be presented as one.
 ## Custom domain
 
 The primary address is https://nychousingdata.com/. GitHub Pages serves the same repository and paths; keep both root and dist/CNAME set to nychousingdata.com. Canonical, citation, social-preview, sitemap and Atom URLs use the custom domain. Old download files remain in place. The domain uses Spaceship DNS, four GitHub Pages A records at the apex and a www CNAME to pgold30.github.io. Keep the GitHub ownership TXT record. Free GitHub Pages hosting continues.
+
+## Public tools and search setup
+
+NYC Housing Data is the site name; Reading the Housing Record remains the research series. The code-native SVG logo is shared by the header and favicon. Keep original paper, story and PDF paths.
+
+`explore/` uses only aggregate cells built by `tools/build_explorer.py`. Rebuild with `python3 tools/build_explorer.py ../nyc_linked_dataset/build --archive ../zenodo_uploads/dataset_v1.0/nyc_linked_dataset_v1.0.zip`. The builder verifies sales/link file hashes against the published archive. No names, addresses, parcel identifiers or individual rows enter the browser asset. Positive recorded prices are included without a market-sale screen. Counts are sales-file rows, not deduplicated deeds. Medians pool records within the filters and are not a price index. Co-ops and Staten Island have no ACRIS linkage measure; condo mortgage flags require a unique deed link. Every percentage names its denominator.
+
+`guide/` explains amounts, parcels, dates and candidate mortgage evidence with a clearly fictional example. `press/` consolidates reusable findings and existing chart assets. The historical tax illustration lives inside the existing tax story at `#tax-tool`, covers the $1m, $2m and $3m lines, and excludes seller taxes, mortgage charges, exemptions and grandfathering. Its source is TSB-M-19(1)R; do not present it as a current closing-cost calculator.
+
+Cloudflare Web Analytics is configured for the owned domain. The public beacon token in `assets/analytics.js` is not an API credential. It runs only on the production domain and is skipped for DNT/GPC. Privacy details are in `privacy/`. No DNS proxy or paid analytics plan is needed. Google Search Console ownership is verified by the apex TXT record; retain that record and the separate GitHub ownership TXT. Submit the root sitemap after publishing new routes. Search-engine inclusion is not guaranteed.
+
+GitHub approved the TLS certificate after a single documented provisioning restart on 9 October 2026. HTTPS enforcement is enabled. Check apex, www redirect and old GitHub paths when changing the domain configuration.
