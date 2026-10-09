@@ -97,3 +97,8 @@ Each story has a brief reader takeaway. The homepage keeps compact research link
 ## Supplied video introduction
 
 `#paper-introduction` places The Three Illusions of Real Estate beside the homepage paper cards, with native playback controls, playsinline, a poster and preload=none. The 4:47 video was supplied by Pablo on 9 October. The web copy is H.264/AAC with faststart and is compressed from about 58 MiB to 30 MiB, preserving duration. Keep the supplied original intact. The AI-generated overview includes schematic illustrations and broader wording than the papers; its visible note qualifies the cash gap, index-path interpretation and conditional simulation. Do not present its drawn charts as verified research series. A cinematic replacement is being requested from the latest public source PDFs in Pablo's specified notebook.
+
+
+## Heading alignment
+
+Shared section headings use the full content width, with a centered introduction below. Page mastheads, research actions and metadata follow the same alignment; article text, evidence notes and tables retain their reading alignment. Headings wrap naturally with balanced lines on narrow screens; never force no-wrap or shrink text to fit. The paper video has centered title, introductory copy and caption. The redundant attribution sentence beside it was removed at Pablo’s request; the schematic-chart qualifications remain visible.

@@ -119,3 +119,28 @@ figure.chart svg { min-width: 0; }
 .paper-video-intro figcaption { color: var(--muted); font-size: .8rem; line-height: 1.6; margin-top: 12px; }
 .paper-video-intro a { font-size: .88rem; }
 @media(max-width:850px) { .paper-video-intro { grid-template-columns: minmax(0,1fr); gap: 20px; padding: 20px; } }
+
+/* Full-width headings with centered introductions; reading text stays left aligned. */
+.section-head { display: block; text-align: center; margin-bottom: 26px; }
+.section-head > div { width: 100%; }
+.section-head .eyebrow { margin-bottom: 12px; color: var(--blue); }
+.section-head h2 { width: 100%; text-wrap: balance; }
+.section-head > p { max-width: 80ch; margin: 14px auto 0; }
+.home-intro, .article-hero, .tool-hero, .story-head, .stories-masthead, .stories-section-title { text-align: center; }
+.home-intro h1, .article-hero h1, .tool-hero h1, .story-head h1 { max-width: none; margin-inline: auto; text-wrap: balance; }
+.home-intro .lead, .article-subtitle, .tool-hero .lead, .story-deck, .stories-masthead > p:not(.eyebrow) { max-width: 80ch; margin-inline: auto; text-wrap: pretty; }
+.article-hero .paper-summary { max-width: 88ch; margin-inline: auto; }
+.article-hero .download-note { margin-inline: auto; }
+.home-intro .action-row, .article-actions, .article-meta, .story-byline, .stories-tools, .story-topics, .breadcrumbs { justify-content: center; }
+.article-hero h1, .story-head h1 { font-size: clamp(2.2rem, 3.6vw, 3.5rem); }
+.paper-video-intro { gap: clamp(20px,2.4vw,40px); padding: clamp(20px,2vw,28px); }
+.paper-video-intro > div > .eyebrow, .paper-video-intro h3, .paper-video-intro h3 + p { text-align: center; }
+.paper-video-intro h3 { text-wrap: balance; margin-bottom: 20px; }
+.paper-video-intro .fine-print { text-align: left; margin-bottom: 16px; }
+.paper-video-intro > div > a { display: block; text-align: center; }
+.paper-video-intro figcaption { text-align: center; text-wrap: pretty; }
+@media(max-width:650px) {
+  .section-head > p { margin-top: 12px; }
+  .article-hero h1, .story-head h1 { font-size: clamp(2rem,8vw,2.6rem); }
+  .paper-video-intro h3 { margin-bottom: 16px; }
+}
