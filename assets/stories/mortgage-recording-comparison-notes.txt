@@ -1,0 +1,11 @@
+Mortgage recording comparison
+Pablo Loschi, 9 October 2026. CC BY 4.0.
+
+Illustration reproduced from The Shape of the Tax v2.7, Section 1:
+https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_preprint_v2.7.pdf
+Fixed archive: https://zenodo.org/records/23256513
+
+Same $900,000 condominium. Without purchase borrowing: no purchase-mortgage recording charge. With a $720,000 mortgage: 720000 * 0.01925 = $13,860 gross borrower charge.
+The rate is applied to the loan, not the home price. It is the borrower schedule used in the paper for 2016-2025; the lender portion is excluded. Credits, exemptions and consolidation adjustments are not applied. Other taxes and closing costs are excluded. Co-op share financing is outside the illustration. This is neither an observed tax payment nor a current closing-cost quote.
+
+The sample averages of 1.41% for houses and 1.28% for condominiums are separate calculations over the paper's financed sample, expressed as shares of purchase price. They are not rates to apply to an individual transaction.

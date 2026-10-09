@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+<title id="title">Same $900,000 condo, different mortgage recording charge</title>
+<desc id="desc">Illustrative gross borrower charge under the schedule used in The Shape of the Tax v2.7: zero without a purchase mortgage, $13,860 on a $720,000 mortgage at 1.925%. Before credits, exemptions and consolidation adjustments. Other taxes and closing costs excluded.</desc>
+<rect width="900" height="600" fill="#f7f9f8"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#18313e">
+<text x="40" y="47" font-size="16" font-weight="700" letter-spacing="1">NYC HOUSING DATA · ILLUSTRATIVE GROSS CHARGE</text>
+<text x="40" y="105" font-size="35" font-weight="700">Same $900,000 condo.</text>
+<text x="40" y="149" font-size="35" font-weight="700">An extra charge for borrowing.</text>
+<rect x="40" y="190" width="397" height="240" rx="5" fill="#fff" stroke="#c5d4da"/>
+<rect x="463" y="190" width="397" height="240" rx="5" fill="#fff" stroke="#c5d4da"/>
+<rect x="40" y="190" width="397" height="6" fill="#145f83"/>
+<rect x="463" y="190" width="397" height="6" fill="#a75a32"/>
+<text x="65" y="242" font-size="29" font-weight="700">Without a mortgage</text>
+<text x="488" y="242" font-size="29" font-weight="700">With a mortgage</text>
+<text x="65" y="283" font-size="24" fill="#506773">No purchase borrowing</text>
+<text x="488" y="283" font-size="24" fill="#506773">$720,000 loan × 1.925%</text>
+<text x="65" y="357" font-size="64" font-weight="700" fill="#145f83">$0</text>
+<text x="488" y="357" font-size="64" font-weight="700" fill="#a75a32">$13,860</text>
+<text x="65" y="402" font-size="22">Purchase-mortgage tax</text>
+<text x="488" y="402" font-size="22">Gross borrower charge</text>
+<text x="40" y="470" font-size="21">Before credits, exemptions and consolidation adjustments.</text>
+<text x="40" y="503" font-size="21">Other taxes and closing costs excluded. Co-op share loans excluded.</text>
+<text x="40" y="548" font-size="18" fill="#506773">Source: The Shape of the Tax v2.7, Section 1. Schedule used for 2016–2025.</text>
+<text x="40" y="577" font-size="18" fill="#506773">Pablo Loschi · nychousingdata.com · CC BY 4.0 · Not a closing-cost quote.</text>
+</g></svg>

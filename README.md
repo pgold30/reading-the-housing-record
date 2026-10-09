@@ -13,7 +13,7 @@ Static HTML and CSS, no build step. Numbers on the site come from the linked pub
 
 ## Housing Stories
 
-The `stories/` section explains the research for general readers. Its initial order is an editorial estimate of reader appeal: tax thresholds, cash buyers, foreclosure deeds, condominium linkage. It is not a measured popularity ranking. Four articles link to their sources and offer eight downloadable graphics, CSV files and an Atom feed. Original new article text and graphics are CC BY 4.0; underlying releases keep their own terms.
+The `stories/` section explains the research for general readers. Its initial order is an editorial estimate of reader appeal: mortgage recording tax, tax thresholds, cash buyers, foreclosure deeds, condominium linkage. It is not a measured popularity ranking. Five articles link to their sources and offer nine downloadable graphics, CSV files and an Atom feed. The original eight-chart ZIP is retained; the mortgage comparison has separate downloads. Original new article text and graphics are CC BY 4.0; underlying releases keep their own terms.
 
 The condominium article adds a descriptive borough-by-price comparison and annual coverage check on frozen dataset v1.0.1. Its runnable Python files are included in the graphics bundle. Coverage, agreement with earlier code and verified accuracy are separate concepts. Missing deed or mortgage links cannot establish cash financing.
 
@@ -87,3 +87,9 @@ Performance: the optional audio uses `preload="none"` so the 22 MB MP3 is reques
 ## Editorial voice
 
 Stories lead with the concrete finding and explain what a buyer or data user can learn from it. Keep scope, unresolved evidence and incidence limits with the claims they qualify. The tax story raises the fairness of an additional statutory charge on borrowing; it does not describe double taxation as an established finding. Preserve source URLs, archived graphics and research estimates when editing site prose.
+
+## Mortgage story and public change history
+
+The mortgage-tax story leads Home and Stories as an editorial choice, not a measured popularity ranking. It uses the tax paper v2.7 Section 1 example: a $900,000 condo, $720,000 mortgage, 1.925% gross borrower schedule and $13,860 calculated charge. Sources, exclusions and the distinction from actual payments remain beside the calculation. Sample-average burdens of 1.41% and 1.28% are separate statistics, not individual tax rates. Co-op share loans are outside the illustration.
+
+Each story has a brief reader takeaway. The homepage keeps compact research links; the simulation page holds the detailed account, and September media and definitions remain under expandable sections with their original anchors. `updates/` records dated changes and provides a correction contact; link it from every footer. Preserve original article paths, archived PDFs and the original graphics pack. When publishing substantive corrections, record the old claim, replacement, reason and affected pages; do not present an interpretation limit as an independently validated finding.

@@ -1,0 +1,3 @@
+scenario,property_type,price_usd,purchase_mortgage_usd,gross_borrower_rate,gross_borrower_charge_usd,scope,source
+Without a mortgage,Condominium,900000,0,0,0,Illustrative schedule used for 2016-2025; before credits exemptions and consolidation adjustments; other taxes and closing costs excluded; not an observed payment,https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_preprint_v2.7.pdf
+With a mortgage,Condominium,900000,720000,0.01925,13860,Illustrative schedule used for 2016-2025; before credits exemptions and consolidation adjustments; other taxes and closing costs excluded; not an observed payment,https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_preprint_v2.7.pdf

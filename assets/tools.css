@@ -85,3 +85,27 @@ figure.chart svg { min-width: 0; }
 
 .stories-tools { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-block: 18px 8px; font-size: .92rem; font-weight: 600; }
 @media(max-width:560px) { .stories-masthead { padding-bottom: 22px; } .story-topics { margin-top: 18px; gap: 12px 18px; } }
+
+/* Reader-first story feature and compact homepage depth. */
+.home-intro .lead { font-size: 1.15rem; margin-bottom: 20px; }
+.home-intro h1 { font-size: clamp(2.3rem, 4.1vw, 3.5rem); margin-bottom: 18px; }
+.hero:has(.home-intro) { padding-block: 35px; }
+.home-intro .fine-print { margin-bottom: 0; }
+.reader-takeaway { margin: 24px 0; padding: 20px 24px; background: var(--pale); border-left: 3px solid var(--blue); }
+.story-text .reader-takeaway h2 { margin: 0 0 10px; font: 650 1rem/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; letter-spacing: 0; }
+.reader-takeaway p { font-size: 1rem; line-height: 1.65; margin: 0; }
+.home-details > summary { cursor: pointer; color: var(--blue-dark); font-weight: 650; padding-block: 12px; }
+.home-details[open] > summary { margin-bottom: 24px; }
+.companion-section:has(.home-details), .terms-section:has(.home-details) { padding-block: 18px; }
+.footer-updates { padding-top: 8px; font-size: .84rem; }
+.update-entry { padding-block: 25px; border-top: 1px solid var(--line); }
+.update-entry:first-child { padding-top: 0; border-top: 0; }
+.update-entry h2 { font-size: clamp(1.4rem,2.5vw,1.9rem); }
+.update-entry li { line-height: 1.7; margin-block: 14px; }
+.update-entry ul { padding-left: 23px; }
+.new-graphic { margin-top: 20px; }
+.new-graphic .fine-print { margin: 18px 0 0; }
+
+@media(max-width:650px) { .reader-takeaway { padding: 18px; } .hero:has(.home-intro) { padding-block: 28px; } }
+
+@media(min-width:851px) { .story-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
