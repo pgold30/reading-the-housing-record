@@ -73,6 +73,7 @@ p { line-height: 1.63; }
 .site-footer { padding: 26px 0 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: .87rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .footer-inner p { margin: 0; }
+.footer-one-line p { line-height: 1.7; }
 .article-hero { padding: 57px 0 54px; background: var(--white); border-bottom: 1px solid var(--line); }
 .breadcrumbs { display: flex; gap: 9px; color: var(--muted); font-size: .87rem; margin-bottom: 31px; }
 .breadcrumbs a { color: var(--muted); }
