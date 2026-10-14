@@ -1,4 +1,4 @@
-"""Export matched archived v6.1 results; never run or alter the simulation."""
+"""Export matched archived default-policy results; never run or alter the simulation."""
 import csv
 import hashlib
 import json
@@ -8,7 +8,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 import argparse
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--replication', type=Path, default=ROOT / 'execution_certainty_wedge_v6_4/replication')
+parser.add_argument('--replication', type=Path, default=ROOT / 'paper_improvements_2026-10-14/implementation_and_releases/releases/wedge_v6.5/execution_certainty_wedge_v6_5/replication')
 SRC = parser.parse_args().replication
 DEST = Path(__file__).resolve().parents[1] / 'assets/data'
 LABELS = {
@@ -28,8 +28,8 @@ def main():
     a = json.loads((SRC / 'nyc_anchored.json').read_text())
     c = json.loads((SRC / 'nyc_cohort_check.json').read_text())
     assert a['seeds'] == c['seeds'] and len(a['seeds']) == 12
-    result = {'version': 'Wedge v6.4: default-policy runs', 'seeds': a['seeds'],
-              'cohort': c['cohort'], 'source_record': 'https://zenodo.org/records/23362696',
+    result = {'version': 'Wedge v6.5: default-policy runs', 'seeds': a['seeds'],
+              'cohort': c['cohort'], 'source_record': 'https://zenodo.org/records/23371739',
               'sources': {f: hashlib.sha256((SRC / f).read_bytes()).hexdigest()
                           for f in ['nyc_anchored.json', 'nyc_cohort_check.json']},
               'policies': POLICIES, 'scenarios': []}

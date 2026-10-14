@@ -1,5 +1,5 @@
 {
-  "version": "Wedge v6.4: default-policy runs",
+  "version": "Wedge v6.5: default-policy runs",
   "seeds": [
     20260824,
     20260924,
@@ -15,7 +15,7 @@
     20261924
   ],
   "cohort": "entry periods 36 through 83; every entrant resolved by period 119",
-  "source_record": "https://zenodo.org/records/23362696",
+  "source_record": "https://zenodo.org/records/23371739",
   "sources": {
     "nyc_anchored.json": "34272b168b84e69717d662eeedac61253b20170d6f6988633e996cf26381afdf",
     "nyc_cohort_check.json": "fad0d1077a6ce617c86956e0707f1d4de95d4b49bda8521543d79e1e615e4c59"
