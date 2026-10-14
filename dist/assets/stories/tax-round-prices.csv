@@ -1,6 +1,6 @@
-price,threshold,before,after,before_period,after_period,unit,source
-$1 million,Unchanged threshold,0.1,0.1,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,The Shape of the Tax v2.6
-$2 million,New 2019 threshold,7.8,1.6,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,The Shape of the Tax v2.6
-$3 million,New 2019 threshold,7.0,1.5,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,The Shape of the Tax v2.6
-$1.5 million,No threshold at this price,5.2,6.2,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,The Shape of the Tax v2.6
-$2.5 million,No threshold at this price,7.8,10.6,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,The Shape of the Tax v2.6
+price,threshold,before,after,before_period,after_period,unit,source,source_record
+$1 million,Unchanged threshold,0.11313639220615965,0.09784172661870505,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,"The Shape of the Tax v3.0, Table 1; one row per deed",https://zenodo.org/records/23333806
+$2 million,New 2019 threshold,7.772151898734176,2.280230326295585,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,"The Shape of the Tax v3.0, Table 1; one row per deed",https://zenodo.org/records/23333806
+$3 million,New 2019 threshold,6.966292134831461,2.492462311557789,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,"The Shape of the Tax v3.0, Table 1; one row per deed",https://zenodo.org/records/23333806
+$1.5 million,No threshold at this price,4.926108374384237,5.843230403800475,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,"The Shape of the Tax v3.0, Table 1; one row per deed",https://zenodo.org/records/23333806
+$2.5 million,No threshold at this price,6.710743801652892,10.039215686274508,2016-01 to 2019-03,2020-01 to 2025-12,exact-price sales / surrounding price density,"The Shape of the Tax v3.0, Table 1; one row per deed",https://zenodo.org/records/23333806

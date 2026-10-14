@@ -1,0 +1,392 @@
+{
+  "version": "Archived Wedge v6.1",
+  "seeds": [
+    20260824,
+    20260924,
+    20261024,
+    20261124,
+    20261224,
+    20261324,
+    20261424,
+    20261524,
+    20261624,
+    20261724,
+    20261824,
+    20261924
+  ],
+  "cohort": "entry periods 36 through 83; every entrant resolved by period 119",
+  "source_record": "https://zenodo.org/records/23042897",
+  "sources": {
+    "nyc_anchored.json": "34272b168b84e69717d662eeedac61253b20170d6f6988633e996cf26381afdf",
+    "nyc_cohort_check.json": "fad0d1077a6ce617c86956e0707f1d4de95d4b49bda8521543d79e1e615e4c59"
+  },
+  "policies": {
+    "static_cap": "Per-entity cap",
+    "wfq": "Fair-share quota",
+    "contention_duty": "Contention duty",
+    "constant_charge": "Constant charge",
+    "combined": "Quota and duty combined"
+  },
+  "scenarios": [
+    {
+      "id": "paper_baseline",
+      "label": "Paper baseline: illustrative high competition",
+      "discount_pct": 12.0,
+      "institutional_share_pct": 58.10400033931046,
+      "capacity": 14,
+      "constant_charge_pct": 7.50365547388668,
+      "full_unserved_pct": 41.85043301000833,
+      "cohort_unserved_pct": 59.779368958225035,
+      "policies": {
+        "static_cap": {
+          "full_access_pp": 33.164023385316895,
+          "full_access_se": 0.2216356780113407,
+          "cohort_access_pp": 51.71855138049978,
+          "cohort_access_se": 0.48779207202934766,
+          "value_change_pct": -11.282727856273922,
+          "value_change_se": 0.15543653577080782,
+          "oracle_pp": -11.224847232692278,
+          "oracle_se": 0.13591399131005164,
+          "moving_pp": -16.891425980448442,
+          "moving_se": 0.19634914405853018
+        },
+        "wfq": {
+          "full_access_pp": 17.139879552100684,
+          "full_access_se": 0.1565730710657707,
+          "cohort_access_pp": 23.94708855739383,
+          "cohort_access_se": 0.4119305001506776,
+          "value_change_pct": -1.779264626762611,
+          "value_change_se": 0.046496573251517716,
+          "oracle_pp": -1.7700222767983351,
+          "oracle_se": 0.04423433663788651,
+          "moving_pp": -0.1888861014889711,
+          "moving_se": 0.047326401991577845
+        },
+        "contention_duty": {
+          "full_access_pp": 5.24482071612569,
+          "full_access_se": 0.05091387055058291,
+          "cohort_access_pp": 9.742366284959877,
+          "cohort_access_se": 0.1399370758044238,
+          "value_change_pct": 0.026128076513359133,
+          "value_change_se": 0.005406447980841101,
+          "oracle_pp": 0.026039704092843213,
+          "oracle_se": 0.005410199094605682,
+          "moving_pp": 2.7276179753875147,
+          "moving_se": 0.01050307191116643
+        },
+        "constant_charge": {
+          "full_access_pp": 4.851318143058381,
+          "full_access_se": 0.03563523616619093,
+          "cohort_access_pp": 6.959402795269973,
+          "cohort_access_se": 0.10999095995140179,
+          "value_change_pct": 0.09704603056631811,
+          "value_change_se": 0.005776257239773867,
+          "oracle_pp": 0.09660504589053265,
+          "oracle_se": 0.0058069630671142465,
+          "moving_pp": 3.3398666306774847,
+          "moving_se": 0.014406650667165044
+        },
+        "combined": {
+          "full_access_pp": 17.20085429333493,
+          "full_access_se": 0.15266944602548255,
+          "cohort_access_pp": 24.081251101028116,
+          "cohort_access_se": 0.4029628622856343,
+          "value_change_pct": -1.803996015957111,
+          "value_change_se": 0.045110325167349655,
+          "oracle_pp": -1.7946233374737783,
+          "oracle_se": 0.04274263200712774,
+          "moving_pp": 0.9030209903373564,
+          "moving_se": 0.05487105616502099
+        }
+      }
+    },
+    {
+      "id": "nyc_company_cash",
+      "label": "NYC company-cash proxy",
+      "discount_pct": 1.5183549653213668,
+      "institutional_share_pct": 10.950906813505846,
+      "capacity": 1,
+      "constant_charge_pct": 2.022180810852327,
+      "full_unserved_pct": 9.83455059532557,
+      "cohort_unserved_pct": 14.869316118680775,
+      "policies": {
+        "static_cap": {
+          "full_access_pp": 1.7714091030468195,
+          "full_access_se": 0.04295048957718596,
+          "cohort_access_pp": 4.397567665677337,
+          "cohort_access_se": 0.10631750137645557,
+          "value_change_pct": -1.3619440995123,
+          "value_change_se": 0.020096979624473536,
+          "oracle_pp": -1.3556458970422902,
+          "oracle_se": 0.019644930566602617,
+          "moving_pp": -5.402657500131631,
+          "moving_se": 0.08241520991315171
+        },
+        "wfq": {
+          "full_access_pp": -0.0,
+          "full_access_se": 0.0,
+          "cohort_access_pp": -0.0,
+          "cohort_access_se": 0.0,
+          "value_change_pct": 0.0,
+          "value_change_se": 0.0,
+          "oracle_pp": 0.0,
+          "oracle_se": 0.0,
+          "moving_pp": 0.0,
+          "moving_se": 0.0
+        },
+        "contention_duty": {
+          "full_access_pp": 0.2026496374643605,
+          "full_access_se": 0.01297653333476857,
+          "cohort_access_pp": 0.45389551899262265,
+          "cohort_access_se": 0.03261710567870467,
+          "value_change_pct": -0.04708216801384424,
+          "value_change_se": 0.002743132579936185,
+          "oracle_pp": -0.04687551169562839,
+          "oracle_se": 0.002751337197062264,
+          "moving_pp": -0.025905348636362513,
+          "moving_se": 0.0019967743304159825
+        },
+        "constant_charge": {
+          "full_access_pp": 0.23938272143272687,
+          "full_access_se": 0.009874297335640965,
+          "cohort_access_pp": 0.37014340117940997,
+          "cohort_access_se": 0.021790727238697995,
+          "value_change_pct": -0.04746823365510977,
+          "value_change_se": 0.0021744039963509437,
+          "oracle_pp": -0.04725855369162776,
+          "oracle_se": 0.002179306761769747,
+          "moving_pp": 0.010935211995920699,
+          "moving_se": 0.000400707830529602
+        },
+        "combined": {
+          "full_access_pp": 0.2026496374643605,
+          "full_access_se": 0.01297653333476857,
+          "cohort_access_pp": 0.45389551899262265,
+          "cohort_access_se": 0.03261710567870467,
+          "value_change_pct": -0.04708216801384424,
+          "value_change_se": 0.002743132579936185,
+          "oracle_pp": -0.04687551169562839,
+          "oracle_se": 0.002751337197062264,
+          "moving_pp": -0.025905348636362513,
+          "moving_se": 0.0019967743304159825
+        }
+      }
+    },
+    {
+      "id": "nyc_upper_discount",
+      "label": "Upper company-cash discount",
+      "discount_pct": 5.294679055633877,
+      "institutional_share_pct": 11.493558854951445,
+      "capacity": 1,
+      "constant_charge_pct": 2.178893836165792,
+      "full_unserved_pct": 10.574727799313681,
+      "cohort_unserved_pct": 15.967316478084268,
+      "policies": {
+        "static_cap": {
+          "full_access_pp": 2.1464896824048565,
+          "full_access_se": 0.05308360257562172,
+          "cohort_access_pp": 5.297572601105058,
+          "cohort_access_se": 0.13285280190269655,
+          "value_change_pct": -1.467072503644502,
+          "value_change_se": 0.02026210419697451,
+          "oracle_pp": -1.4610917767383464,
+          "oracle_se": 0.01979105169853605,
+          "moving_pp": -5.481258343719197,
+          "moving_se": 0.08384664381307427
+        },
+        "wfq": {
+          "full_access_pp": -0.0,
+          "full_access_se": 0.0,
+          "cohort_access_pp": -0.0,
+          "cohort_access_se": 0.0,
+          "value_change_pct": 0.0,
+          "value_change_se": 0.0,
+          "oracle_pp": 0.0,
+          "oracle_se": 0.0,
+          "moving_pp": 0.0,
+          "moving_se": 0.0
+        },
+        "contention_duty": {
+          "full_access_pp": 0.20911179458088616,
+          "full_access_se": 0.0182389486895522,
+          "cohort_access_pp": 0.45890494168752455,
+          "cohort_access_se": 0.039667856532861014,
+          "value_change_pct": -0.04078417660629441,
+          "value_change_se": 0.0022322589391971853,
+          "oracle_pp": -0.04061413529090988,
+          "oracle_se": 0.0022155176053026034,
+          "moving_pp": 0.10796565251386947,
+          "moving_se": 0.001788937757804485
+        },
+        "constant_charge": {
+          "full_access_pp": 0.2590230064263197,
+          "full_access_se": 0.015053519220570683,
+          "cohort_access_pp": 0.37526797669025735,
+          "cohort_access_se": 0.037990994441767685,
+          "value_change_pct": -0.04323692878325858,
+          "value_change_se": 0.002100818605981376,
+          "oracle_pp": -0.04304885532078473,
+          "oracle_se": 0.0020652064189379954,
+          "moving_pp": 0.12702404432944625,
+          "moving_se": 0.0012139018494365594
+        },
+        "combined": {
+          "full_access_pp": 0.20911179458088616,
+          "full_access_se": 0.0182389486895522,
+          "cohort_access_pp": 0.45890494168752455,
+          "cohort_access_se": 0.039667856532861014,
+          "value_change_pct": -0.04078417660629441,
+          "value_change_se": 0.0022322589391971853,
+          "oracle_pp": -0.04061413529090988,
+          "oracle_se": 0.0022155176053026034,
+          "moving_pp": 0.10796565251386947,
+          "moving_se": 0.001788937757804485
+        }
+      }
+    },
+    {
+      "id": "nyc_all_companies",
+      "label": "All company buyers proxy",
+      "discount_pct": 1.5183549653213668,
+      "institutional_share_pct": 25.018450506356583,
+      "capacity": 3,
+      "constant_charge_pct": 3.7077169469978832,
+      "full_unserved_pct": 18.778030395348804,
+      "cohort_unserved_pct": 27.248212806047782,
+      "policies": {
+        "static_cap": {
+          "full_access_pp": 11.293245008917486,
+          "full_access_se": 0.14785982778598872,
+          "cohort_access_pp": 20.41942885930344,
+          "cohort_access_se": 0.24737875269101683,
+          "value_change_pct": -5.157962216693107,
+          "value_change_se": 0.06801190332544213,
+          "oracle_pp": -5.13246697874059,
+          "oracle_se": 0.06362269048349035,
+          "moving_pp": -13.510101685686815,
+          "moving_se": 0.13659543265812146
+        },
+        "wfq": {
+          "full_access_pp": 0.4601677419937204,
+          "full_access_se": 0.03237970582450245,
+          "cohort_access_pp": 0.6083158455755916,
+          "cohort_access_se": 0.046043303285466346,
+          "value_change_pct": -0.05959863108495256,
+          "value_change_se": 0.0040887555214873745,
+          "oracle_pp": -0.05932416529658239,
+          "oracle_se": 0.004080486107764013,
+          "moving_pp": -0.05946007611684345,
+          "moving_se": 0.005010399236860183
+        },
+        "contention_duty": {
+          "full_access_pp": 1.0937333101510196,
+          "full_access_se": 0.027015272484391565,
+          "cohort_access_pp": 2.3420641765328942,
+          "cohort_access_se": 0.05302859146338955,
+          "value_change_pct": -0.17631924680222255,
+          "value_change_se": 0.0033399714154956437,
+          "oracle_pp": -0.1755013119125783,
+          "oracle_se": 0.0034818802515254243,
+          "moving_pp": -0.33494783996499694,
+          "moving_se": 0.007979288095620455
+        },
+        "constant_charge": {
+          "full_access_pp": 1.21397629936386,
+          "full_access_se": 0.02592418096030246,
+          "cohort_access_pp": 1.8085576090828062,
+          "cohort_access_se": 0.03966926505250496,
+          "value_change_pct": -0.1652034964005651,
+          "value_change_se": 0.0033968137372589404,
+          "oracle_pp": -0.16442617543489987,
+          "oracle_se": 0.0034813752047618833,
+          "moving_pp": -0.1409464550429812,
+          "moving_se": 0.0012580713732016596
+        },
+        "combined": {
+          "full_access_pp": 1.403079493127149,
+          "full_access_se": 0.03139764964262063,
+          "cohort_access_pp": 2.6562006047380904,
+          "cohort_access_se": 0.053743925775613675,
+          "value_change_pct": -0.2209509695640719,
+          "value_change_se": 0.004140705036881453,
+          "oracle_pp": -0.21990463109026656,
+          "oracle_se": 0.004227202025869714,
+          "moving_pp": -0.38114170110137846,
+          "moving_se": 0.008010658046451943
+        }
+      }
+    },
+    {
+      "id": "naive_headline",
+      "label": "Headline gap used as an offer discount",
+      "discount_pct": 8.835078903553828,
+      "institutional_share_pct": 12.050297687101985,
+      "capacity": 1,
+      "constant_charge_pct": 2.2978386167637375,
+      "full_unserved_pct": 11.122800922714953,
+      "cohort_unserved_pct": 16.771810883528378,
+      "policies": {
+        "static_cap": {
+          "full_access_pp": 2.527951480791746,
+          "full_access_se": 0.04936497284218966,
+          "cohort_access_pp": 6.179928810723133,
+          "cohort_access_se": 0.1252048933189753,
+          "value_change_pct": -1.5583827437819195,
+          "value_change_se": 0.0214551494494149,
+          "oracle_pp": -1.5526576466856374,
+          "oracle_se": 0.020939843049847414,
+          "moving_pp": -5.501396890488407,
+          "moving_se": 0.08452596097004157
+        },
+        "wfq": {
+          "full_access_pp": -0.0,
+          "full_access_se": 0.0,
+          "cohort_access_pp": -0.0,
+          "cohort_access_se": 0.0,
+          "value_change_pct": 0.0,
+          "value_change_se": 0.0,
+          "oracle_pp": 0.0,
+          "oracle_se": 0.0,
+          "moving_pp": 0.0,
+          "moving_se": 0.0
+        },
+        "contention_duty": {
+          "full_access_pp": 0.20172402405403553,
+          "full_access_se": 0.007436578488507943,
+          "cohort_access_pp": 0.4568782701334993,
+          "cohort_access_se": 0.02660268459196609,
+          "value_change_pct": -0.03068488919967649,
+          "value_change_se": 0.0020532637397727184,
+          "oracle_pp": -0.030575238364448826,
+          "oracle_se": 0.0020488529205181286,
+          "moving_pp": 0.19397276229580207,
+          "moving_se": 0.002797231816384572
+        },
+        "constant_charge": {
+          "full_access_pp": 0.24746695262877197,
+          "full_access_se": 0.010259122485327815,
+          "cohort_access_pp": 0.37145433480850937,
+          "cohort_access_se": 0.020902739925521437,
+          "value_change_pct": -0.03279841541015571,
+          "value_change_se": 0.0021014884002158686,
+          "oracle_pp": -0.03267872359577484,
+          "oracle_se": 0.002089666972451517,
+          "moving_pp": 0.20686082625526644,
+          "moving_se": 0.002055546111785727
+        },
+        "combined": {
+          "full_access_pp": 0.20172402405403553,
+          "full_access_se": 0.007436578488507943,
+          "cohort_access_pp": 0.4568782701334993,
+          "cohort_access_se": 0.02660268459196609,
+          "value_change_pct": -0.03068488919967649,
+          "value_change_se": 0.0020532637397727184,
+          "oracle_pp": -0.030575238364448826,
+          "oracle_se": 0.0020488529205181286,
+          "moving_pp": 0.19397276229580207,
+          "moving_se": 0.002797231816384572
+        }
+      }
+    }
+  ]
+}
