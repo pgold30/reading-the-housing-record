@@ -8,11 +8,11 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 import argparse
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--replication', type=Path, default=ROOT / 'execution_certainty_wedge_v6_1/replication')
+parser.add_argument('--replication', type=Path, default=ROOT / 'execution_certainty_wedge_v6_4/replication')
 SRC = parser.parse_args().replication
 DEST = Path(__file__).resolve().parents[1] / 'assets/data'
 LABELS = {
-    'paper_baseline': 'Paper baseline: illustrative high competition',
+    'paper_baseline': 'Stress test: illustrative high competition',
     'nyc_company_cash': 'NYC company-cash proxy',
     'nyc_upper_discount': 'Upper company-cash discount',
     'nyc_all_companies': 'All company buyers proxy',
@@ -28,8 +28,8 @@ def main():
     a = json.loads((SRC / 'nyc_anchored.json').read_text())
     c = json.loads((SRC / 'nyc_cohort_check.json').read_text())
     assert a['seeds'] == c['seeds'] and len(a['seeds']) == 12
-    result = {'version': 'Archived Wedge v6.1', 'seeds': a['seeds'],
-              'cohort': c['cohort'], 'source_record': 'https://zenodo.org/records/23042897',
+    result = {'version': 'Wedge v6.4: default-policy runs', 'seeds': a['seeds'],
+              'cohort': c['cohort'], 'source_record': 'https://zenodo.org/records/23362696',
               'sources': {f: hashlib.sha256((SRC / f).read_bytes()).hexdigest()
                           for f in ['nyc_anchored.json', 'nyc_cohort_check.json']},
               'policies': POLICIES, 'scenarios': []}

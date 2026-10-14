@@ -106,8 +106,10 @@ Shared section headings use the full content width, with a centered introduction
 
 ## Matched model explorer, 14 October 2026
 
-The Wedge page uses a 15 KB static JSON export of the archived v6.1 runs. It does not rerun the model in the browser. Rebuild with `python3 tools/export_wedge.py --replication /path/to/execution_certainty_wedge_v6_1/replication` (NumPy required). The exporter checks shared seeds, identical arrivals and oracle denominators, resolved cohorts, paired changes and standard errors against the saved per-seed runs. Model data contain no transaction records or addresses.
+The Wedge page uses a 15 KB static JSON export of the default-policy runs reused in v6.4. It does not rerun the model in the browser. Rebuild with `python3 tools/export_wedge.py --replication /path/to/execution_certainty_wedge_v6_4/replication` (NumPy required). The exporter checks shared seeds, identical arrivals and oracle denominators, resolved cohorts, paired changes and standard errors against the saved per-seed runs. Model data contain no transaction records or addresses.
 
 Changing the population changes the access measure only; instrument parameters and whole-run value remain fixed. Presets are descriptive proxy mappings, not causal NYC estimates. The all-company preset's realised model share is about 25%, not the empirical 22.84%. The constant charge matches the duty's mean scheduled haircut, not its access gain. Do not mix these runs with separately tuned target-access experiments.
 
 The current tax-story downloads use preprint v3.0 and replication v2.0. The original graphics ZIP remains an archive; the dated `housing-stories-graphics-20261014.zip` is the current Press download. The corresponding correction is recorded at `/updates/#2026-10-14-model-and-tax-story`. Manuscript PDFs and archived replication outputs were preserved.
+
+The Wedge primary link and benchmark figure use the verified 14 October v6.4 release (Zenodo 23362696). The v6.1 PDF and figure remain available at their original paths. The explorer shows default-policy scenarios; it does not mix in the separately tuned access-target settings of v6.4 Tables 4–5.
