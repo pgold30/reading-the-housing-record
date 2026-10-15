@@ -4,7 +4,7 @@ Research website for Pablo Loschi's work on New York City housing records:
 
 - *Who Gets the House? Related-Party Transfers and the Cash–Mortgage Price Gap in New York City* — [10.5281/zenodo.22421850](https://doi.org/10.5281/zenodo.22421850)
 - *When a Deed Is Not a Market Sale: Foreclosure Transfers, Statutory Consideration, and Repeat-Sales House-Price Measurement* — [10.5281/zenodo.22925383](https://doi.org/10.5281/zenodo.22925383)
-- *The Shape of the Tax: Transaction Shifting at New York City's 2019 Transfer-Tax Notches and the Mortgage Recording Tax* — [10.5281/zenodo.22925301](https://doi.org/10.5281/zenodo.22925301)
+- *The Shape of the Tax: Round Prices and Bunching at New York City's 2019 Transfer-Tax Notches* — [10.5281/zenodo.22925301](https://doi.org/10.5281/zenodo.22925301)
 - *The Execution-Certainty Wedge* — model and replication links on its paper page.
 
 Live site: https://nychousingdata.com/
