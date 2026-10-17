@@ -10,6 +10,8 @@ python3 examples/recorded_mortgage_example.py build --output annual_condo_covera
 python3 examples/condo_selection.py build --output selection
 ```
 
-The first result separates annual condominium deed coverage from mortgage matches among uniquely linked sales. The second compares linked and unlinked condominium records. Read the output denominators before comparing shares. A blank financing flag is not a cash purchase; a mortgage match is not verified purchase finance. Neither table is an appreciation index.
+These commands reproduce data release 1.0. For the 1.1.0 coverage figures (89.4% of eligible condominium sales in 2021, for example), replace build/links.csv.gz with the 1.1.0 file of the same name from the record before running the first example. The second example checks the 1.0 counts and runs only with the 1.0 links file.
+
+The first result separates annual condominium deed coverage from mortgage matches among linked sales. The second compares linked and unlinked condominium records. Read the output denominators before comparing shares. A blank financing flag is not a cash purchase; a mortgage match is not verified purchase finance. Neither table is an appreciation index.
 
 If you try it, email loschi.pablo@gmail.com with your operating system, Python version, release used, command and whether the result reproduced. An error message without names or property addresses is enough. A useful next test is whether the documentation lets you make a borough comparison without help. External users have not yet validated this release; an invitation is not a completed use report.
