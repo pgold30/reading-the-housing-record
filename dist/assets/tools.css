@@ -146,3 +146,5 @@ figure.chart svg { min-width: 0; }
 
 .press-feature{grid-column:1/-1;align-self:start;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:26px 28px;background:var(--white);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:6px}.press-feature-copy{min-width:0}.press-feature .eyebrow{margin-bottom:8px}.press-feature h2{font-size:clamp(1.3rem,2.2vw,1.65rem);margin-bottom:10px}.press-feature h2 a{text-decoration:none}.press-feature h2 a:hover{text-decoration:underline}.press-feature p:last-child{margin-bottom:0;max-width:75ch;color:var(--muted)}.press-feature .tool-button{flex:none;white-space:nowrap}
 @media(max-width:850px){.press-feature{flex-direction:column;align-items:flex-start;gap:18px;padding:22px}}
+
+.press-media { padding-block: 16px 48px; }
