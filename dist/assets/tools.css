@@ -25,7 +25,7 @@ h1, h2, h3, p, li, dt, dd, a { overflow-wrap: break-word; }
 .tool-table { table-layout: fixed; }
 .tool-table th { white-space: normal; overflow-wrap: anywhere; }
 .tool-table td { overflow-wrap: anywhere; }
-.chart-card > div[id^="chart-"] { overflow: visible; }
+.chart-card > div[id^="chart-"] { overflow: visible; min-height: 358px; }
 .chart-card svg { width: 100%; max-height: none; min-width: 0; }
 figure.chart svg { min-width: 0; }
 .story-table-wrap, details.data-table, .table-scroll { max-width: 100%; border-radius: 6px; }
