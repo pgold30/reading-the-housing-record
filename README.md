@@ -113,3 +113,7 @@ Changing the population changes the access measure only; instrument parameters a
 The current tax-story downloads use preprint v3.0 and replication v2.0. The original graphics ZIP remains an archive; the dated `housing-stories-graphics-20261014.zip` is the current Press download. The corresponding correction is recorded at `/updates/#2026-10-14-model-and-tax-story`. Manuscript PDFs and archived replication outputs were preserved.
 
 The Wedge primary link and benchmark figure use the verified 14 October v6.4 release (Zenodo 23362696). The v6.1 PDF and figure remain available at their original paths. The explorer shows default-policy scenarios; it does not mix in the separately tuned access-target settings of v6.4 Tables 4–5.
+
+## Condominium unit-lot correction, 21 October 2026
+
+The deposited 1.1.0 linker limited condominium unit lots to 1001–1999. The official PLUTO range is 1001–6999. The former Bronx public-record-gap interpretation is withdrawn at its original story URL. Until corrected outputs are checked and released, the explorer withholds condo and combined-property link/financing fields, retaining raw counts and price medians. Blank link fields in downloads carry `linkage_status=under_review`. House and co-op fields are unchanged. Original aggregates are archived under `assets/explore/archive/`; original paper PDFs and dated chart archives remain available. The current press pack omits condo linkage graphics. Candidate expanded-range counts are not a document-validated accuracy measure and are not published in this correction.

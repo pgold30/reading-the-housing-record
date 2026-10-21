@@ -403,3 +403,6 @@ figure.chart:has(svg) { max-width: 100%; overflow-x: auto; }
 .reader-feature img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
 .download-note { max-width: 800px; margin: 13px 0 0; color: var(--muted); font-size: .85rem; }
 @media(max-width:850px) { .reader-feature-grid { grid-template-columns: minmax(0,1fr); gap: 20px; } .reader-feature img { max-width: 620px; } }
+
+/* Dated substantive correction, in normal document flow. */
+.research-correction{box-sizing:border-box;margin-block:1.25rem;padding:1rem 1.25rem;border:1px solid var(--line,#c5d3db);border-inline-start:4px solid #a46a16;background:var(--white,#fff);overflow-wrap:anywhere}.research-correction strong{font-size:1rem}.research-correction p{font-size:1rem;line-height:1.6;margin:.45rem 0 0;max-width:90ch}.research-correction h2{font-size:1.5rem;line-height:1.3;text-align:start}

@@ -3,12 +3,13 @@ const dims = ['borough','year','property','band'];
 const defaults = {borough:'all',year:'all',property:'house',band:'all'};
 const number = new Intl.NumberFormat('en-US');
 const dollars = new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
-const percent = (a,b) => b ? (100*a/b).toFixed(1)+'%' : 'Not available';
+const count = v => v === null ? 'Under review' : number.format(v);
+const percent = (a,b) => a === null ? 'Under review' : b ? (100*a/b).toFixed(1)+'%' : 'Not available';
 const empty = {n:0,eligible:0,unique:0,none:0,ambiguous:0,measured:0,mortgage:0,median:null};
 let dataset, lookup, selection, series;
 const charts = [['n','Recorded transactions','Recorded transactions'],['median','Median recorded price','US dollars'],['coverage','Unique deed coverage','Percent of eligible records']];
 const key = r => dims.map(d=>r[d]).join('|');
-function value(row,metric){return metric==='coverage' ? (row.eligible ? 100*row.unique/row.eligible : null) : row[metric];}
+function value(row,metric){return metric==='coverage' ? (row.unique === null ? null : row.eligible ? 100*row.unique/row.eligible : null) : row[metric];}
 function format(v,metric){return v===null ? 'Not available' : metric==='median' ? dollars.format(v) : metric==='coverage' ? v.toFixed(1)+'%' : number.format(v);}
 function node(tag,attrs={},text){const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;return n;}
 function draw(metric,title,unit){
@@ -16,7 +17,7 @@ function draw(metric,title,unit){
   const width=Math.max(220,Math.round(container.clientWidth||900));
   const small=width<600, left=small?62:90, right=20, plot=width-left-right;
   const filterText=document.querySelector('#selection-label').textContent;
-  const footer=[filterText,'NYC Housing Data · DOF / ACRIS · frozen extract 26 Sep 2026','Recorded prices describe the transaction mix; not a price index.'];
+  const footer=[filterText,...(metric==='coverage'&&['condo','all'].includes(selection.property)?['Condominium linkage under review; figures withheld.']:[]),'NYC Housing Data · DOF / ACRIS · frozen extract 26 Sep 2026','Recorded prices describe the transaction mix; not a price index.'];
   const lines=[];
   for(const text of footer){let line='';for(const word of text.split(' ')){if(line.length+word.length+1>Math.max(24,Math.floor((width-24)/6))){lines.push(line);line=word;}else line+=(line?' ':'')+word;}if(line)lines.push(line);}
   const height=310+lines.length*16;
@@ -36,7 +37,7 @@ function draw(metric,title,unit){
   container.replaceChildren(svg);
 }
 function download(text,type,name){const u=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
-function csv(metric){const cols=['year','recorded_transactions','median_recorded_price_usd','eligible_for_deed_link','unique_deed_links','unmatched_deed_links','ambiguous_deed_links','mortgage_measurement_records','mortgage_matches','unique_deed_coverage_pct','mortgage_match_pct','borough_filter','property_filter','price_band_filter','data_version','source_snapshot'];const rows=series.map(r=>[r.year,r.n,r.median??'',r.eligible,r.unique,r.none,r.ambiguous,r.measured,r.mortgage,r.eligible?(100*r.unique/r.eligible).toFixed(4):'',r.measured?(100*r.mortgage/r.measured).toFixed(4):'',selection.borough,selection.property,selection.band,dataset.meta.data_version,dataset.meta.retrieved]);download([cols,...rows].map(r=>r.join(',')).join('\r\n')+'\r\n','text/csv;charset=utf-8','nyc-housing-'+metric+'.csv');}
+function csv(metric){const cols=['year','recorded_transactions','median_recorded_price_usd','eligible_for_deed_link','unique_deed_links','unmatched_deed_links','ambiguous_deed_links','mortgage_measurement_records','mortgage_matches','unique_deed_coverage_pct','mortgage_match_pct','borough_filter','property_filter','price_band_filter','data_version','source_snapshot','linkage_status'];const rows=series.map(r=>[r.year,r.n,r.median??'',r.eligible,r.unique,r.none,r.ambiguous,r.measured,r.mortgage,r.unique!==null&&r.eligible?(100*r.unique/r.eligible).toFixed(4):'',r.measured?(100*r.mortgage/r.measured).toFixed(4):'',selection.borough,selection.property,selection.band,dataset.meta.data_version,dataset.meta.retrieved,r.unique===null?'under_review':'published_v1.1.0']);download([cols,...rows].map(r=>r.join(',')).join('\r\n')+'\r\n','text/csv;charset=utf-8','nyc-housing-'+metric+'.csv');}
 function render(){
   selection=Object.fromEntries(dims.map(d=>[d,form.elements[d].value]));
   const q=new URLSearchParams();for(const d of dims)if(selection[d]!==defaults[d])q.set(d,selection[d]);history.replaceState(null,'',location.pathname+(q.size?'?'+q:''));
@@ -46,14 +47,14 @@ function render(){
   document.querySelector('#metric-price').textContent=r.median===null?'Not available':dollars.format(r.median);
   document.querySelector('#metric-coverage').textContent=percent(r.unique,r.eligible);
   document.querySelector('#metric-mortgage').textContent=percent(r.mortgage,r.measured);
-  document.querySelector('#coverage-denominator').textContent=number.format(r.unique)+' unique links / '+number.format(r.eligible)+' eligible records';
-  document.querySelector('#mortgage-denominator').textContent=number.format(r.mortgage)+' matches / '+number.format(r.measured)+' records with a financing flag';
+  document.querySelector('#coverage-denominator').textContent=r.unique===null?'Condominium deed links are being rechecked.':count(r.unique)+' unique links / '+number.format(r.eligible)+' eligible records';
+  document.querySelector('#mortgage-denominator').textContent=r.mortgage===null?'Condominium mortgage matches are being rechecked.':count(r.mortgage)+' matches / '+count(r.measured)+' records with a financing flag';
   document.querySelector('#record-count-note').textContent=r.n===0?'No positive-price records in this selection.':r.n<20?'Small selection: fewer than 20 recorded transactions. Treat the median cautiously.':'Counts include nominal, related and other transfers; no market-sale screen is applied.';
   const years=selection.year==='all'?dataset.meta.years.map(String):[selection.year];
   series=years.map(year=>({...empty,...selection,year,...lookup.get(key({...selection,year}))}));
   const cellLabels=['Year','Recorded transactions','Median price','Deed coverage','Eligible records','Mortgage matches','Financing flag records'];
-  const tbody=document.querySelector('#data-rows');tbody.replaceChildren();for(const row of series){let cellIndex=0;const tr=document.createElement('tr');for(const v of [row.year,number.format(row.n),format(row.median,'median'),percent(row.unique,row.eligible),number.format(row.eligible),percent(row.mortgage,row.measured),number.format(row.measured)]){const td=document.createElement('td');td.dataset.label=cellLabels[cellIndex++];td.textContent=v;tr.append(td);}tbody.append(tr);}
-  charts.forEach(c=>draw(...c));document.querySelector('#explore-status').textContent='Showing '+number.format(r.n)+' recorded transactions. The table and downloads reflect these filters.';
+  const tbody=document.querySelector('#data-rows');tbody.replaceChildren();for(const row of series){let cellIndex=0;const tr=document.createElement('tr');for(const v of [row.year,number.format(row.n),format(row.median,'median'),percent(row.unique,row.eligible),number.format(row.eligible),percent(row.mortgage,row.measured),count(row.measured)]){const td=document.createElement('td');td.dataset.label=cellLabels[cellIndex++];td.textContent=v;tr.append(td);}tbody.append(tr);}
+  charts.forEach(c=>draw(...c));document.querySelector('#explore-status').textContent='Showing '+number.format(r.n)+' recorded transactions.' + (['condo','all'].includes(selection.property) ? ' Condominium linkage and mortgage figures are under review.' : ' The table and downloads reflect these filters.');
 }
 try{
   const response=await fetch('../assets/explore/aggregates.json');if(!response.ok)throw Error('Data unavailable');dataset=await response.json();if(!Array.isArray(dataset.rows)||!dataset.meta?.years)throw Error('Invalid data');lookup=new Map(dataset.rows.map(r=>[key(r),r]));
