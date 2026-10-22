@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nychousingdata.com/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/data/</loc>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_preprint_v3.1.pdf</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/who-gets-the-house/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v3_8.pdf</loc>
@@ -98,34 +98,37 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/cash-buyer-discount/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/family-sale-price/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/foreclosure-deed-price/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/missing-condo-sales/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/mortgage-recording-tax/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/nyc-million-dollar-tax-line/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/updates/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
   </url>
-<url><loc>https://nychousingdata.com/stories/first-home-tax-fixes/</loc><lastmod>2026-10-18</lastmod></url></urlset>
+<url><loc>https://nychousingdata.com/stories/first-home-tax-fixes/</loc><lastmod>2026-10-22</lastmod></url><url><loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_supplement_v3_3.pdf</loc><lastmod>2026-10-22</lastmod></url>
+<url><loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_3.pdf</loc><lastmod>2026-10-22</lastmod></url>
+<url><loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v3_10.pdf</loc><lastmod>2026-10-22</lastmod></url>
+</urlset>

@@ -1,0 +1,136 @@
+{
+ "table4_burden_on_observed_loans": {
+  "houses": {
+   "loans": 125023,
+   "ltv_mean": 0.7448298792546946,
+   "ltv_median": 0.7741935483870968,
+   "mrt_share_mean": 0.014067492223177176,
+   "mrt_share_median": 0.0144375,
+   "mrt_share_p10": 0.009146500721931195,
+   "mrt_share_p90": 0.018607528756476685
+  },
+  "condominiums": {
+   "loans": 49709,
+   "ltv_mean": 0.6771984898754624,
+   "ltv_median": 0.7365579723957548,
+   "mrt_share_mean": 0.012782779239347286,
+   "mrt_share_median": 0.013588235294117647,
+   "mrt_share_p10": 0.007826054932268704,
+   "mrt_share_p90": 0.015930206896551724
+  }
+ },
+ "sample": {
+  "purchases": 253288,
+  "financed": 178593,
+  "financed_loan_observed": 174732,
+  "financed_house_loan_observed": 125023,
+  "financed_condo_loan_observed": 49709,
+  "financed_house_imputed": 3470,
+  "financed_condo_imputed": 391,
+  "years": 10
+ },
+ "revenue_per_year": {
+  "borrower_mrt_observed_house_loans_only": 161177272.07802325,
+  "borrower_mrt_observed_condo_loans": 82469483.6553435,
+  "borrower_mrt_observed_loans": 243646755.73336673,
+  "borrower_mrt_imputed_houses": 3382879.06490961,
+  "borrower_mrt_imputed_condos": 747826.7272071287,
+  "borrower_mrt_with_imputation": 247777461.52548346,
+  "mta_253_2_component_with_imputation": 39039379.79041829
+ },
+ "mta_only_flat_rate": 0.0013736610789577346,
+ "schedules": {
+  "A_flat": {
+   "desc": "tau * P",
+   "tau_percent": 0.8718433975327695,
+   "revenue_check_per_year": 247777461.52548352,
+   "financed_share_paying_less": 0.9107747784067685,
+   "mean_net_change_by_band": {
+    "$300k-500k": {
+     "cash": 3548.8551990848,
+     "financed": -2631.7630975087586
+    },
+    "$500k-1M": {
+     "cash": 6490.725838461927,
+     "financed": -4054.9024184082655
+    },
+    "$1M-2M": {
+     "cash": 12405.321179348206,
+     "financed": -5197.937731789644
+    },
+    "$2M-6M": {
+     "cash": 28221.259820657295,
+     "financed": -9888.686190180679
+    }
+   },
+   "mean_net_change": {
+    "financed": -4651.061237308292,
+    "cash": 11120.51649447218
+   }
+  },
+  "B_above_500k": {
+   "desc": "tau * max(P - 500k, 0)",
+   "tau_percent": 1.5454743569018068,
+   "revenue_check_per_year": 247777461.52548346,
+   "financed_share_paying_less": 0.9007463898361078,
+   "mean_net_change_by_band": {
+    "$300k-500k": {
+     "cash": 0.0,
+     "financed": -6305.463560526931
+    },
+    "$500k-1M": {
+     "cash": 3778.421996129019,
+     "financed": -6725.042400746443
+    },
+    "$1M-2M": {
+     "cash": 14262.937284836094,
+     "financed": -3607.148229100362
+    },
+    "$2M-6M": {
+     "cash": 42299.08192921516,
+     "financed": 2997.4783513280377
+    }
+   },
+   "mean_net_change": {
+    "financed": -5114.414342589992,
+    "cash": 12228.376741229993
+   }
+  },
+  "C_two_bracket": {
+   "desc": "tau on (500k,2M], 2*tau above 2M",
+   "tau_percent": 1.2964385819839144,
+   "revenue_check_per_year": 247777461.52548346,
+   "financed_share_paying_less": 0.9117938553022795,
+   "mean_net_change_by_band": {
+    "$300k-500k": {
+     "cash": 0.0,
+     "financed": -6305.463560526931
+    },
+    "$500k-1M": {
+     "cash": 3169.571874759723,
+     "financed": -7349.480151219294
+    },
+    "$1M-2M": {
+     "cash": 11964.625686541403,
+     "financed": -5806.816246852231
+    },
+    "$2M-6M": {
+     "cash": 51519.54445518561,
+     "financed": 10365.078470324464
+    }
+   },
+   "mean_net_change": {
+    "financed": -5406.865748961962,
+    "cash": 12927.61730643769
+   }
+  }
+ },
+ "by_property_type_flat_rate_percent": {
+  "condo": 0.6737252732471417,
+  "house": 1.0241397856986865
+ },
+ "by_property_type_above_500k_rate_percent": {
+  "condo": 1.0263977584505122,
+  "house": 2.0765348211157475
+ }
+}
