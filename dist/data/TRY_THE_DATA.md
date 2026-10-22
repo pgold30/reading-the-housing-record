@@ -1,17 +1,14 @@
 # Try the linked data
 
-Download nyc_linked_dataset_v1.0.zip and the unchanged examples archive linked on the record. Use Python 3.10 or newer; no extra packages or account are needed. From the folder holding both downloads, extract them into the same location:
+Download nyc_linked_dataset_v1_2_0.zip from the version 1.2.0 record at https://doi.org/10.5281/zenodo.23557585. Python 3.10 or newer is sufficient; no extra packages or registry account are needed.
 
 ```sh
-python3 -m zipfile -e nyc_linked_dataset_v1.0.zip .
-python3 -m zipfile -e nyc_linked_dataset_v1.0.1_examples.zip .
-cd nyc_linked_dataset_v1.0
+python3 -m zipfile -e nyc_linked_dataset_v1_2_0.zip .
+cd nyc_linked_dataset_v1_2_0
 python3 examples/recorded_mortgage_example.py build --output annual_condo_coverage.csv
 python3 examples/condo_selection.py build --output selection
 ```
 
-These commands reproduce data release 1.0. For the 1.1.0 coverage figures (89.4% of eligible condominium sales in 2021, for example), replace build/links.csv.gz with the 1.1.0 file of the same name from the record before running the first example. The second example checks the 1.0 counts and runs only with the 1.0 links file.
+In 2021, 16,736 of 17,734 eligible condominium sales link to a deed (94.4%). Of those links, 11,106 have a base-window mortgage match (66.4%). The second example compares linked and unlinked condominium records. Read the denominators before comparing shares: an unmeasured financing field is not a cash purchase, and a mortgage match is not verified purchase finance. These medians are not an appreciation index.
 
-The first result separates annual condominium deed coverage from mortgage matches among linked sales. The second compares linked and unlinked condominium records. Read the output denominators before comparing shares. A blank financing flag is not a cash purchase; a mortgage match is not verified purchase finance. Neither table is an appreciation index.
-
-If you try it, email loschi.pablo@gmail.com with your operating system, Python version, release used, command and whether the result reproduced. An error message without names or property addresses is enough. A useful next test is whether the documentation lets you make a borough comparison without help. External users have not yet validated this release; an invitation is not a completed use report.
+If you try the example, email loschi.pablo@gmail.com with the release, Python version, command and whether it reproduced. An error message without names or property addresses is enough. External users have not yet validated this release; an invitation is not a completed use report.

@@ -87,11 +87,11 @@ def build(source, archive=None):
     assert source_rows == 729047 and totals['n'] + excluded == source_rows
     condos = next(r for r in rows if r['borough'] == r['year'] == r['band'] == 'all' and r['property'] == 'condo')
     houses = next(r for r in rows if r['borough'] == r['year'] == r['band'] == 'all' and r['property'] == 'house')
-    assert condos['unique'] == 113340 and condos['none'] == 12758 and condos['ambiguous'] == 153
+    assert condos['unique'] == 121263 and condos['none'] == 4910 and condos['ambiguous'] == 78
     assert houses['unique'] == 183912 and houses['none'] == 5367
     return {'meta': {'dataset': 'NYC residential sales linked to ACRIS deeds and mortgages',
-                     'documentation_version': '1.1.0', 'data_version': '1.1',
-                     'source_url': 'https://doi.org/10.5281/zenodo.23414979',
+                     'documentation_version': '1.2.0', 'data_version': '1.2.0',
+                     'source_url': 'https://doi.org/10.5281/zenodo.23557585',
                      'retrieved': '2026-09-26', 'years': list(range(2016, 2026)),
                      'source_rows': source_rows, 'excluded_nonpositive': excluded,
                      'source_sha256': hashes, 'archive_verified': bool(archive),
@@ -108,7 +108,7 @@ def main():
     (out/'aggregates.json').write_text(json.dumps(result, separators=(',', ':'))+'\n')
     names = list(result['rows'][0])
     with (out/'aggregates.csv').open('w', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=names)
+        w = csv.DictWriter(f, fieldnames=names, lineterminator="\n")
         w.writeheader()
         w.writerows(result['rows'])
     print(json.dumps({'cells': len(result['rows']), 'meta': result['meta']}, indent=2))
