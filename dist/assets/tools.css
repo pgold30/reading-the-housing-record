@@ -13,7 +13,7 @@
 @media(max-width:560px){.press-resources{padding-top:24px}.press-sidebar{grid-template-columns:1fr}.press-download,.resource-panel{padding:20px}.resource-group summary{padding:16px 15px;gap:12px;font-size:.95rem}.resource-content{padding:0 15px 12px}.resource-table td{padding-left:12px}.file-links{gap:6px}.file-links a{padding:7px;font-size:.75rem}.resource-table th{font-size:.84rem}.press-hero{padding:30px 0 24px}.tool-section>.wrap>h2{margin-top:28px}}
 
 /* Fluid page shells and contained components, shared by every route. */
-.wrap, .header-inner, .story-text { min-width: 0; max-width: 1240px; }
+.wrap, .header-inner, .story-text { min-width: 0; max-width: 1440px; }
 .header-inner { flex-wrap: wrap; }
 .brand, .site-nav, main, section, aside, .press-resources > *, .story-feature > *, .story-card > * { min-width: 0; }
 img, video, svg { max-width: 100%; }
@@ -129,7 +129,7 @@ figure.chart svg { min-width: 0; }
 /* Full-width headings with centered introductions; reading text stays left aligned. */
 .section-head { display: block; text-align: center; margin-bottom: 30px; }
 .section-head > div { width: 100%; }
-.section-head .eyebrow { margin-bottom: 12px; color: var(--blue); }
+.section-head .eyebrow { max-width: none; margin-inline: auto; margin-bottom: 12px; color: var(--blue); }
 .section-head h2 { width: 100%; text-wrap: balance; }
 .section-head > p { max-width: 72ch; margin: 14px auto 0; }
 .home-intro, .article-hero, .tool-hero, .story-head, .stories-masthead, .stories-section-title { text-align: center; }
@@ -154,3 +154,45 @@ figure.chart svg { min-width: 0; }
 
 /* Compact dataset credit uses the section width and wraps naturally on phones. */
 .data-cite { max-width: none; width: 100%; font-size: .8rem; line-height: 1.6; }
+
+/* Shared responsive shell: align the header with content and keep navigation usable. */
+.header-inner { width: calc(100% - 2 * var(--page-gutter)); padding-inline: 0; align-items: center; }
+.site-nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+main [id] { scroll-margin-top: 100px; }
+.story-card h2, .story-card h3 { text-wrap: pretty; }
+.story-card-image { display: flex; align-items: center; background: #fff; }
+.story-card-image img { aspect-ratio: 12 / 7; max-height: 320px; object-fit: contain; }
+.story-feature-art img { margin-inline: auto; }
+.home-latest .section-head > p { margin-top: 12px; }
+button, select, summary { touch-action: manipulation; }
+button:disabled { cursor: not-allowed; opacity: .65; }
+@media(max-width:850px) {
+  .header-inner { gap: 10px 20px; }
+  .site-nav { gap: 4px 16px; }
+}
+@media(max-width:650px) {
+  .header-inner { flex-direction: column; align-items: flex-start; padding-block: 12px 6px; gap: 8px; }
+  .brand-mark, .brand-mark img { width: 34px; height: 34px; }
+  .site-nav { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); width: 100%; gap: 4px; font-size: .8rem; }
+  .site-nav a { white-space: normal; text-align: center; line-height: 1.25; padding: 6px 2px; }
+  main [id] { scroll-margin-top: 128px; }
+  .section, .note-section { padding-block: 36px; }
+  .paper-card { min-height: 0; }
+  .story-grid { margin-bottom: 36px; }
+  .story-feature { margin-bottom: 36px; }
+  .article-actions { width: 100%; }
+  .article-actions a { flex: 1 1 180px; }
+  .file-kind { margin-left: 8px; }
+  .story-text { margin-bottom: 36px; }
+  .chart-card > div[id^="chart-"] { min-height: 0; }
+  figure.chart:has(svg) { overflow-x: auto; }
+  figure.chart > svg { min-width: 560px; }
+  figure.chart:has(svg)::before { content: "Scroll sideways to read the chart →"; display: block; font: 500 .8rem/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; color: var(--muted); margin-bottom: 10px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .story-card:hover, .home-paths a:hover, .tool-button:hover, .article-actions a:hover { transform: none; }
+}
+
+@media(prefers-color-scheme:dark) {
+  .tool-button:not(.secondary), .tool-button:hover { color: var(--paper); }
+}

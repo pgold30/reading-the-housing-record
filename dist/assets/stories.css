@@ -48,10 +48,18 @@
 @media(max-width:560px) { .site-nav { justify-content:flex-start; }.stories-masthead { padding-top:38px; }.story-head { padding-top:32px; }.story-text { width:calc(100% - 2 * var(--page-gutter)); margin-top:30px; }.story-card { grid-template-columns:1fr; }.story-byline { gap:9px 15px; }.story-text > p { font-size:1.1rem; }.story-text > p:first-child { font-size:1.18rem; }.story-figure figcaption,.chart-downloads { padding-inline:14px; }.story-data { padding-inline:14px; }.story-head .breadcrumbs { margin-bottom:22px; } }
 
 /* Homepage: latest stories row (20 Oct 2026) */
-.story-grid.home-latest-grid { grid-template-columns: repeat(3,minmax(0,1fr)); margin-bottom: 0; }
+.story-grid.home-latest-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); margin-bottom: 0; }
+.home-latest-grid > .story-card { display: flex; flex-direction: column; }
+.story-card-copy { display: flex; flex-direction: column; flex: 1; }
+.story-card .story-card-meta { margin-top: auto; padding-top: 12px; }
 .story-card h3 { font-size: 1.3rem; line-height: 1.25; margin: 0 0 8px; }
 .story-card h3 a { color: var(--ink); text-decoration: none; }
 .story-card h3 a:hover { text-decoration: underline; }
-.home-latest-grid .story-card-image img { aspect-ratio: 12 / 7; object-fit: cover; object-position: top; }
+.home-latest-grid .story-card-image img { aspect-ratio: 12 / 7; max-height: 320px; object-fit: contain; object-position: center; }
 .data-cite { margin-top: 16px; max-width: 72ch; }
-@media(max-width:1000px) { .story-grid.home-latest-grid { grid-template-columns: 1fr; } }
+/* An odd final story fills the row instead of leaving an empty card slot. */
+@media(min-width:851px) {
+  .story-grid:not(.home-latest-grid) > .story-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .story-grid:not(.home-latest-grid) > .story-card:last-child:nth-child(odd):has(> .story-card-image) { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; }
+}
+@media(max-width:560px) { .story-grid.home-latest-grid { grid-template-columns: minmax(0,1fr); } }

@@ -117,3 +117,11 @@ The Wedge primary link and benchmark figure use the verified 14 October v6.4 rel
 ## Condominium unit-lot correction, 21 October 2026
 
 The deposited 1.1.0 linker limited condominium unit lots to 1001–1999. The official PLUTO range is 1001–6999. The former Bronx public-record-gap interpretation is withdrawn at its original story URL. Until corrected outputs are checked and released, the explorer withholds condo and combined-property link/financing fields, retaining raw counts and price medians. Blank link fields in downloads carry `linkage_status=under_review`. House and co-op fields are unchanged. Original aggregates are archived under `assets/explore/archive/`; original paper PDFs and dated chart archives remain available. The current press pack omits condo linkage graphics. Candidate expanded-range counts are not a document-validated accuracy measure and are not published in this correction.
+
+### Responsive layouts (22 October 2026)
+
+The homepage story row uses `auto-fit`, so removing a card does not leave an empty third column. On desktop, an odd final card in the Stories list spans the row; cards with images use a side-by-side layout there. Shared shells use a 1440px maximum and align the navigation with page content. Article prose keeps its narrower reading width.
+
+On phones, the five navigation links occupy one grid row with 44px touch targets. Research SVGs retain a readable width inside a keyboard-focusable scrolling figure with a visible sideways-scroll hint. Explorer and tax tables retain their labelled mobile layouts. CSS changes must update the stylesheet query revision in every HTML route and mirror changes to `dist/`.
+
+The 22 October check covered all 19 routes at 320, 375, 768, 1024, 1440 and 1920px. It also exercised explorer borough/property/year filters and the tax-threshold selector. Verification evidence is saved outside the public site in `paper_improvements_2026-10-22/website_responsive/`.
