@@ -151,3 +151,6 @@ figure.chart svg { min-width: 0; }
 .paper-video-intro h2 { font-size: clamp(1.55rem,2.5vw,2rem); text-wrap: balance; margin-bottom: 14px; }
 .home-intro-video { padding-block: 24px 0; }
 .home-intro-video .paper-video-intro { margin-bottom: 0; }
+
+/* Compact dataset credit uses the section width and wraps naturally on phones. */
+.data-cite { max-width: none; width: 100%; font-size: .8rem; line-height: 1.6; }
