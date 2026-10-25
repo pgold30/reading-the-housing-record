@@ -125,3 +125,8 @@ The homepage story row uses `auto-fit`, so removing a card does not leave an emp
 On phones, the five navigation links occupy one grid row with 44px touch targets. Research SVGs retain a readable width inside a keyboard-focusable scrolling figure with a visible sideways-scroll hint. Explorer and tax tables retain their labelled mobile layouts. CSS changes must update the stylesheet query revision in every HTML route and mirror changes to `dist/`.
 
 The 22 October check covered all 19 routes at 320, 375, 768, 1024, 1440 and 1920px. It also exercised explorer borough/property/year filters and the tax-threshold selector. Verification evidence is saved outside the public site in `paper_improvements_2026-10-22/website_responsive/`.
+
+
+### Paper releases, 25 October 2026
+
+Current Zenodo records are House 3.10 (23638520), Tax 3.3 (23638571) and full Deed 1.0.12 (23638576). The manuscript downloads match those records byte for byte. House’s 18 follow-up financing cases remain unresolved. The Deed page and story distinguish fixed-label chart bands from model-dependent classification-rate ranges and the 40 human-reference readings from historical AI agreement. The family-story citywide surname/address counts remain explicitly dated to dataset 1.1.0; no updated count is inferred from improved linkage. Baseline archives and earlier download URLs are retained. Journal files were not replaced.
