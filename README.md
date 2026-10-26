@@ -140,3 +140,8 @@ The benchmark-audit section is the single starting point for the note PDF and it
 ### Offline examples, 26 October 2026
 
 `reproduce/` is the shared starting point for version-pinned Dataset 1.2.0, House 3.10, Tax 3.3 and Deed 1.0.12 examples. ZIPs and checksums live in `assets/reproduce/`. Each includes frozen reduced inputs and a scope-specific runner; it is not labelled a full replication. The Dataset example uses standard Python only. Deed additionally supports rebuilding its pair inputs from the hashed public baseline parquet. Keep the original public releases and paper files unchanged. Outside-user testing remains pending until someone outside the project actually runs the example. Private access logs and case IDs are not website assets.
+
+
+### Paper releases, 26 October 2026
+
+Current Zenodo records are House 3.11 (23666455), Tax 3.4 (23666456) and Deed 1.0.13 (23666457), text-only updates of the 25 October releases. The manuscript downloads match those records byte for byte, and earlier PDFs stay at their old URLs. Story edits: version links, a sentence fragment, a duplicated paragraph and some repeated caveats. Every story number was checked against the current papers.
