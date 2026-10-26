@@ -130,3 +130,8 @@ The 22 October check covered all 19 routes at 320, 375, 768, 1024, 1440 and 1920
 ### Paper releases, 25 October 2026
 
 Current Zenodo records are House 3.10 (23638520), Tax 3.3 (23638571) and full Deed 1.0.12 (23638576). The manuscript downloads match those records byte for byte. House’s 18 follow-up financing cases remain unresolved. The Deed page and story distinguish fixed-label chart bands from model-dependent classification-rate ranges and the 40 human-reference readings from historical AI agreement. The family-story citywide surname/address counts remain explicitly dated to dataset 1.1.0; no updated count is inferred from improved linkage. Baseline archives and earlier download URLs are retained. Journal files were not replaced.
+
+
+### Methods links and video placement, 26 October 2026
+
+The benchmark-audit section is the single starting point for the note PDF and its latest archive, Zenodo 23438822 (release 1.0.3). That archive retains the unchanged v1.0.2 PDF and adds PolicySpace2 audit files; do not relabel the PDF v1.0.3. The merged v7.0 paper incorporates the earlier note. The homepage points to this section. Its earlier narrated video now follows the papers, retaining its original anchor and media files, with a link to corrected dataset 1.2.0. The resolved condominium banner is removed from Updates while its historical anchor remains attached to the correction entry.
