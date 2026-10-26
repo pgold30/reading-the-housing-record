@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/data/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1.0.3.pdf</loc>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_preprint_v3.1.pdf</loc>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/Foreclosure_Deeds_That_Look_Like_Sales_note_v1.0.9.pdf</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/who-gets-the-house/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v3_8.pdf</loc>
@@ -143,5 +143,9 @@
   <url>
     <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1_0_12.pdf</loc>
     <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/reproduce/</loc>
+    <lastmod>2026-10-26</lastmod>
   </url>
 </urlset>

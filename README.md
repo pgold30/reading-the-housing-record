@@ -135,3 +135,8 @@ Current Zenodo records are House 3.10 (23638520), Tax 3.3 (23638571) and full De
 ### Methods links and video placement, 26 October 2026
 
 The benchmark-audit section is the single starting point for the note PDF and its latest archive, Zenodo 23438822 (release 1.0.3). That archive retains the unchanged v1.0.2 PDF and adds PolicySpace2 audit files; do not relabel the PDF v1.0.3. The merged v7.0 paper incorporates the earlier note. The homepage points to this section. Its earlier narrated video now follows the papers, retaining its original anchor and media files, with a link to corrected dataset 1.2.0. The resolved condominium banner is removed from Updates while its historical anchor remains attached to the correction entry.
+
+
+### Offline examples, 26 October 2026
+
+`reproduce/` is the shared starting point for version-pinned Dataset 1.2.0, House 3.10, Tax 3.3 and Deed 1.0.12 examples. ZIPs and checksums live in `assets/reproduce/`. Each includes frozen reduced inputs and a scope-specific runner; it is not labelled a full replication. The Dataset example uses standard Python only. Deed additionally supports rebuilding its pair inputs from the hashed public baseline parquet. Keep the original public releases and paper files unchanged. Outside-user testing remains pending until someone outside the project actually runs the example. Private access logs and case IDs are not website assets.
