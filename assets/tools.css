@@ -196,3 +196,10 @@ button:disabled { cursor: not-allowed; opacity: .65; }
 @media(prefers-color-scheme:dark) {
   .tool-button:not(.secondary), .tool-button:hover { color: var(--paper); }
 }
+
+
+/* 28 October: visible keyboard focus and comfortable secondary touch targets. */
+summary:focus-visible, input:focus-visible, [tabindex="0"]:focus-visible { outline: 3px solid #e29833; outline-offset: 4px; }
+.chart-actions button, .chart-downloads a, .page-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+.wedge-actions a, .resource-pills a { min-height: 44px; display: inline-flex; align-items: center; }
+.cite-box pre { tab-size: 2; }

@@ -2,19 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nychousingdata.com/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/data/</loc>
     <lastmod>2026-10-26</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1.0.3.pdf</loc>
-    <lastmod>2026-10-14</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1_1_0.pdf</loc>
-    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/explore/</loc>
@@ -26,67 +18,19 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/</loc>
-    <lastmod>2026-10-26</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/Auditing_policy_dependent_benchmarks_v1.0.1.pdf</loc>
-    <lastmod>2026-10-14</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/Auditing_policy_dependent_benchmarks_v1_0_2.pdf</loc>
-    <lastmod>2026-10-16</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/When_the_Benchmark_Moves_with_the_Policy_v7_0.pdf</loc>
-    <lastmod>2026-10-16</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/execution_certainty_wedge_v6_5.pdf</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/</loc>
-    <lastmod>2026-10-27</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_preprint_v3.1.pdf</loc>
-    <lastmod>2026-10-14</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_supplement_v3_2.pdf</loc>
-    <lastmod>2026-10-16</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_2.pdf</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/</loc>
-    <lastmod>2026-10-26</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/Foreclosure_Deeds_That_Look_Like_Sales_note_v1.0.9.pdf</loc>
-    <lastmod>2026-10-14</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1.0.10.pdf</loc>
-    <lastmod>2026-10-14</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1_0_11.pdf</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/who-gets-the-house/</loc>
-    <lastmod>2026-10-26</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v3_8.pdf</loc>
-    <lastmod>2026-10-14</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v3_9.pdf</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/press/</loc>
@@ -122,30 +66,30 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/updates/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/first-home-tax-fixes/</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
   <url>
-    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_supplement_v3_3.pdf</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_3.pdf</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v3_10.pdf</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1_0_12.pdf</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
     <loc>https://nychousingdata.com/reproduce/</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1_2_0.pdf</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/When_the_Benchmark_Moves_with_the_Policy_v7_1.pdf</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/Auditing_policy_dependent_benchmarks_v1_0_2.pdf</loc>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v3_11.pdf</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
   <url>
@@ -153,15 +97,15 @@
     <lastmod>2026-10-27</lastmod>
   </url>
   <url>
-    <loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v3_11.pdf</loc>
-    <lastmod>2026-10-26</lastmod>
+    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_supplement_v3_6.pdf</loc>
+    <lastmod>2026-10-27</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1_0_13.pdf</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
   <url>
-    <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/When_the_Benchmark_Moves_with_the_Policy_v7_1.pdf</loc>
-    <lastmod>2026-10-26</lastmod>
+    <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/Foreclosure_Deeds_That_Look_Like_Sales_note_v1.0.9.pdf</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
 </urlset>

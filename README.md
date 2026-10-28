@@ -9,6 +9,10 @@ Research website for Pablo Loschi's work on New York City housing records:
 
 Live site: https://nychousingdata.com/
 
+Current releases checked 28 October 2026: Dataset 1.2.0 (23557585), House 3.11 (23666455), Tax 3.6 (23685888), Deed 1.0.13 (23666457), and Methods replication 7.1.1 (23734795), with its manuscript unchanged at 7.1. Historical entries below describe earlier versions.
+
+The Methods replay and its offline verifier are linked from the paper and `reproduce/`. The three-year LivSim comparison is complete; PolicySpace2’s full ten-year model was not rerun. Older empirical quick-start ZIPs retain their source-version labels and are not relabelled as new analyses. Paper downloads precede the long summaries. Secondary controls and chart-download links have 44px touch targets; keep keyboard focus visible on scrollable chart regions and disclosure controls.
+
 Static HTML and CSS, no build step. Numbers on the site come from the linked public paper releases. Release identifiers remain in citation metadata and download filenames; page summaries omit revision logs.
 
 ## Housing Stories
@@ -145,3 +149,5 @@ The benchmark-audit section is the single starting point for the note PDF and it
 ### Paper releases, 26 October 2026
 
 Current Zenodo records are House 3.11 (23666455), Tax 3.4 (23666456) and Deed 1.0.13 (23666457), text-only updates of the 25 October releases. The manuscript downloads match those records byte for byte, and earlier PDFs stay at their old URLs. Story edits: version links, a sentence fragment, a duplicated paragraph and some repeated caveats. Every story number was checked against the current papers.
+
+The sitemap lists current manuscript and data-note PDFs, not every archived version. Keep historical files accessible for citations without promoting superseded PDFs in the sitemap.
