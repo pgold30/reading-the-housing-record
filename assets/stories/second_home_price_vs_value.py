@@ -21,7 +21,7 @@ from matplotlib.ticker import FuncFormatter
 
 OUT = pathlib.Path(__file__).resolve().parent
 D = pathlib.Path(sys.argv[1])
-BLUE, INK, GRID, LIGHT = "#145f83", "#536774", "#d9e1e6", "#9fbfd0"
+BLUE, INK, GRID, LIGHT = "#145f83", "#536774", "#d9e1e6", "#7f9fb0"
 
 
 def load_roll():
@@ -94,13 +94,14 @@ fig, ax = plt.subplots(figsize=(9, 5.2), dpi=100)
 xs = np.arange(len(rows))
 for i, r in enumerate(rows):
     color = BLUE if r[0] >= 1_000_000 else LIGHT
-    ax.plot([i, i], [r[3], r[5]], color=color, lw=6, solid_capstyle="butt", alpha=0.45)
+    ax.plot([i, i], [r[3], r[5]], color=color, lw=7, solid_capstyle="butt", alpha=0.35)
     ax.scatter([i], [r[4]], s=80, color=color, zorder=3)
 ax.axvline(3.5, color=INK, lw=1.2, ls=(0, (3, 3)))
 ax.text(3.45, 8_350_000, "Owes nothing", ha="right", va="top", color=INK, fontsize=12)
 ax.text(3.55, 8_350_000, "Owes $40,000 a year or more", ha="left", va="top", color="#1d2b33", fontsize=12)
+ax.text(7.4, 500_000, "Dot: median sale. Bar: middle half of sales.", ha="right", va="bottom", color=INK, fontsize=11)
 ax.set_xticks(xs)
-ax.set_xticklabels([f"${r[0]/1e6:.2f}M" if r[0] >= 1e6 else f"${r[0]/1e3:.0f}k" for r in rows], rotation=0, fontsize=11)
+ax.set_xticklabels([(f"${r[0]/1e6:g}M" if r[0] % 100_000 == 0 else f"${r[0]/1e6:.2f}M") if r[0] >= 1e6 else f"${r[0]/1e3:.0f}k" for r in rows], rotation=0, fontsize=11)
 ax.set_ylim(0, 8_500_000)
 ax.yaxis.set_major_formatter(FuncFormatter(lambda y, _: f"${y/1e6:.0f}M" if y else "$0"))
 ax.set_xlabel("City value of the unit, 2026-27 (bands of $50,000, starting at)", color=INK, fontsize=12, labelpad=8)
