@@ -1,0 +1,23 @@
+{
+ "matched_sales": 11794,
+ "below_line_900k_1m": {
+  "n": 404,
+  "median_price": 4500000.0
+ },
+ "above_line_1m_1_1m": {
+  "n": 311,
+  "median_price": 4797525.0
+ },
+ "sales_4_5m_5_5m_median_dof_value": 939426.0,
+ "sales_4_5m_5_5m_n": 595,
+ "ratio_quartiles": [
+  3.459785619500128,
+  4.216335801879257,
+  5.285390634696987
+ ],
+ "valued_ge_1m_n": 1707,
+ "valued_ge_1m_sold_under_5m": 432,
+ "valued_ge_1m_sold_under_5m_manhattan_share": 0.2284105131414268,
+ "valued_ge_1m_sold_under_5m_brooklyn_share": 0.6146788990825688,
+ "valued_under_1m_sold_ge_5m": 439
+}
