@@ -1,0 +1,46 @@
+{
+ "houses": {
+  "roll_ge_5m": 6075,
+  "roll_ge_5m_by_borough": {
+   "3": 3050,
+   "1": 2893,
+   "2": 77,
+   "4": 32,
+   "5": 23
+  },
+  "roll_5_0_to_5_5m": 1178,
+  "matched_sales": 3291,
+  "valued_4_5_to_5_0m": {
+   "n": 113,
+   "median_price": 4385000.0
+  },
+  "valued_5_0_to_5_5m": {
+   "n": 88,
+   "median_price": 4812500.0
+  },
+  "sold_4_5_to_5_5m_median_value": 4990000.0,
+  "price_to_value_quartiles": [
+   0.71006054702984,
+   0.8858434586041255,
+   1.0815291136958796
+  ]
+ },
+ "bulk_condo_rows": {
+  "condo_sales_ge_4m": 3758,
+  "repeated_block_date_price_rows": 983,
+  "of_which_no_single_unit_deed": 979,
+  "deals": 135,
+  "largest_deals_rows": [
+   61,
+   52,
+   49,
+   46,
+   43
+  ],
+  "matched_same_surname": 4,
+  "matched_legal_rule_amount": 5,
+  "matched_n": 2773,
+  "condo_rows_2023_2025_price_under_10k": 12322,
+  "condo_rows_2023_2025": 47216
+ }
+}
