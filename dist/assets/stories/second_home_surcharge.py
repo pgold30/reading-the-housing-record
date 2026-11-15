@@ -2,9 +2,8 @@
 
 Illustration for the story "New York's second-home tax starts at a cliff" (7 November 2026).
 Rate: 4% of the Department of Finance value once that value reaches $1 million, applied to the
-whole value, as in Greenberg Traurig's worked example (4% of $1 million = $40,000). The chart stops
-below $3 million, where the next band starts, because published guides do not settle how the
-higher bands apply. Writes second-home-surcharge.{svg,png,csv} next to this script.
+whole value, under Tax Law section 1353 and DOF's final rules. The chart stops below $3 million;
+the statutory 4% band includes exactly $3 million and the next rate starts above it. Writes second-home-surcharge.{svg,png,csv} next to this script.
 """
 import csv, pathlib
 import matplotlib
