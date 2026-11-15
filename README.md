@@ -151,3 +151,10 @@ The benchmark-audit section is the single starting point for the note PDF and it
 Current Zenodo records are House 3.11 (23666455), Tax 3.4 (23666456) and Deed 1.0.13 (23666457), text-only updates of the 25 October releases. The manuscript downloads match those records byte for byte, and earlier PDFs stay at their old URLs. Story edits: version links, a sentence fragment, a duplicated paragraph and some repeated caveats. Every story number was checked against the current papers.
 
 The sitemap lists current manuscript and data-note PDFs, not every archived version. Keep historical files accessible for citations without promoting superseded PDFs in the sitemap.
+
+
+### Story charts, 15 November 2026
+
+Story figures extend to 1100px on desktop and to the viewport on phones. Keep prose at its reading width and keep chart captions and data tables. Story pages omit per-chart PNG/SVG/CSV rows; Press retains its download resources. Seven charts are rendered from saved CSVs by `assets/stories/render_readable_story_charts.py`; the three second-home comparison charts use `render_second_home_qualified_charts.py`. Both provide phone SVGs. Never recalculate research outputs as part of a display change. The family transfer-report image is a document illustration, not a generated chart; preserve it.
+
+Press lists both Housing Notes guest posts (12 October and 11 November). The November external post retains its publication date; the source-story link points to the revised 15 November explanation.

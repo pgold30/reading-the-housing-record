@@ -1,25 +1,270 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
-<title id="title">Same $900,000 condo, different mortgage recording charge</title>
-<desc id="desc">Illustrative gross borrower charge under the schedule used in The Shape of the Tax v3.0: zero without a purchase mortgage, $13,860 on a $720,000 mortgage at 1.925%. Before credits, exemptions and consolidation adjustments. Other taxes and closing costs excluded.</desc>
-<rect width="900" height="600" fill="#f7f9f8"/>
-<g font-family="Arial, Helvetica, sans-serif" fill="#18313e">
-<text x="40" y="47" font-size="16" font-weight="700" letter-spacing="1">NYC HOUSING DATA · ILLUSTRATIVE GROSS CHARGE</text>
-<text x="40" y="105" font-size="35" font-weight="700">Same $900,000 condo.</text>
-<text x="40" y="149" font-size="35" font-weight="700">An extra charge for borrowing.</text>
-<rect x="40" y="190" width="397" height="240" rx="5" fill="#fff" stroke="#c5d4da"/>
-<rect x="463" y="190" width="397" height="240" rx="5" fill="#fff" stroke="#c5d4da"/>
-<rect x="40" y="190" width="397" height="6" fill="#145f83"/>
-<rect x="463" y="190" width="397" height="6" fill="#a75a32"/>
-<text x="65" y="242" font-size="29" font-weight="700">Without a mortgage</text>
-<text x="488" y="242" font-size="29" font-weight="700">With a mortgage</text>
-<text x="65" y="283" font-size="24" fill="#506773">No purchase borrowing</text>
-<text x="488" y="283" font-size="24" fill="#506773">$720,000 loan × 1.925%</text>
-<text x="65" y="357" font-size="64" font-weight="700" fill="#145f83">$0</text>
-<text x="488" y="357" font-size="64" font-weight="700" fill="#a75a32">$13,860</text>
-<text x="65" y="402" font-size="22">Purchase-mortgage tax</text>
-<text x="488" y="402" font-size="22">Gross borrower charge</text>
-<text x="40" y="470" font-size="21">Before credits, exemptions and consolidation adjustments.</text>
-<text x="40" y="503" font-size="21">Other taxes and closing costs excluded. Co-op share loans excluded.</text>
-<text x="40" y="548" font-size="18" fill="#506773">Source: The Shape of the Tax v3.0, Supplement Section I. Schedule used for 2016–2025.</text>
-<text x="40" y="577" font-size="18" fill="#506773">Pablo Loschi · nychousingdata.com · CC BY 4.0 · Not a closing-cost quote.</text>
-</g></svg>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="403.2pt" viewBox="0 0 720 403.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 403.2
+L 720 403.2
+L 720 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 102.323516 345.070625
+L 705 345.070625
+L 705 44.68
+L 102.323516 44.68
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m6675177463" d="M 0 0
+L 0 3.5
+" style="stroke: #536774; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m6675177463" x="232.446847" y="345.070625" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; fill: #536774" transform="translate(185.43591 364.969746)">No purchase</text>
+      <text style="font-size: 15px; font-family: Arial, sans-serif; fill: #536774" transform="translate(195.795285 382.972676)">mortgage</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m6675177463" x="574.876668" y="345.070625" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; fill: #536774" transform="translate(539.089949 364.969746)">$720,000</text>
+      <text style="font-size: 15px; font-family: Arial, sans-serif; fill: #536774" transform="translate(538.225106 382.972676)">mortgage</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <path d="M 102.323516 345.070625
+L 705 345.070625
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <defs>
+       <path id="m899ee19996" d="M 0 0
+L -3.5 0
+" style="stroke: #536774; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="345.070625" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="350.769453" transform="rotate(-0 95.323516 350.769453)">$0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <path d="M 102.323516 311.693889
+L 705 311.693889
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="311.693889" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="317.392717" transform="rotate(-0 95.323516 317.392717)">$2,000</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <path d="M 102.323516 278.317153
+L 705 278.317153
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="278.317153" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="284.015981" transform="rotate(-0 95.323516 284.015981)">$4,000</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <path d="M 102.323516 244.940417
+L 705 244.940417
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="244.940417" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="250.639245" transform="rotate(-0 95.323516 250.639245)">$6,000</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <path d="M 102.323516 211.563681
+L 705 211.563681
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="211.563681" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="217.262509" transform="rotate(-0 95.323516 217.262509)">$8,000</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <path d="M 102.323516 178.186944
+L 705 178.186944
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="178.186944" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="183.885773" transform="rotate(-0 95.323516 183.885773)">$10,000</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15">
+      <path d="M 102.323516 144.810208
+L 705 144.810208
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="144.810208" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="150.509036" transform="rotate(-0 95.323516 150.509036)">$12,000</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_17">
+      <path d="M 102.323516 111.433472
+L 705 111.433472
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="111.433472" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="117.1323" transform="rotate(-0 95.323516 117.1323)">$14,000</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_19">
+      <path d="M 102.323516 78.056736
+L 705 78.056736
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="78.056736" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="83.755564" transform="rotate(-0 95.323516 83.755564)">$16,000</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_21">
+      <path d="M 102.323516 44.68
+L 705 44.68
+" clip-path="url(#p3b7cb53104)" style="fill: none; stroke: #d9e1e6; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m899ee19996" x="102.323516" y="44.68" style="fill: #536774; stroke: #536774; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: end; fill: #536774" x="95.323516" y="50.378828" transform="rotate(-0 95.323516 50.378828)">$18,000</text>
+     </g>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 15px; font-family: Arial, sans-serif; text-anchor: middle" x="25.690313" y="194.875313" transform="rotate(-90 25.690313 194.875313)">Gross borrower charge</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 129.717901 345.070625
+L 335.175794 345.070625
+L 335.175794 345.070625
+L 129.717901 345.070625
+z
+" clip-path="url(#p3b7cb53104)" style="fill: #a9c3d1"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 472.147722 345.070625
+L 677.605614 345.070625
+L 677.605614 113.769844
+L 472.147722 113.769844
+z
+" clip-path="url(#p3b7cb53104)" style="fill: #145f83"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 102.323516 345.070625
+L 102.323516 44.68
+" style="fill: none; stroke: #536774; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 102.323516 345.070625
+L 705 345.070625
+" style="fill: none; stroke: #536774; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 24px; font-family: Arial, sans-serif; text-anchor: middle" x="232.446847" y="333.388767" transform="rotate(-0 232.446847 333.388767)">$0</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 24px; font-family: Arial, sans-serif; text-anchor: middle" x="574.876668" y="102.087986" transform="rotate(-0 574.876668 102.087986)">$13,860</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 18px; font-family: Arial, sans-serif; text-anchor: middle" x="403.661758" y="28.68" transform="rotate(-0 403.661758 28.68)">Same $900,000 condo</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3b7cb53104">
+   <rect x="102.323516" y="44.68" width="602.676484" height="300.390625"/>
+  </clipPath>
+ </defs>
+</svg>

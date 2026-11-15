@@ -63,3 +63,12 @@
   .story-grid:not(.home-latest-grid) > .story-card:last-child:nth-child(odd):has(> .story-card-image) { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; }
 }
 @media(max-width:560px) { .story-grid.home-latest-grid { grid-template-columns: minmax(0,1fr); } }
+
+/* Story figures use more of the viewport than the prose column. */
+.story-text .story-figure { width: min(1100px, calc(100vw - 2 * var(--page-gutter))); max-width: none; margin-left: 50%; transform: translateX(-50%); border: 0; border-radius: 0; background: transparent; padding-bottom: 0; }
+.story-text .story-figure figcaption { padding: 14px 0 8px; font-size: 1rem; line-height: 1.6; }
+.story-text .story-data { padding-inline: 0; }
+@media (max-width: 560px) {
+ .story-text .story-figure { width: 100vw; }
+ .story-text .story-figure figcaption, .story-text .story-data { padding-inline: var(--page-gutter); }
+}
