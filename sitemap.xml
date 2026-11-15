@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nychousingdata.com/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/data/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/explore/</loc>
@@ -18,15 +18,15 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/who-gets-the-house/</loc>
@@ -42,27 +42,27 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/cash-buyer-discount/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/family-sale-price/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/foreclosure-deed-price/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/mortgage-recording-tax/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/nyc-million-dollar-tax-line/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/updates/</loc>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/first-home-tax-fixes/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/second-home-tax-cliff/</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/reproduce/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-15</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1_2_0.pdf</loc>
@@ -131,5 +131,21 @@
   <url>
     <loc>https://nychousingdata.com/papers/the-execution-certainty-wedge/When_the_Benchmark_Moves_with_the_Policy_v7_2.pdf</loc>
     <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_8.pdf</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_supplement_v3_8.pdf</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1_0_15.pdf</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/When_the_Benchmark_Moves_with_the_Policy_v7_3.pdf</loc>
+    <lastmod>2026-11-13</lastmod>
   </url>
 </urlset>
