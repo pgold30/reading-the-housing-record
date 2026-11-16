@@ -47,7 +47,9 @@
   .wedge-table th, .wedge-table td { padding: 10px; }
   .reader-summary { padding: 14px 16px; }
 }
+:root[data-theme="dark"] .wedge-bar.negative { background: #de9b67; }
+:root[data-theme="dark"] .wedge-download { color: #102330; }
 @media (prefers-color-scheme: dark) {
-  .wedge-bar.negative { background: #de9b67; }
-  .wedge-download { color: #102330; }
+  :root:not([data-theme="light"]) .wedge-bar.negative { background: #de9b67; }
+  :root:not([data-theme="light"]) .wedge-download { color: #102330; }
 }

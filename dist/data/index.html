@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
   <meta name="description" content="A public dataset of New York City residential sales, 2016–2025, linked to their recorded deeds and mortgages, with a codebook and code.">
   <title>Linked sales dataset | NYC Housing Data</title>
   <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
@@ -16,12 +16,12 @@
   <meta property="og:image" content="https://nychousingdata.com/assets/stories/condo-coverage.png">
   <meta property="og:image:alt" content="Deed-link coverage among eligible condominium sales, by borough">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../assets/site.css?v=20261116ux">
-<link rel="stylesheet" href="../assets/stories.css?v=20261116ux">
-<link rel="stylesheet" href="../assets/tools.css?v=20261028review"></head>
+  <link rel="stylesheet" href="../assets/site.css?v=20261116bat">
+<link rel="stylesheet" href="../assets/stories.css?v=20261116bat">
+<link rel="stylesheet" href="../assets/tools.css?v=20261116bat"></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/" aria-current="page">Data</a><a href="../press/">Press</a><a href="../#about">About</a></nav></div></header>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/" aria-current="page">Data</a><a href="../press/">Press</a><a href="../#about">About</a><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="21" height="18" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg><span class="theme-label">Night signal</span></button></nav></div></header>
   <main id="main">
     <section class="article-hero"><div class="wrap">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Overview</a><span aria-hidden="true">/</span><span>Data</span></nav>
@@ -60,15 +60,15 @@ python3 examples/condo_selection.py build --output selection</pre></div></sectio
     </div></div>
     <section class="related"><div class="wrap"><p class="eyebrow">Within the program</p><h2>The papers</h2><div class="related-links"><a href="../papers/when-a-deed-is-not-a-market-sale/">When a Deed Is Not a Market Sale →</a><a href="../papers/who-gets-the-house/">Who Gets the House? →</a><a href="../papers/the-shape-of-the-tax/">The Shape of the Tax →</a></div></div></section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="../data/">Data</a> · <a href="../reproduce/">Reproduce</a> · <a href="../guide/">Record guide</a> · <a href="../press/">Press</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a></p></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="../data/">Data</a> · <a href="../reproduce/">Reproduce</a> · <a href="../guide/">Record guide</a> · <a href="../press/">Press</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
 <script>
 document.querySelectorAll('.copy-btn').forEach(function (b) {
   b.addEventListener('click', function () {
     var t = document.getElementById(b.dataset.target).innerText;
-    var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+    var done = function () { b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
     if (navigator.clipboard) { navigator.clipboard.writeText(t).then(done, function () {}); }
   });
 });
 </script>
-<script type="module" src="../assets/analytics.js"></script></body>
+<script type="module" src="../assets/theme.js?v=20261116bat"></script><script type="module" src="../assets/analytics.js"></script></body>
 </html>

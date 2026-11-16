@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
   <meta name="description" content="When the Benchmark Moves with the Policy: a simulated housing market in which the ranking of housing-access instruments depends on how access and efficiency are measured.">
   <title>When the Benchmark Moves with the Policy | NYC Housing Data</title>
   <link rel="icon" type="image/svg+xml" href="../../assets/logo.svg">
@@ -26,12 +26,12 @@
   <meta property="og:image" content="https://nychousingdata.com/assets/fig/wedge-benchmark-v6-4.png">
   <meta property="og:image:alt" content="Efficiency difference of a contention duty against two benchmarks, by the model's offer discount">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../../assets/site.css?v=20261116ux">
-<link rel="stylesheet" href="../../assets/stories.css?v=20261116ux">
-<link rel="stylesheet" href="../../assets/tools.css?v=20261028review"><link rel="stylesheet" href="../../assets/research-explorer.css?v=20261014"></head>
+  <link rel="stylesheet" href="../../assets/site.css?v=20261116bat">
+<link rel="stylesheet" href="../../assets/stories.css?v=20261116bat">
+<link rel="stylesheet" href="../../assets/tools.css?v=20261116bat"><link rel="stylesheet" href="../../assets/research-explorer.css?v=20261116bat"></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="brand" href="../../"><span class="brand-mark" aria-hidden="true"><img src="../../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../../explore/">Explore</a><a href="../../stories/">Stories</a><a href="../../#papers" aria-current="page">Research</a><a href="../../data/">Data</a><a href="../../press/">Press</a><a href="../../#about">About</a></nav></div></header>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../../"><span class="brand-mark" aria-hidden="true"><img src="../../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../../explore/">Explore</a><a href="../../stories/">Stories</a><a href="../../#papers" aria-current="page">Research</a><a href="../../data/">Data</a><a href="../../press/">Press</a><a href="../../#about">About</a><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="21" height="18" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg><span class="theme-label">Night signal</span></button></nav></div></header>
   <main id="main">
     <section class="article-hero"><div class="wrap">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Overview</a><span aria-hidden="true">/</span><span>Companion simulation</span></nav>
@@ -40,6 +40,7 @@
       <div class="article-meta"><span>Pablo Loschi</span><span>Simulation &amp; audit study</span></div><div class="article-actions"><a href="When_the_Benchmark_Moves_with_the_Policy_v7_4.pdf">Read the paper (29 pp.) <span class="file-kind">PDF</span></a><a href="https://zenodo.org/records/24273770">Replication &amp; audit files</a></div>
       <p class="download-note">Paper version 7.4, 16 November 2026 (<a href="../../updates/#2026-11-16-zenodo-releases">Release notes</a>) · <a href="https://zenodo.org/records/24273770/files/methods_v7_4_manuscript_source.zip?download=1">Manuscript sources (ZIP)</a> · <a href="https://zenodo.org/records/24273770/files/Methods_v7_3_audit_evidence.zip?download=1">Audit evidence (ZIP)</a> · <a href="#replication-verification">Run the audit checks</a>.</p>
       <div class="reader-summary"><p class="eyebrow">The short version</p><p class="paper-summary">Allocation policies change who waits, who is served and who leaves, so measures counted over those groups can move with the policy itself. Version 7.4 leads with a five-pair audit of the published LivSim liver-allocation simulator and exact benchmark examples—where a moving-benchmark ratio rises from 0.80 to 1.00 while realised value falls from 16 to 11—alongside an illustrative New York City proxy housing market. The housing model is not calibrated or estimated. An earlier PolicySpace2 illustration remains unreproduced and sits in provisional Appendix I outside the main claims, where version 7.4 adds seven controlled container probes (Appendix I.2) tracing exact family-level non-determinism in unmodified PolicySpace2 commit <code>ced77dd</code>.</p></div>
+      <details class="mobile-toc"><summary>On this page</summary><nav class="mobile-toc-links" aria-label="Jump to section"><a href="#question">The question</a><a href="#simulation-explorer">Explore the model</a><a href="#results">Main findings</a><a href="#why-it-matters">Why it matters</a><a href="#scope">What the results can tell us</a><a href="#replication-verification">Run the replication check</a><a href="#benchmark-audit">Earlier benchmark note</a><a href="#cite">Citation</a></nav></details>
     </div></section>
 
 <section class="wrap wedge-explorer" id="simulation-explorer" aria-labelledby="wedge-explorer-title">
@@ -74,16 +75,16 @@ python3 check_cohorts_independently_all5.py --run-dir runs --replications 1,2,3,
     </div></div>
     <section class="related"><div class="wrap"><p class="eyebrow">Within the program</p><h2>Related papers</h2><div class="related-links"><a href="../../papers/who-gets-the-house/">Who Gets the House? →</a><a href="../../papers/the-shape-of-the-tax/">The Shape of the Tax →</a><a href="../../papers/when-a-deed-is-not-a-market-sale/">When a Deed Is Not a Market Sale →</a></div></div></section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../../">Overview</a> · <a href="../../data/">Data</a> · <a href="../../reproduce/">Reproduce</a> · <a href="../../guide/">Record guide</a> · <a href="../../press/">Press</a> · <a href="../../privacy/">Privacy</a> · <a href="../../updates/">Updates</a></p></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../../">Overview</a> · <a href="../../data/">Data</a> · <a href="../../reproduce/">Reproduce</a> · <a href="../../guide/">Record guide</a> · <a href="../../press/">Press</a> · <a href="../../privacy/">Privacy</a> · <a href="../../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
 <script>
 document.querySelectorAll('.copy-btn').forEach(function (b) {
   b.addEventListener('click', function () {
     var t = document.getElementById(b.dataset.target).innerText;
-    var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+    var done = function () { b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
     if (navigator.clipboard) { navigator.clipboard.writeText(t).then(done, function () {}); }
   });
 });
 </script>
 <script type="module" src="../../assets/wedge-explorer.js?v=20261014"></script>
-<script type="module" src="../../assets/analytics.js"></script></body>
+<script type="module" src="../../assets/theme.js?v=20261116bat"></script><script type="module" src="../../assets/analytics.js"></script></body>
 </html>
