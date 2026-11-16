@@ -15,9 +15,7 @@
     document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
       btn.setAttribute('aria-pressed', String(dark));
       btn.setAttribute('aria-label', dark ? 'Switch back to daylight mode' : 'Summon night mode (Gotham signal)');
-      btn.title = dark ? 'Lights on — switch back to daylight mode' : 'Summon night mode (Gotham signal)';
-      const label = btn.querySelector('.theme-label');
-      if (label) label.textContent = dark ? 'Daylight' : 'Night signal';
+      btn.title = dark ? 'Lights on — daylight mode' : 'Summon night mode (Gotham signal)';
     });
   }
 

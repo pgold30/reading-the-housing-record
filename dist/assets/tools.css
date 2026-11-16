@@ -278,7 +278,7 @@ summary:focus-visible, input:focus-visible, [tabindex="0"]:focus-visible { outli
     padding-block: 12px 8px;
   }
   .brand { order: 1; }
-  .theme-toggle { order: 2; padding: 5px 11px 5px 9px; font-size: .78rem; min-height: 36px; }
+  .theme-toggle { order: 2; width: 38px; height: 38px; }
   .site-nav {
     order: 3;
     flex: 1 0 100%;
@@ -291,5 +291,4 @@ summary:focus-visible, input:focus-visible, [tabindex="0"]:focus-visible { outli
 }
 @media (max-width: 360px) {
   .filters { grid-template-columns: minmax(0, 1fr); }
-  .theme-toggle .theme-label { display: none; }
 }
