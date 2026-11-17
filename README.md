@@ -158,3 +158,7 @@ The sitemap lists current manuscript and data-note PDFs, not every archived vers
 Story figures extend to 1100px on desktop and to the viewport on phones. Keep prose at its reading width and keep chart captions and data tables. Story pages omit per-chart PNG/SVG/CSV rows; Press retains its download resources. Seven charts are rendered from saved CSVs by `assets/stories/render_readable_story_charts.py`; the three second-home comparison charts use `render_second_home_qualified_charts.py`. Both provide phone SVGs. Never recalculate research outputs as part of a display change. The family transfer-report image is a document illustration, not a generated chart; preserve it.
 
 Press lists both Housing Notes guest posts (12 October and 11 November). The November external post retains its publication date; the source-story link points to the revised 15 November explanation.
+
+## Methods release 7.10 — 17 November 2026
+
+Current methods downloads and citation metadata use Zenodo 24320005. The fast replication entry point is `python3 reproduce_review.py` from the extracted Methods_v7_10_replication.zip. Supplement S1 separately preserves the excluded, unreproduced PolicySpace2 investigation. Preserve earlier PDF URLs and numerical chart/explorer inputs. The methods paper illustrates accounting mechanisms; do not call the ratio identity a new theorem or the housing model an empirical policy forecast.
