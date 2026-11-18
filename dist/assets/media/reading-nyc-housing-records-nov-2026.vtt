@@ -1,0 +1,231 @@
+WEBVTT
+
+00:00:00.300 --> 00:00:04.565
+New York keeps a record each time a home
+changes hands.
+
+00:00:04.775 --> 00:00:07.768
+What can that record tell us about the sale?
+
+00:00:08.800 --> 00:00:11.920
+A sale can leave several different records.
+
+00:00:12.130 --> 00:00:16.661
+The Department of Finance puts a price and a
+date in its sales file.
+
+00:00:16.871 --> 00:00:23.657
+The deed records the transfer. A mortgage,
+when filed, sits in a separate register
+entry.
+
+00:00:23.867 --> 00:00:28.155
+The three files have no shared transaction
+identifier.
+
+00:00:28.365 --> 00:00:32.330
+A researcher has to work out which records
+belong together.
+
+00:00:36.200 --> 00:00:44.298
+Pablo Loschi linked New York City sales
+dated from 2016 through 2025 to deeds and
+mortgages.
+
+00:00:44.508 --> 00:00:49.432
+The matching rules use the parcel, the
+amount and the dates around a sale.
+
+00:00:49.642 --> 00:00:55.850
+For condos, the sales file can list the
+building lot while the deed records the unit
+lot.
+
+00:00:57.500 --> 00:01:05.696
+In the four boroughs covered by ACRIS, 97.2
+percent of positive-price house sales link
+to a deed.
+
+00:01:05.906 --> 00:01:09.732
+For condos, the share is 96 percent.
+
+00:01:09.942 --> 00:01:15.629
+These are coverage rates. Checking whether
+each link is correct takes a separate audit.
+
+00:01:18.750 --> 00:01:23.582
+The house paper uses the word cash for a
+sale without a matched mortgage.
+
+00:01:23.792 --> 00:01:26.541
+Borrowing can still go unobserved.
+
+00:01:26.751 --> 00:01:33.328
+The paper compares repeat sales when the
+same house switches between the financing
+categories.
+
+00:01:39.450 --> 00:01:43.395
+The house contrast is 9.25 log points.
+
+00:01:43.605 --> 00:01:49.659
+It falls to 4.87 when pairs with a same-
+surname buyer and seller are excluded.
+
+00:01:49.869 --> 00:01:53.498
+A shared surname flags a possible
+relationship.
+
+00:01:54.100 --> 00:02:01.667
+Under common controls, the screened house
+contrast exceeds the condo contrast by 5.81
+log points.
+
+00:02:01.877 --> 00:02:08.067
+That comparison uses holds of five years or
+more and trims the growth tails within each
+property type.
+
+00:02:08.277 --> 00:02:12.535
+Records alone give limited evidence on the
+value of closing certainty.
+
+00:02:13.900 --> 00:02:16.754
+A different question starts at a round
+number.
+
+00:02:16.964 --> 00:02:24.002
+New York added residential transfer-tax
+thresholds in 2019, starting at two million
+dollars.
+
+00:02:25.300 --> 00:02:30.328
+At two million dollars, the higher buyer
+rate applies to the whole price.
+
+00:02:30.538 --> 00:02:36.410
+One extra dollar of sale price adds about
+five thousand dollars to the buyer tax.
+
+00:02:37.650 --> 00:02:42.170
+Sales at exactly two million dollars became
+less common.
+
+00:02:42.380 --> 00:02:52.135
+Before the reform, the spike at that price
+was 7.8 times the surrounding price density.
+Afterward it was 2.3 times.
+
+00:02:52.345 --> 00:02:57.524
+The share of exact-price sales also fell at
+the other thresholds studied.
+
+00:02:58.850 --> 00:03:03.207
+More recorded prices appeared just below the
+new thresholds.
+
+00:03:03.417 --> 00:03:07.347
+Those changes are visible in the
+distribution of prices.
+
+00:03:07.557 --> 00:03:12.909
+The data leave the paths of individual deals
+and who bore the tax unresolved.
+
+00:03:16.950 --> 00:03:20.394
+There is another complication in the deed
+itself.
+
+00:03:20.604 --> 00:03:26.973
+When a lender takes title, the recorded
+amount can follow a legal rule tied to the
+bid or debt.
+
+00:03:30.000 --> 00:03:33.449
+Some lender transfers look like ordinary
+sales.
+
+00:03:33.659 --> 00:03:39.469
+The study flags 16,655 transfers to lenders.
+
+00:03:39.679 --> 00:03:44.259
+About 62 percent pass standard price and
+parcel checks.
+
+00:03:44.469 --> 00:03:47.105
+They can enter a repeat-sales index.
+
+00:03:48.150 --> 00:03:55.125
+Including those amounts lifts the house
+index by 3.69 log points in 2010’s third
+quarter.
+
+00:03:55.335 --> 00:04:00.418
+It lowers the 2011 and 2012 average by 2.28
+points.
+
+00:04:00.628 --> 00:04:04.168
+The change in the peak-to-trough decline is
+imprecise.
+
+00:04:05.200 --> 00:04:11.130
+The final paper steps away from deeds to
+examine how simulations are evaluated.
+
+00:04:11.340 --> 00:04:18.264
+When a policy changes who is still eligible
+or waiting, it can change the number used as
+a benchmark.
+
+00:04:18.474 --> 00:04:21.930
+A worked example shows what that does to a
+score.
+
+00:04:23.200 --> 00:04:28.990
+In this example, realised value starts at
+sixteen. The benchmark is twenty.
+
+00:04:29.200 --> 00:04:32.202
+Divide the two and the score is eighty
+percent.
+
+00:04:32.412 --> 00:04:39.563
+Under the other policy, realised value falls
+to eleven. The moving benchmark falls to
+eleven as well.
+
+00:04:40.250 --> 00:04:45.995
+Now the score reads one hundred percent,
+even though realised value has fallen.
+
+00:04:46.205 --> 00:04:50.817
+The benchmark changed faster than the
+outcome it was used to judge.
+
+00:04:51.027 --> 00:04:53.685
+This is a worked simulation example.
+
+00:04:53.895 --> 00:05:00.571
+To interpret the score, report the result,
+its denominator and the population being
+followed.
+
+00:05:03.350 --> 00:05:09.164
+What goes into a number matters whether it
+comes from a city register or a simulation.
+
+00:05:09.374 --> 00:05:14.113
+The public papers show the assumptions and
+checks behind each result.
+
+00:05:14.323 --> 00:05:18.854
+That helps readers judge which comparisons
+the records can support.
+
+00:05:19.900 --> 00:05:27.206
+Explore the linked sales, read the research,
+and find the code at nychousingdata.com.
+
+00:05:27.416 --> 00:05:32.236
+Start with a sale, and see what you can
+learn by following its records.
