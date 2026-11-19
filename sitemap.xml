@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nychousingdata.com/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/calculator/</loc>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/data/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/explore/</loc>
@@ -14,7 +18,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/guide/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/</loc>
@@ -58,7 +62,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/first-home-tax-fixes/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/foreclosure-deed-price/</loc>
@@ -70,7 +74,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/mortgage-recording-tax/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/nyc-million-dollar-tax-line/</loc>

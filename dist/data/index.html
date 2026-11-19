@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
   <meta name="description" content="A public dataset of New York City residential sales, 2016–2025, linked to their recorded deeds and mortgages, with a codebook and code.">
-  <title>Linked sales dataset | NYC Housing Data</title>
+  <title>NYC Housing Sales Data (2016–2025): DOF Rolling &amp; Annualized Sales Linked to ACRIS | NYC Housing Data</title>
   <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
   <link rel="canonical" href="https://nychousingdata.com/data/">
   <meta property="og:type" content="website">
@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="../assets/site.css?v=20261116bat2">
 <link rel="stylesheet" href="../assets/stories.css?v=20261116bat2">
-<link rel="stylesheet" href="../assets/tools.css?v=20261116bat2">
+<link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
   <!-- scholar-dc-meta-start -->
   <meta name="citation_title" content="NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025">
   <meta name="citation_author" content="Loschi, Pablo">
@@ -56,7 +56,7 @@
       <div class="article-actions"><a href="https://zenodo.org/records/24274709">Get dataset and code</a><a href="NYC_linked_dataset_data_note_v1_2_2.pdf">Read the data note (v1.2.2) <span class="file-kind">PDF</span></a></div>
     </div></section>
     <div class="article-body"><div class="wrap article-layout">
-      <div><section class="content-section"><h2>Why these records need linking</h2><p>New York City publishes its property sales and its recorded deeds and mortgages as separate open datasets, and the two do not join directly. The Department of Finance sales file has the price and date but no document number. ACRIS, the city register, has the deeds and mortgages but not the sales. Condominiums are the hardest case: the sales file usually identifies a unit by the building's billing lot, while ACRIS records its deed and mortgage under the unit's own lot, so a join on the parcel number misses most of them.</p><p>This dataset links the records using fixed, documented rules. The studies on this site and other researchers can reuse the same matches. The public files contain no party names.</p></section>
+      <div><section class="content-section"><h2>Why these records need linking</h2><p>New York City publishes its property sales and its recorded deeds and mortgages as separate open datasets, and the two do not join directly. The Department of Finance annualized and rolling sales files give the price and date but no ACRIS document number. ACRIS, the city register, has the deeds and mortgages but not the sales. Condominiums are the hardest case: the sales file usually identifies a unit by the building's billing lot, while ACRIS records its deed and mortgage under the unit's own lot, so a join on the parcel number misses most of them.</p><p>This dataset links the records using fixed, documented rules. The studies on this site and other researchers can reuse the same matches. The public files contain no party names.</p></section>
       <section class="content-section"><h2>In numbers</h2><ul class="stat-list"><li><span class="stat-value">729,047</span><span class="stat-label">house, condominium and co-operative sales, 2016–2025, all five boroughs</span></li><li><span class="stat-value">97.2%</span><span class="stat-label">eligible house sales with a deed link in release 1.2.0</span></li></ul><p>The release links 183,912 eligible house sales and 121,263 eligible condominium sales to deeds. Condominium coverage is 96.0%. A link identifies a candidate document under the stated rules; it does not verify the transaction or the purpose of a mortgage.</p></section>
       <section class="content-section"><h2>Files in the deposited 1.2.0 dataset</h2><p>Three tables that share keys: <code>sales</code> joins to <code>links</code> on <code>sale_id</code>, and <code>links</code> joins to <code>deed_flags</code> on <code>deed_document_id</code>. A blank cell means not applicable or not measured, never zero.</p>
       <details class="data-table" open><summary>Files and main columns</summary><table><thead><tr><th>File</th><th>Rows</th><th>Main columns</th></tr></thead><tbody>
@@ -85,7 +85,7 @@ python3 examples/condo_selection.py build --output selection</pre></div></sectio
     </div></div>
     <section class="related"><div class="wrap"><p class="eyebrow">Within the program</p><h2>The papers</h2><div class="related-links"><a href="../papers/when-a-deed-is-not-a-market-sale/">When a Deed Is Not a Market Sale →</a><a href="../papers/who-gets-the-house/">Who Gets the House? →</a><a href="../papers/the-shape-of-the-tax/">The Shape of the Tax →</a></div></div></section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="../data/">Data</a> · <a href="../reproduce/">Reproduce</a> · <a href="../guide/">Record guide</a> · <a href="../press/">Press</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="../calculator/">Calculator</a> · <a href="../data/">Data</a> · <a href="../reproduce/">Reproduce</a> · <a href="../guide/">Record guide</a> · <a href="../press/">Press</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
 <script>
 document.querySelectorAll('.copy-btn').forEach(function (b) {
   b.addEventListener('click', function () {

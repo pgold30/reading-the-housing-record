@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <title>NYC Closing-Tax Calculator (2026): Mortgage Recording Tax &amp; Mansion Tax | NYC Housing Data</title>
+  <meta name="description" content="Estimate 2026 NYC mortgage recording tax (1.80% / 1.925%), co-op exemption, cash vs. mortgage gap, and NYC mansion tax cliffs ($1M, $2M, $3M, $5M).">
+  <link rel="canonical" href="https://nychousingdata.com/calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NYC Housing Data">
+  <meta property="og:title" content="NYC Closing-Tax Calculator (2026): Mortgage Recording Tax &amp; Mansion Tax">
+  <meta property="og:description" content="Compare gross NYC buyer closing taxes for cash vs. mortgage purchases across houses, condos, and co-ops, with live $500k and mansion-tax cliff alerts.">
+  <meta property="og:url" content="https://nychousingdata.com/calculator/">
+  <meta property="og:image" content="https://nychousingdata.com/assets/stories/mortgage-recording-comparison.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+  <link rel="stylesheet" href="../assets/site.css?v=20261119calc">
+  <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the NYC mortgage recording tax rate in 2026?","acceptedAnswer":{"@type":"Answer","text":"For one- to three-family houses and residential condominiums in New York City, the standard gross borrower mortgage recording tax schedule is 1.80% on loans below $500,000 and 1.925% on the entire loan amount at $500,000 or more, before lender credits, exemptions, or CEMA consolidation adjustments."}},{"@type":"Question","name":"Do NYC co-ops pay mortgage recording tax?","acceptedAnswer":{"@type":"Answer","text":"No. Co-operative apartment purchases in New York City are exempt from the mortgage recording tax ($0) because buyers finance shares in a corporation rather than recording a mortgage against real property."}},{"@type":"Question","name":"What is the $500,000 mortgage recording tax cliff in NYC?","acceptedAnswer":{"@type":"Answer","text":"Because the 1.925% rate applies to the whole loan once mortgage principal reaches $500,000, borrowing $500,000 instead of $499,999 adds about $625 in gross mortgage recording tax at closing."}}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/">Data</a><a href="../press/">Press</a><a href="../#about">About</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
+  <main id="main">
+    <section class="tool-hero"><div class="wrap">
+      <p class="eyebrow">Interactive tool · 2026 NY / NYC schedules</p>
+      <h1>NYC Closing-Tax Calculator</h1>
+      <p class="lead">Compare gross buyer-side NYC mortgage recording tax and mansion tax for mortgaged vs. all-cash purchases across houses, condos, and co-ops—and spot the $500,000 and million-dollar tax cliffs.</p>
+    </div></section>
+    <section class="tool-section"><div class="wrap">
+      <div class="explore-presets" role="group" aria-label="Common NYC purchase examples">
+        <button type="button" class="preset-pill" data-calc-preset='{"price":700000,"property":"house","downPct":"20","loan":560000}'>$700k Bronx house (20% down)</button>
+        <button type="button" class="preset-pill" data-calc-preset='{"price":900000,"property":"condo","downPct":"20","loan":720000}'>$900k condo (20% down)</button>
+        <button type="button" class="preset-pill" data-calc-preset='{"price":625000,"property":"house","downPct":"20","loan":500000}'>$500k loan cliff</button>
+        <button type="button" class="preset-pill" data-calc-preset='{"price":1000000,"property":"condo","downPct":"20","loan":800000}'>$1M mansion cliff</button>
+        <button type="button" class="preset-pill" data-calc-preset='{"price":2000000,"property":"condo","downPct":"20","loan":1600000}'>$2M tax cliff</button>
+        <button type="button" class="preset-pill" data-calc-preset='{"price":900000,"property":"coop","downPct":"20","loan":720000}'>$900k co-op ($0 MRT)</button>
+      </div>
+      <form class="filters" id="calc-form" aria-label="NYC closing tax inputs">
+        <label for="calc-price">Purchase price ($)
+          <input id="calc-price" class="calc-input" type="number" min="50000" max="100000000" step="1000" value="700000">
+        </label>
+        <label for="calc-property">Property type
+          <select id="calc-property">
+            <option value="house" selected>1–3 family house</option>
+            <option value="condo">Condominium</option>
+            <option value="coop">Co-operative apartment</option>
+          </select>
+        </label>
+        <label for="calc-down-pct">Down payment
+          <select id="calc-down-pct">
+            <option value="10">10% down</option>
+            <option value="20" selected>20% down</option>
+            <option value="25">25% down</option>
+            <option value="50">50% down</option>
+            <option value="100">All cash (0% loan)</option>
+            <option value="custom">Custom loan amount</option>
+          </select>
+        </label>
+        <label for="calc-loan">Mortgage amount ($)
+          <input id="calc-loan" class="calc-input" type="number" min="0" max="100000000" step="1000" value="560000">
+        </label>
+      </form>
+
+      <div id="calc-cliff-alert" class="research-correction" role="status" hidden></div>
+
+      <div class="metric-grid">
+        <section class="metric"><h2>Mortgage recording tax</h2><strong id="out-mrt">$10,780</strong><p id="out-mrt-note">1.925% gross borrower rate on $560,000 loan.</p></section>
+        <section class="metric"><h2>NYC mansion tax</h2><strong id="out-mansion">$0</strong><p id="out-mansion-note">Applies to purchases of $1,000,000 or more.</p></section>
+        <section class="metric"><h2>Buyer with mortgage</h2><strong id="out-borrower-total">$10,780</strong><p>Gross buyer closing taxes (MRT + mansion tax).</p></section>
+        <section class="metric"><h2>Extra tax vs. cash buyer</h2><strong id="out-gap">$10,780</strong><p>All-cash buyer pays <span id="out-cash-total">$0</span> on these lines.</p></section>
+      </div>
+
+      <div class="tax-tool">
+        <h2>Cash vs. mortgage buyer comparison</h2>
+        <div class="tax-bars">
+          <div>
+            <div class="tax-bar-label"><span>Buyer with mortgage (gross buyer closing taxes)</span><strong id="bar-borrower-val">$10,780</strong></div>
+            <div class="tax-bar-track"><span id="bar-borrower" style="width:100%"></span></div>
+          </div>
+          <div>
+            <div class="tax-bar-label"><span>All-cash buyer (same home, $0 mortgage tax)</span><strong id="bar-cash-val">$0</strong></div>
+            <div class="tax-bar-track"><span id="bar-cash" style="width:0%"></span></div>
+          </div>
+        </div>
+        <p class="fine-print">Illustrative gross buyer-side statutory schedule (NYC borrower mortgage recording tax of 1.80% under $500,000 and 1.925% at $500,000+, excluding the lender’s 0.25% share, plus the post-July 2019 NYC mansion &amp; supplemental tax tiers from 1.00% at $1M to 3.90% at $25M+). Excludes seller-side NYC RPTT/NY State transfer taxes, lender credits, exemptions, and CEMA consolidation adjustments. Not tax or legal advice.</p>
+      </div>
+
+      <div class="narrow" style="margin-top:36px">
+        <h2>2026 NYC Mortgage Recording Tax &amp; Mansion Tax Rates</h2>
+        <div class="table-scroll">
+          <table class="tool-table" role="table">
+            <caption>Statutory gross buyer schedules modeled in The Shape of the Tax (v3.10)</caption>
+            <thead><tr><th scope="col">Tax / Property</th><th scope="col">Threshold</th><th scope="col">Borrower rate</th><th scope="col">Cash / Co-op</th></tr></thead>
+            <tbody>
+              <tr><td>Mortgage recording tax (1–3 family &amp; condo)</td><td>Loan under $500,000</td><td>1.80% of loan</td><td>$0</td></tr>
+              <tr><td>Mortgage recording tax (1–3 family &amp; condo)</td><td>Loan $500,000+</td><td>1.925% of whole loan</td><td>$0</td></tr>
+              <tr><td>NYC mansion tax (all residential)</td><td>$1M – under $2M</td><td>1.00% of price</td><td>Same rate</td></tr>
+              <tr><td>NYC mansion + supplemental tax</td><td>$2M – under $3M</td><td>1.25% of price</td><td>Same rate</td></tr>
+              <tr><td>NYC mansion + supplemental tax</td><td>$3M – under $5M</td><td>1.50% of price</td><td>Same rate</td></tr>
+              <tr><td>NYC mansion + supplemental tax</td><td>$5M – under $10M</td><td>2.25% of price</td><td>Same rate</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="action-row">
+          <a class="tool-button" href="../stories/mortgage-recording-tax/">Read the mortgage-tax story →</a>
+          <a class="tool-button secondary" href="../papers/the-shape-of-the-tax/">Read The Shape of the Tax (v3.10)</a>
+          <a class="tool-button secondary" href="../explore/">Explore NYC sales data</a>
+        </div>
+      </div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="../calculator/">Calculator</a> · <a href="../data/">Data</a> · <a href="../reproduce/">Reproduce</a> · <a href="../guide/">Record guide</a> · <a href="../press/">Press</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
+  <script type="module" src="../assets/calculator.js?v=20261119calc"></script>
+  <script type="module" src="../assets/theme.js?v=20261119calc"></script>
+  <script type="module" src="../assets/analytics.js"></script>
+</body>
+</html>
