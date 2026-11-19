@@ -159,6 +159,6 @@ Story figures extend to 1100px on desktop and to the viewport on phones. Keep pr
 
 Press lists both Housing Notes guest posts (12 October and 11 November). The November external post retains its publication date; the source-story link points to the revised 15 November explanation.
 
-## Methods release 7.10 — 17 November 2026
+## Methods release 7.12 — 19 November 2026
 
-Current methods downloads and citation metadata use Zenodo 24320005. The fast replication entry point is `python3 reproduce_review.py` from the extracted Methods_v7_10_replication.zip. Supplement S1 separately preserves the excluded, unreproduced PolicySpace2 investigation. Preserve earlier PDF URLs and numerical chart/explorer inputs. The methods paper illustrates accounting mechanisms; do not call the ratio identity a new theorem or the housing model an empirical policy forecast.
+Current methods downloads and citation metadata use Zenodo 24363902. The fast replication entry point is `python3 reproduce_review.py` from the extracted Methods_v7_12_replication.zip. Supplement S1 separately preserves the excluded, unreproduced PolicySpace2 investigation. Preserve earlier PDF URLs and numerical chart/explorer inputs. The methods paper illustrates accounting mechanisms; do not call the ratio identity a new theorem or the housing model an empirical policy forecast.
