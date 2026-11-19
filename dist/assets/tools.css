@@ -292,3 +292,20 @@ summary:focus-visible, input:focus-visible, [tabindex="0"]:focus-visible { outli
 @media (max-width: 360px) {
   .filters { grid-template-columns: minmax(0, 1fr); }
 }
+
+
+/* --- 2026-11-19 Calculator input styling --- */
+.calc-input {
+  display: block;
+  width: 100%;
+  margin-top: 9px;
+  padding: 12px 10px;
+  font: inherit;
+  font-size: .95rem;
+  min-height: 46px;
+  background: var(--white);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font-variant-numeric: tabular-nums;
+}
