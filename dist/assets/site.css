@@ -50,7 +50,7 @@ p { line-height: 1.63; }
 .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 29px; }
 .section-head h2 { margin-bottom: 0; }
 .section-head p { margin: 0; max-width: 530px; color: var(--muted); }
-.paper-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.paper-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .paper-card { display: flex; flex-direction: column; min-height: 362px; padding: 28px; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); border-radius: 6px; }
 .paper-card .number { color: var(--blue); font-size: .8rem; font-weight: 760; letter-spacing: .08em; margin-bottom: 25px; }
 .paper-card h3 { margin-bottom: 15px; }

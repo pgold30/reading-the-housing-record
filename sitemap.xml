@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nychousingdata.com/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/calculator/</loc>
@@ -90,7 +90,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/updates/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_12.pdf</loc>
@@ -126,4 +126,12 @@
   </url>
   <url><loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/When_the_Benchmark_Moves_with_the_Policy_v7_12.pdf</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/Supplement_v7_12.pdf</loc><lastmod>2026-11-19</lastmod></url>
+  <url>
+    <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/Rental_Proxies_on_a_Million_Dollar_Notch_v1_0.pdf</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
 </urlset>
