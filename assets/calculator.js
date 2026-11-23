@@ -142,5 +142,29 @@
     });
   });
 
+  function applyQueryParams() {
+    const q = new URLSearchParams(location.search);
+    const pRaw = Number(q.get('price'));
+    if (Number.isFinite(pRaw) && pRaw >= 10000 && pRaw <= 100000000) {
+      priceInput.value = String(Math.round(pRaw));
+    }
+    const prop = q.get('property');
+    if (prop && ['house', 'condo', 'coop'].includes(prop)) {
+      propSelect.value = prop;
+    }
+    const down = q.get('down');
+    if (down && ['10', '20', '25', '50', '100', 'custom'].includes(down)) {
+      downSelect.value = down;
+    }
+    const loanRaw = q.get('loan');
+    if (loanRaw !== null && Number.isFinite(Number(loanRaw)) && Number(loanRaw) >= 0) {
+      downSelect.value = 'custom';
+      loanInput.value = String(Math.round(Number(loanRaw)));
+    } else {
+      syncLoanFromDown();
+    }
+  }
+
+  applyQueryParams();
   render();
 })();

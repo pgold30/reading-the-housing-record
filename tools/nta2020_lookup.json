@@ -1,0 +1,262 @@
+[{"nta2020":"BK0101","ntaname":"Greenpoint","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0102","ntaname":"Williamsburg","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0103","ntaname":"South Williamsburg","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0104","ntaname":"East Williamsburg","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0201","ntaname":"Brooklyn Heights","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0202","ntaname":"Downtown Brooklyn-DUMBO-Boerum Hill","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0203","ntaname":"Fort Greene","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0204","ntaname":"Clinton Hill","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0261","ntaname":"Brooklyn Navy Yard","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0301","ntaname":"Bedford-Stuyvesant (West)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0302","ntaname":"Bedford-Stuyvesant (East)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0401","ntaname":"Bushwick (West)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0402","ntaname":"Bushwick (East)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0471","ntaname":"The Evergreens Cemetery","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0501","ntaname":"Cypress Hills","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0502","ntaname":"East New York (North)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0503","ntaname":"East New York-New Lots","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0504","ntaname":"Spring Creek-Starrett City","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0505","ntaname":"East New York-City Line","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0571","ntaname":"Highland Park-Cypress Hills Cemeteries (South)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0601","ntaname":"Carroll Gardens-Cobble Hill-Gowanus-Red Hook","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0602","ntaname":"Park Slope","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0701","ntaname":"Windsor Terrace-South Slope","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0702","ntaname":"Sunset Park (West)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0703","ntaname":"Sunset Park (Central)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0771","ntaname":"Green-Wood Cemetery","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0801","ntaname":"Prospect Heights","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0802","ntaname":"Crown Heights (North)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0891","ntaname":"Lincoln Terrace Park","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0901","ntaname":"Crown Heights (South)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK0902","ntaname":"Prospect Lefferts Gardens-Wingate","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1001","ntaname":"Bay Ridge","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1002","ntaname":"Dyker Heights","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1061","ntaname":"Fort Hamilton","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1091","ntaname":"Dyker Beach Park","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1101","ntaname":"Bensonhurst","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1102","ntaname":"Bath Beach","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1103","ntaname":"Gravesend (West)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1201","ntaname":"Sunset Park (East)-Borough Park (West)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1202","ntaname":"Borough Park","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1203","ntaname":"Kensington","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1204","ntaname":"Mapleton-Midwood (West)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1301","ntaname":"Gravesend (South)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1302","ntaname":"Coney Island-Sea Gate","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1303","ntaname":"Brighton Beach","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1391","ntaname":"Calvert Vaux Park","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1401","ntaname":"Flatbush","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1402","ntaname":"Flatbush (West)-Ditmas Park-Parkville","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1403","ntaname":"Midwood","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1501","ntaname":"Gravesend (East)-Homecrest","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1502","ntaname":"Madison","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1503","ntaname":"Sheepshead Bay-Manhattan Beach-Gerritsen Beach","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1601","ntaname":"Ocean Hill","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1602","ntaname":"Brownsville","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1701","ntaname":"East Flatbush-Erasmus","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1702","ntaname":"East Flatbush-Farragut","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1703","ntaname":"East Flatbush-Rugby","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1704","ntaname":"East Flatbush-Remsen Village","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1771","ntaname":"Holy Cross Cemetery","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1801","ntaname":"Flatlands","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1802","ntaname":"Marine Park-Mill Basin-Bergen Beach","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1803","ntaname":"Canarsie","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1891","ntaname":"Marine Park-Plumb Island","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1892","ntaname":"McGuire Fields","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK1893","ntaname":"Canarsie Park & Pier","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK5591","ntaname":"Prospect Park","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK5691","ntaname":"Barren Island-Floyd Bennett Field","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK5692","ntaname":"Jamaica Bay (West)","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BK5693","ntaname":"Shirley Chisholm State Park","boroname":"Brooklyn","borocode":"3"}
+,{"nta2020":"BX0101","ntaname":"Mott Haven-Port Morris","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0102","ntaname":"Melrose","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0201","ntaname":"Hunts Point","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0202","ntaname":"Longwood","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0291","ntaname":"North & South Brother Islands","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0301","ntaname":"Morrisania","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0302","ntaname":"Claremont Village-Claremont (East)","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0303","ntaname":"Crotona Park East","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0391","ntaname":"Crotona Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0401","ntaname":"Concourse-Concourse Village","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0402","ntaname":"Highbridge","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0403","ntaname":"Mount Eden-Claremont (West)","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0491","ntaname":"Yankee Stadium-Macombs Dam Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0492","ntaname":"Claremont Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0501","ntaname":"University Heights (South)-Morris Heights","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0502","ntaname":"Mount Hope","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0503","ntaname":"Fordham Heights","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0601","ntaname":"West Farms","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0602","ntaname":"Tremont","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0603","ntaname":"Belmont","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0701","ntaname":"University Heights (North)-Fordham","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0702","ntaname":"Bedford Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0703","ntaname":"Norwood","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0801","ntaname":"Kingsbridge Heights-Van Cortlandt Village","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0802","ntaname":"Kingsbridge-Marble Hill","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0803","ntaname":"Riverdale-Spuyten Duyvil","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0901","ntaname":"Soundview-Bruckner-Bronx River","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0902","ntaname":"Soundview-Clason Point","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0903","ntaname":"Castle Hill-Unionport","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0904","ntaname":"Parkchester","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX0991","ntaname":"Soundview Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1001","ntaname":"Westchester Square","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1002","ntaname":"Throgs Neck-Schuylerville","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1003","ntaname":"Pelham Bay-Country Club-City Island","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1004","ntaname":"Co-op City","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1071","ntaname":"Hart Island","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1091","ntaname":"Ferry Point Park-St. Raymond Cemetery","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1101","ntaname":"Pelham Parkway-Van Nest","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1102","ntaname":"Morris Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1103","ntaname":"Pelham Gardens","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1104","ntaname":"Allerton","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1161","ntaname":"Hutchinson Metro Center","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1201","ntaname":"Williamsbridge-Olinville","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1202","ntaname":"Eastchester-Edenwald-Baychester","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1203","ntaname":"Wakefield-Woodlawn","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX1271","ntaname":"Woodlawn Cemetery","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX2691","ntaname":"Van Cortlandt Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX2791","ntaname":"Bronx Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"BX2891","ntaname":"Pelham Bay Park","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"MN0101","ntaname":"Financial District-Battery Park City","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0102","ntaname":"Tribeca-Civic Center","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0191","ntaname":"The Battery-Governors Island-Ellis Island-Liberty Island","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0201","ntaname":"SoHo-Little Italy-Hudson Square","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0202","ntaname":"Greenwich Village","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0203","ntaname":"West Village","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0301","ntaname":"Chinatown-Two Bridges","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0302","ntaname":"Lower East Side","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0303","ntaname":"East Village","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0401","ntaname":"Chelsea-Hudson Yards","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0402","ntaname":"Hell's Kitchen","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0501","ntaname":"Midtown South-Flatiron-Union Square","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0502","ntaname":"Midtown-Times Square","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0601","ntaname":"Stuyvesant Town-Peter Cooper Village","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0602","ntaname":"Gramercy","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0603","ntaname":"Murray Hill-Kips Bay","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0604","ntaname":"East Midtown-Turtle Bay","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0661","ntaname":"United Nations","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0701","ntaname":"Upper West Side-Lincoln Square","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0702","ntaname":"Upper West Side (Central)","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0703","ntaname":"Upper West Side-Manhattan Valley","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0801","ntaname":"Upper East Side-Lenox Hill-Roosevelt Island","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0802","ntaname":"Upper East Side-Carnegie Hill","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0803","ntaname":"Upper East Side-Yorkville","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0901","ntaname":"Morningside Heights","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0902","ntaname":"Manhattanville-West Harlem","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN0903","ntaname":"Hamilton Heights-Sugar Hill","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1001","ntaname":"Harlem (South)","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1002","ntaname":"Harlem (North)","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1101","ntaname":"East Harlem (South)","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1102","ntaname":"East Harlem (North)","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1191","ntaname":"Randall's Island","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1201","ntaname":"Washington Heights (South)","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1202","ntaname":"Washington Heights (North)","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1203","ntaname":"Inwood","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1291","ntaname":"Highbridge Park","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN1292","ntaname":"Inwood Hill Park","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"MN6491","ntaname":"Central Park","boroname":"Manhattan","borocode":"1"}
+,{"nta2020":"QN0101","ntaname":"Astoria (North)-Ditmars-Steinway","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0102","ntaname":"Old Astoria-Hallets Point","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0103","ntaname":"Astoria (Central)","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0104","ntaname":"Astoria (East)-Woodside (North)","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0105","ntaname":"Queensbridge-Ravenswood-Dutch Kills","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0151","ntaname":"Rikers Island","boroname":"Bronx","borocode":"2"}
+,{"nta2020":"QN0161","ntaname":"Sunnyside Yards (North)","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0171","ntaname":"St. Michael's Cemetery","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0191","ntaname":"Astoria Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0201","ntaname":"Long Island City-Hunters Point","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0202","ntaname":"Sunnyside","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0203","ntaname":"Woodside","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0261","ntaname":"Sunnyside Yards (South)","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0271","ntaname":"Calvary & Mount Zion Cemeteries","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0301","ntaname":"Jackson Heights","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0302","ntaname":"East Elmhurst","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0303","ntaname":"North Corona","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0401","ntaname":"Elmhurst","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0402","ntaname":"Corona","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0501","ntaname":"Maspeth","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0502","ntaname":"Ridgewood","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0503","ntaname":"Glendale","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0504","ntaname":"Middle Village","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0571","ntaname":"Mount Olivet & All Faiths Cemeteries","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0572","ntaname":"Middle Village Cemetery","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0573","ntaname":"St. John Cemetery","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0574","ntaname":"Highland Park-Cypress Hills Cemeteries (North)","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0601","ntaname":"Rego Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0602","ntaname":"Forest Hills","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0701","ntaname":"College Point","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0702","ntaname":"Whitestone-Beechhurst","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0703","ntaname":"Bay Terrace-Clearview","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0704","ntaname":"Murray Hill-Broadway Flushing","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0705","ntaname":"East Flushing","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0706","ntaname":"Queensboro Hill","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0707","ntaname":"Flushing-Willets Point","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0761","ntaname":"Fort Totten","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0791","ntaname":"Kissena Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0801","ntaname":"Kew Gardens Hills","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0802","ntaname":"Pomonok-Electchester-Hillcrest","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0803","ntaname":"Fresh Meadows-Utopia","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0804","ntaname":"Jamaica Estates-Holliswood","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0805","ntaname":"Jamaica Hills-Briarwood","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0871","ntaname":"Mount Hebron & Cedar Grove Cemeteries","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0891","ntaname":"Cunningham Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0901","ntaname":"Kew Gardens","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0902","ntaname":"Richmond Hill","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0903","ntaname":"South Richmond Hill","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0904","ntaname":"Ozone Park (North)","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN0905","ntaname":"Woodhaven","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1001","ntaname":"South Ozone Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1002","ntaname":"Ozone Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1003","ntaname":"Howard Beach-Lindenwood","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1091","ntaname":"Spring Creek Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1101","ntaname":"Auburndale","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1102","ntaname":"Bayside","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1103","ntaname":"Douglaston-Little Neck","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1104","ntaname":"Oakland Gardens-Hollis Hills","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1191","ntaname":"Alley Pond Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1201","ntaname":"Jamaica","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1202","ntaname":"South Jamaica","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1203","ntaname":"Baisley Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1204","ntaname":"Springfield Gardens (North)-Rochdale Village","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1205","ntaname":"St. Albans","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1206","ntaname":"Hollis","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1301","ntaname":"Glen Oaks-Floral Park-New Hyde Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1302","ntaname":"Bellerose","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1303","ntaname":"Queens Village","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1304","ntaname":"Cambria Heights","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1305","ntaname":"Laurelton","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1306","ntaname":"Springfield Gardens (South)-Brookville","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1307","ntaname":"Rosedale","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1371","ntaname":"Montefiore Cemetery","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1401","ntaname":"Far Rockaway-Bayswater","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1402","ntaname":"Rockaway Beach-Arverne-Edgemere","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1403","ntaname":"Breezy Point-Belle Harbor-Rockaway Park-Broad Channel","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN1491","ntaname":"Rockaway Community Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN8081","ntaname":"LaGuardia Airport","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN8191","ntaname":"Flushing Meadows-Corona Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN8291","ntaname":"Forest Park","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN8381","ntaname":"John F. Kennedy International Airport","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN8491","ntaname":"Jamaica Bay (East)","boroname":"Queens","borocode":"4"}
+,{"nta2020":"QN8492","ntaname":"Jacob Riis Park-Fort Tilden-Breezy Point Tip","boroname":"Queens","borocode":"4"}
+,{"nta2020":"SI0101","ntaname":"St. George-New Brighton","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0102","ntaname":"Tompkinsville-Stapleton-Clifton-Fox Hills","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0103","ntaname":"Rosebank-Shore Acres-Park Hill","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0104","ntaname":"West New Brighton-Silver Lake-Grymes Hill","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0105","ntaname":"Westerleigh-Castleton Corners","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0106","ntaname":"Port Richmond","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0107","ntaname":"Mariner's Harbor-Arlington-Graniteville","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0191","ntaname":"Snug Harbor","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0201","ntaname":"Grasmere-Arrochar-South Beach-Dongan Hills","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0202","ntaname":"New Dorp-Midland Beach","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0203","ntaname":"Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0204","ntaname":"New Springville-Willowbrook-Bulls Head-Travis","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0291","ntaname":"Freshkills Park (North)","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0301","ntaname":"Oakwood-Richmondtown","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0302","ntaname":"Great Kills-Eltingville","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0303","ntaname":"Arden Heights-Rossville","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0304","ntaname":"Annadale-Huguenot-Prince's Bay-Woodrow","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0305","ntaname":"Tottenville-Charleston","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI0391","ntaname":"Freshkills Park (South)","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI9561","ntaname":"Fort Wadsworth","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI9591","ntaname":"Hoffman & Swinburne Islands","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI9592","ntaname":"Miller Field","boroname":"Staten Island","borocode":"5"}
+,{"nta2020":"SI9593","ntaname":"Great Kills Park","boroname":"Staten Island","borocode":"5"}]

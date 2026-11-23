@@ -309,3 +309,150 @@ summary:focus-visible, input:focus-visible, [tabindex="0"]:focus-visible { outli
   border-radius: 3px;
   font-variant-numeric: tabular-nums;
 }
+
+/* --- 2026-11-23 Neighborhood, ZIP & Condo Lookup --- */
+.lookup-search-shell {
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+.lookup-type-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.lookup-combobox {
+  position: relative;
+  margin-bottom: 14px;
+}
+.lookup-input {
+  margin-top: 0;
+  padding: 13px 14px;
+  font-size: 1rem;
+  min-height: 50px;
+}
+.lookup-results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 40;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  max-height: 360px;
+  overflow-y: auto;
+  background: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(20, 42, 58, .14);
+}
+.lookup-result-item {
+  padding: 10px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--line);
+}
+.lookup-result-item:last-child { border-bottom: 0; }
+.lookup-result-item:hover,
+.lookup-result-item.is-active {
+  background: var(--pale);
+}
+.lookup-result-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.lookup-result-kind {
+  font-size: .78rem;
+  font-weight: 650;
+  color: var(--blue-dark);
+}
+.lookup-result-sub {
+  font-size: .82rem;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.lookup-result-empty {
+  padding: 14px 12px;
+  font-size: .9rem;
+  color: var(--muted);
+}
+.lookup-presets { margin-bottom: 10px; }
+.lookup-card {
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--blue);
+  border-radius: 6px;
+}
+.lookup-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.lookup-badge {
+  display: inline-block;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--pale);
+  color: var(--blue-dark);
+  border: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+.lookup-card-head h2 {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  margin: 0 0 6px;
+}
+.lookup-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.lookup-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 24px 0;
+}
+.lookup-subpanel {
+  padding: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  min-width: 0;
+}
+.lookup-subpanel h3 {
+  font-size: 1.2rem;
+  margin: 0 0 12px;
+}
+.lookup-compact-table {
+  font-size: .84rem;
+  margin: 0;
+}
+.lookup-compact-table th,
+.lookup-compact-table td {
+  padding: 9px 10px;
+}
+.lookup-notch-bars { margin: 14px 0; }
+@media (max-width: 850px) {
+  .lookup-detail-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 650px) {
+  .lookup-search-shell, .lookup-card { padding: 16px; }
+  .lookup-card-actions { width: 100%; }
+  .lookup-card-actions > * { flex: 1 1 180px; text-align: center; }
+}

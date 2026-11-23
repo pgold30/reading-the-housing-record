@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <title>NYC Neighborhood, ZIP &amp; Condo Lookup (2016–2025) | NYC Housing Data</title>
+  <meta name="description" content="Search 183 NYC ZIP codes, 197 neighborhoods (2020 NTAs), and 1,078 major condo buildings across 503,706 residential sales ($10,000+, 2016–2025) linked to ACRIS deeds and mortgages.">
+  <link rel="canonical" href="https://nychousingdata.com/lookup/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NYC Housing Data">
+  <meta property="og:title" content="NYC Neighborhood, ZIP &amp; Condo Lookup (2016–2025)">
+  <meta property="og:description" content="Look up median prices, ACRIS no-mortgage shares, mansion-tax shares, and illustrative buyer closing taxes by NYC ZIP code, neighborhood, or condo building.">
+  <meta property="og:url" content="https://nychousingdata.com/lookup/">
+  <meta property="og:image" content="https://nychousingdata.com/assets/stories/condo-coverage.png">
+  <meta property="og:image:alt" content="ACRIS deed linkage coverage and financing patterns across NYC housing records">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+  <link rel="stylesheet" href="../assets/site.css?v=20261116bat2">
+  <link rel="stylesheet" href="../assets/tools.css?v=20261123lookup">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NYC Neighborhood, ZIP & Condo Lookup","url":"https://nychousingdata.com/lookup/","applicationCategory":"ReferenceApplication","operatingSystem":"Any","description":"Static lookup tool summarizing 503,706 NYC residential sales ($10,000+, 2016–2025) across 183 ZIP codes, 197 neighborhoods, and 1,078 major condo buildings from NYC housing records linked to ACRIS deeds and mortgages.","creator":{"@type":"Person","name":"Pablo Loschi","sameAs":"https://orcid.org/0009-0004-9455-4713"},"isBasedOn":{"@type":"Dataset","name":"NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025","identifier":"https://doi.org/10.5281/zenodo.24274709","license":"https://creativecommons.org/licenses/by/4.0/"}}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/">Data</a><a href="../press/">Press</a><a href="../#about">About</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
+
+  <main id="main">
+    <section class="tool-hero">
+      <div class="wrap">
+        <p class="eyebrow">Citable lookup · Frozen archive 2016–2025</p>
+        <h1>Neighborhood, ZIP &amp; Condo Lookup</h1>
+        <p class="lead">Search 183 NYC ZIP codes, 197 neighborhoods (2020 NTAs), and 1,078 major condo buildings across 503,706 residential sales of $10,000 or more—linked to ACRIS deeds and mortgages with explicit measurement boundaries.</p>
+      </div>
+    </section>
+
+    <section class="tool-section">
+      <div class="wrap">
+        <div class="lookup-search-shell">
+          <div class="lookup-type-pills" role="group" aria-label="Filter search results by geography or building">
+            <button type="button" class="preset-pill" data-kind="all" aria-pressed="true">All (1,458)</button>
+            <button type="button" class="preset-pill" data-kind="n" aria-pressed="false">Neighborhoods (197)</button>
+            <button type="button" class="preset-pill" data-kind="z" aria-pressed="false">ZIP codes (183)</button>
+            <button type="button" class="preset-pill" data-kind="b" aria-pressed="false">Condo buildings (1,078)</button>
+          </div>
+
+          <div class="lookup-combobox">
+            <label for="lookup-query" class="sr-only">Search by ZIP code, neighborhood name, or condo street address</label>
+            <input id="lookup-query" class="calc-input lookup-input" type="search" autocomplete="off" spellcheck="false" placeholder="Search ZIP (e.g. 10013), neighborhood (Williamsburg), or condo address (11 Hoyt, 250 South, BIN)…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="lookup-results">
+            <ul id="lookup-results" class="lookup-results" role="listbox" hidden></ul>
+          </div>
+
+          <div class="explore-presets lookup-presets" role="group" aria-label="Quick examples">
+            <button type="button" class="preset-pill" data-lookup-id="zip-10013">10013 (Tribeca)</button>
+            <button type="button" class="preset-pill" data-lookup-id="nta-BK0102">Williamsburg</button>
+            <button type="button" class="preset-pill" data-lookup-id="bin-3329438">11 Hoyt St (Brooklyn)</button>
+            <button type="button" class="preset-pill" data-lookup-id="bin-1089771">250 South St (Manhattan)</button>
+            <button type="button" class="preset-pill" data-lookup-id="nta-QN0103">Astoria (Central)</button>
+            <button type="button" class="preset-pill" data-lookup-id="zip-10301">10301 (Staten Island · scope check)</button>
+          </div>
+          <p id="lookup-status" class="status-message" role="status">Loading index…</p>
+        </div>
+
+        <article id="lookup-card" class="lookup-card" aria-live="polite" hidden>
+          <div class="lookup-card-head">
+            <div>
+              <span id="card-badge" class="lookup-badge">ZIP Code</span>
+              <h2 id="card-title">ZIP 10013</h2>
+              <p id="card-subtitle" class="fine-print">Manhattan · Tribeca-Civic Center</p>
+            </div>
+            <div class="lookup-card-actions">
+              <button type="button" id="copy-citation" class="tool-button">Copy citation &amp; link</button>
+              <a id="open-calculator" class="tool-button secondary" href="../calculator/">Open in Tax Calculator →</a>
+              <button type="button" id="download-csv" class="tool-button secondary">Download annual CSV</button>
+            </div>
+          </div>
+
+          <div class="metric-grid">
+            <section class="metric">
+              <h2>Recorded sales (&ge; $10k)</h2>
+              <strong id="m-sales">—</strong>
+              <p id="m-sales-note">—</p>
+            </section>
+            <section class="metric">
+              <h2>Median recorded price</h2>
+              <strong id="m-price">—</strong>
+              <p id="m-price-note">—</p>
+            </section>
+            <section class="metric">
+              <h2>No-mortgage-match (&ldquo;cash&rdquo;)</h2>
+              <strong id="m-cash">—</strong>
+              <p id="m-cash-note">—</p>
+            </section>
+            <section class="metric">
+              <h2>Illustrative buyer closing taxes</h2>
+              <strong id="m-tax">—</strong>
+              <p id="m-tax-note">—</p>
+            </section>
+          </div>
+
+          <div class="lookup-detail-grid">
+            <section class="lookup-subpanel" aria-labelledby="mix-heading">
+              <h3 id="mix-heading">Property mix &amp; LTV context</h3>
+              <div class="table-scroll">
+                <table class="tool-table lookup-compact-table" role="table">
+                  <thead>
+                    <tr><th scope="col">Segment</th><th scope="col">Sales</th><th scope="col">Median price</th><th scope="col">ACRIS flagged</th><th scope="col">Unmatched (%)</th></tr>
+                  </thead>
+                  <tbody id="type-rows"></tbody>
+                </table>
+              </div>
+              <p id="ltv-summary" class="fine-print"></p>
+            </section>
+
+            <section class="lookup-subpanel" aria-labelledby="notch-heading">
+              <h3 id="notch-heading">Mansion-tax threshold exposure</h3>
+              <div class="tax-bars lookup-notch-bars">
+                <div>
+                  <div class="tax-bar-label"><span>Sales &ge; $1,000,000 (1.00%+ mansion tier)</span><strong id="n-1m-val">—</strong></div>
+                  <div class="tax-bar-track"><span id="bar-1m" style="width:0%"></span></div>
+                </div>
+                <div>
+                  <div class="tax-bar-label"><span>Sales &ge; $2,000,000 (1.25%+ tier)</span><strong id="n-2m-val">—</strong></div>
+                  <div class="tax-bar-track"><span id="bar-2m" style="width:0%"></span></div>
+                </div>
+                <div>
+                  <div class="tax-bar-label"><span>Sales &ge; $3,000,000 (1.50%+ tier)</span><strong id="n-3m-val">—</strong></div>
+                  <div class="tax-bar-track"><span id="bar-3m" style="width:0%"></span></div>
+                </div>
+              </div>
+              <p id="notch-benchmark-note" class="fine-print"></p>
+            </section>
+          </div>
+
+          <div id="dynamic-scope" class="scope-box"></div>
+
+          <h3>Annual history (2016–2025)</h3>
+          <div class="table-scroll">
+            <table class="tool-table explorer-table" role="table">
+              <caption>Recorded residential sales (&ge; $10,000) by year. Unmatched mortgage share uses ACRIS-flagged house &amp; condo deeds only (shown when flagged count &ge; 10).</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Year</th>
+                  <th scope="col">Sales (&ge; $10k)</th>
+                  <th scope="col">Median price</th>
+                  <th scope="col">ACRIS flagged</th>
+                  <th scope="col">Unmatched (&ldquo;cash&rdquo;) share</th>
+                </tr>
+              </thead>
+              <tbody id="annual-rows"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="narrow" style="margin-top:36px">
+          <h2>Method &amp; underlying papers</h2>
+          <p class="intro">This lookup aggregates dataset release <strong>v1.2.0</strong> (<a href="../data/">Data Note v1.2.2</a>; 729,047 raw rows, 503,706 residential sales at $10,000 or more across 2016–2025). Major condo buildings require at least 25 qualifying condo sales and exclude NYC placeholder BINs ending in <code>000000</code>. Because condo deeds link to individual unit lots (<code>1001–6999</code>), they are grouped at the building level via BIN (<code>bin-*</code>) so unit transfers do not split a building apart.</p>
+          <div class="action-row">
+            <a class="tool-button secondary" href="../papers/who-gets-the-house/">Who Gets the House? (cash vs. mortgage)</a>
+            <a class="tool-button secondary" href="../papers/the-shape-of-the-tax/">The Shape of the Tax (notches &amp; MRT)</a>
+            <a class="tool-button secondary" href="../papers/when-a-deed-is-not-a-market-sale/">When a Deed Is Not a Market Sale</a>
+            <a class="tool-button secondary" href="../explore/">Full NYC Data Explorer</a>
+          </div>
+          <p class="fine-print">Source: <a href="https://doi.org/10.5281/zenodo.24274709">NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025 (v1.2.0 / note v1.2.2)</a>, Pablo Loschi (CC BY 4.0). Not legal, appraisal, or tax advice.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="../calculator/">Calculator</a> · <a href="../lookup/">Lookup</a> · <a href="../data/">Data</a> · <a href="../reproduce/">Reproduce</a> · <a href="../guide/">Record guide</a> · <a href="../press/">Press</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
+  <script type="module" src="../assets/lookup/lookup.js?v=20261123lookup"></script>
+  <script type="module" src="../assets/theme.js?v=20261116bat2"></script>
+  <script type="module" src="../assets/analytics.js"></script>
+</body>
+</html>
