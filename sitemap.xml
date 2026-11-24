@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/press/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/privacy/</loc>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/reproduce/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/stories/</loc>
@@ -85,12 +85,16 @@
     <lastmod>2026-11-19</lastmod>
   </url>
   <url>
+    <loc>https://nychousingdata.com/stories/first-second-home-tax-bills/</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
     <loc>https://nychousingdata.com/stories/second-home-tax-cliff/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/updates/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_12.pdf</loc>
@@ -128,10 +132,18 @@
   <url><loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/Supplement_v7_12.pdf</loc><lastmod>2026-11-19</lastmod></url>
   <url>
     <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/Rental_Proxies_on_a_Million_Dollar_Notch_v1_0.pdf</loc>
     <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/Which_Condos_Cross_NYCs_Second_Home_Tax_Threshold_v1_4.pdf</loc>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/Supplement_v1_4.pdf</loc>
+    <lastmod>2026-11-24</lastmod>
   </url>
 </urlset>

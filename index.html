@@ -4,61 +4,216 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-  <meta name="description" content="Explore New York City housing transactions, understand property records and read research on prices, buyers and taxes.">
+  <meta name="description" content="Independent research and an open, post-ZTRAX public-record benchmark linking New York City housing sales, deeds, mortgages, and property tax bills.">
   <title>NYC Housing Data | New York housing records, explained</title>
   <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
   <link rel="canonical" href="https://nychousingdata.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NYC Housing Data">
   <meta property="og:title" content="NYC Housing Data | New York housing records, explained">
-  <meta property="og:description" content="Explore New York City housing transactions, understand property records and read research on prices, buyers and taxes.">
+  <meta property="og:description" content="Independent research and an open, post-ZTRAX public-record benchmark linking New York City housing sales, deeds, mortgages, and property tax bills.">
   <meta property="og:url" content="https://nychousingdata.com/">
   <meta property="og:image" content="https://nychousingdata.com/assets/stories/mortgage-recording-comparison.png">
   <meta property="og:image:alt" content="Illustrative gross borrower charge on the same $900,000 condo: $0 without a purchase mortgage, $13,860 on a $720,000 mortgage before adjustments">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="assets/site.css?v=20261123p5">
-<link rel="stylesheet" href="./assets/stories.css?v=20261116bat2">
-<link rel="stylesheet" href="./assets/tools.css?v=20261119calc"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://nychousingdata.com/#website", "name": "NYC Housing Data", "alternateName": "Reading the Housing Record", "url": "https://nychousingdata.com/", "description": "Independent research and public-data tools on New York City housing transactions.", "publisher": {"@id": "https://nychousingdata.com/#author"}}, {"@type": "Person", "@id": "https://nychousingdata.com/#author", "name": "Pablo Loschi", "url": "https://nychousingdata.com/#about", "sameAs": ["https://orcid.org/0009-0004-9455-4713"]}]}</script><link rel="stylesheet" href="assets/research-explorer.css?v=20261116bat2"></head>
+  <link rel="stylesheet" href="assets/site.css?v=20261124ux">
+  <link rel="stylesheet" href="./assets/stories.css?v=20261116bat2">
+  <link rel="stylesheet" href="./assets/tools.css?v=20261119calc">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://nychousingdata.com/#website", "name": "NYC Housing Data", "alternateName": "Reading the Housing Record", "url": "https://nychousingdata.com/", "description": "Independent research and open public-record benchmark on New York City housing transactions.", "publisher": {"@id": "https://nychousingdata.com/#author"}}, {"@type": "Person", "@id": "https://nychousingdata.com/#author", "name": "Pablo Loschi", "url": "https://nychousingdata.com/#about", "sameAs": ["https://orcid.org/0009-0004-9455-4713", "https://scholar.google.com/citations?user=bdzZzDoAAAAJ&hl=en", "https://github.com/pgold30"]}]}</script>
+  <link rel="stylesheet" href="assets/research-explorer.css?v=20261116bat2">
+</head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header"><div class="header-inner"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><img src="./assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="./explore/">Explore</a><a href="./stories/">Stories</a><a href="./#papers">Research</a><a href="./data/">Data</a><a href="./press/">Press</a><a href="./#about">About</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
   <main id="main">
-
     <section class="hero"><div class="wrap home-intro">
-      <div><p class="eyebrow">NYC Housing Data · Independent research</p><h1>New York’s housing records, explained</h1><p class="lead">Find out what New York’s housing records say about prices, buyers and taxes. Explore the transactions behind the research.</p><p class="hero-metrics"><span>729,047 sales (2016–2025)</span> · <span>5 working papers</span> · <span>Public linked dataset</span> · <span>Versioned on Zenodo</span></p><div class="action-row"><a class="tool-button" href="explore/">Explore the data</a><a class="tool-button secondary" href="lookup/">ZIP &amp; condo lookup</a><a class="tool-button secondary" href="calculator/">Closing-tax calculator</a><a class="tool-button secondary" href="guide/">Understand a property record</a><a class="tool-button secondary" href="data/">Dataset &amp; code</a></div><p class="fine-print" style="margin-top:18px">Historical research archive covering NYC sales and ACRIS records (not a live market or parcel-lookup feed).</p></div>
+      <div>
+        <p class="eyebrow">NYC Housing Data · Independent research</p>
+        <h1>New York’s housing records, explained</h1>
+        <p class="lead">Public property files mix market trades with tax notches, statutory deed formulas, and billing-lot keys. These studies and open tables link New York City sales to deeds, mortgages, and property tax bills to show what the records measure and what they miss.</p>
+        <p class="hero-metrics"><span>729,047 sales (2016–2025)</span> · <span>4 NYC studies + 1 simulation note</span> · <span>Open post-ZTRAX NYC benchmark</span> · <span>CC BY 4.0 on Zenodo</span></p>
+        <div class="action-row">
+          <a class="tool-button" href="#papers">Read the research</a>
+          <a class="tool-button secondary" href="data/">Dataset &amp; code</a>
+          <a class="tool-button secondary" href="guide/">Understand a property record</a>
+        </div>
+        <p class="fine-print" style="margin-top:18px">Public research archive using 2016–2025 DOF sales, ACRIS deeds, and FY2027 assessment rolls (not a live market or parcel-lookup feed).</p>
+      </div>
     </div></section>
-    <section class="reader-feature"><div class="wrap reader-feature-grid"><div><p class="eyebrow">Featured story · Buying &amp; taxes</p><h2><a href="stories/first-home-tax-fixes/">Four ways New York could make a first home cheaper to buy</a></h2><p>Building more homes will take years. Moving the tax off mortgages, smoothing the transfer-tax cliffs and fixing the city’s sales data could happen much sooner. In the worked $900,000 condo example, the gross recording charge is another 7.7% of a $180,000 down payment, before credits and exemptions.</p><a class="story-read" href="stories/first-home-tax-fixes/">Read the four fixes <span aria-hidden="true">→</span></a><p class="fine-print">Swap and slice figures hold sales fixed: they show the size of a change, not a forecast. <a href="stories/mortgage-recording-tax/">The $900,000 condo example</a>.</p></div><a href="stories/first-home-tax-fixes/" aria-label="Read four ways New York could make a first home cheaper to buy"><img src="assets/stories/mortgage-recording-comparison.svg" alt="Illustrative gross mortgage recording charge on the same $900,000 condo: $0 without a purchase mortgage; $13,860 on a $720,000 mortgage, before adjustments." width="900" height="600"></a></div></section>
 
-    <section class="section home-latest" id="latest-stories"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Housing Stories</p><h2>Latest stories</h2></div><p><a href="stories/">All stories →</a></p></div><div class="story-grid home-latest-grid"><article class="story-card"><a class="story-card-image" href="stories/second-home-tax-cliff/" tabindex="-1" aria-hidden="true"><img src="assets/stories/second-home-surcharge.svg?v=20261107c" alt="" loading="lazy" width="900" height="520"></a><div class="story-card-copy"><p class="eyebrow">Buying &amp; taxes</p><h3><a href="stories/second-home-tax-cliff/">New York&#x27;s second-home tax starts at a cliff</a></h3><p>A condo the city values at $999,999 owes nothing; at $1 million it owes $40,000 a year.</p><p class="story-card-meta">Analysis · 11 min read</p></div></article><article class="story-card"><a class="story-card-image" href="stories/family-sale-price/" tabindex="-1" aria-hidden="true"><img src="assets/stories/family-sale-transfer-report.png" alt="" loading="lazy" width="1000" height="632"></a><div class="story-card-copy"><p class="eyebrow">Prices &amp; records</p><h3><a href="stories/family-sale-price/">A $1.6 million sale that stayed in the family</a></h3><p>The form filed with the deed declares a transfer between relatives. The open sales data leaves that answer out.</p><p class="story-card-meta">Analysis · 7 min read</p></div></article><article class="story-card"><a class="story-card-image" href="stories/nyc-million-dollar-tax-line/" tabindex="-1" aria-hidden="true"><img src="assets/stories/tax-round-prices.svg" alt="" loading="lazy" width="1200" height="700"></a><div class="story-card-copy"><p class="eyebrow">Buying &amp; taxes</p><h3><a href="stories/nyc-million-dollar-tax-line/">At $2 million, one extra dollar adds $5,000 in tax</a></h3><p>Sales at exactly $1,999,999 went from four before the 2019 tax change to 127 after it.</p><p class="story-card-meta">Data story · 5 min read</p></div></article></div></div></section>
+    <section class="home-tools-band" aria-label="Interactive public-data tools"><div class="wrap">
+      <div class="home-paths">
+        <a href="lookup/">
+          <span class="home-tool-kicker">FY2027 surcharge check</span>
+          <strong>ZIP &amp; condo lookup</strong>
+          <span>Inspect how Phase 1 rental-proxy assessments treat a neighborhood, ZIP code, or condominium building relative to the $1M threshold.</span>
+        </a>
+        <a href="calculator/">
+          <span class="home-tool-kicker">Closing costs</span>
+          <strong>Closing-tax calculator</strong>
+          <span>Compare New York’s buyer mansion tax and mortgage recording tax across prices, loan amounts, and CEMA refinancing structures.</span>
+        </a>
+        <a href="explore/">
+          <span class="home-tool-kicker">Linked dataset</span>
+          <strong>Sales &amp; linkage explorer</strong>
+          <span>Filter 2016–2025 residential sales, deed-link rates, and recorded mortgage matches by borough, property type, and price band.</span>
+        </a>
+      </div>
+    </div></section>
+
+    <section class="why-section" id="why-it-matters"><div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Why public housing records mislead</p>
+          <h2>Three places where law and recordkeeping shape the numbers</h2>
+        </div>
+        <p>Before taking a public price series, cash-buyer discount, or assessment roll at face value, researchers have to read the tax and registry rules behind each column.</p>
+      </div>
+      <div class="why-grid">
+        <div>
+          <h3>Tax statutes sit inside recorded prices</h3>
+          <p>Round-price transfer-tax cliffs move deals from $2 million to $1,999,999, foreclosure deeds record judgment debt instead of bids, and Class 2 rental proxies value $4–$6 million condos near $1 million.</p>
+        </div>
+        <div>
+          <h3>Unlinked records are not cash or exempt sales</h3>
+          <p>Condominium sales often carry building billing lots while deeds sit on unit lots, leaving expensive units disproportionately unlinked. Treating an empty recording window as cash distorts price-gap estimates.</p>
+        </div>
+        <div>
+          <h3>An open NYC benchmark after ZTRAX</h3>
+          <p>With Zillow’s direct ZTRAX servicing wound down in 2023, researchers lack a current, NDA-free linked record for New York City. This deposit provides documented unit-lot links through 2025 under CC BY 4.0.</p>
+        </div>
+      </div>
+    </div></section>
 
     <section class="section" id="papers"><div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">The papers</p><h2 id="program-map-title">Four studies of New York housing transactions, and a companion simulation</h2></div><p>Transfer-tax thresholds, deed consideration rules, buyer financing labels, pied-à-terre valuation distortion, and simulation benchmark measurement. <a href="#research-film">Watch the research film</a>.</p></div>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The papers</p>
+          <h2 id="program-map-title">Four studies of New York housing records, and a companion simulation</h2>
+        </div>
+        <p>Second-home valuation thresholds, transfer-tax notches, foreclosure deed amounts, buyer financing labels, and simulation benchmark measurement.</p>
+      </div>
 
       <div class="paper-grid">
-        <article class="paper-card"><div class="number">01 / TAX DESIGN</div><p class="card-meta">Version 3.12 · 19 Nov 2026</p><h3>The Shape of the Tax</h3><p>How did recorded prices respond to the transfer-tax notches created in 2019, and what does round-number shifting mean for bunching estimates?</p><p class="card-stat"><strong>7.8 → 2.3</strong>sales at exactly $2 million relative to nearby density, before and after the 2019 reform</p><div class="card-bottom"><div class="card-links"><a href="papers/the-shape-of-the-tax/">Read summary →</a><a class="card-pdf" href="papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_12.pdf">PDF (55 pp.)</a><a class="card-pdf" href="stories/nyc-million-dollar-tax-line/">Story →</a></div></div></article>
-        <article class="paper-card"><div class="number">02 / DEED AMOUNTS</div><p class="card-meta">Measurement note v1.0.20 · 24 Nov 2026</p><h3>When a Deed Is Not a Market Sale</h3><p>When does recorded consideration follow a statutory bid or discharged-debt rule rather than a market price, and how does that shift price indices?</p><p class="card-stat"><strong>16,655</strong>transfers to lenders flagged in 2003–2025 ACRIS deeds</p><div class="card-bottom"><div class="card-links"><a href="papers/when-a-deed-is-not-a-market-sale/">Read summary →</a><a class="card-pdf" href="papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_Measurement_Note_v1_0_20.pdf">Note (16 pp.)</a><a class="card-pdf" href="papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1_0_15.pdf">Paper (26 pp.)</a><a class="card-pdf" href="stories/foreclosure-deed-price/">Story →</a></div></div></article>
-        <article class="paper-card"><div class="number">03 / FINANCING LABELS</div><p class="card-meta">Version 5.7 · 19 Nov 2026</p><h3>Who Gets the House?</h3><p>Does a recorded cash–mortgage price gap reflect closing certainty, or which buyers and related-party transfers appear in each group?</p><p class="card-stat"><strong>9.25 → 4.87</strong>log-point house gap, before and after excluding same-surname deeds</p><div class="card-bottom"><div class="card-links"><a href="papers/who-gets-the-house/">Read summary →</a><a class="card-pdf" href="papers/who-gets-the-house/who_gets_the_house_v5_7.pdf">PDF (33 pp.)</a><a class="card-pdf" href="stories/cash-buyer-discount/">Story →</a></div></div></article>
-        <article class="paper-card"><div class="number">04 / PIED-À-TERRE VALUATION</div><p class="card-meta">Version 1.0 · 23 Nov 2026</p><h3>Rental Proxies on a Million-Dollar Notch</h3><p>How does Class 2 rental-proxy assessment invert effective surcharge rates, split comparable $4M–$6M condos at the $1 million cliff, and challenge 2028 sales rules?</p><p class="card-stat"><strong>61.5% / 38.5%</strong>$4M–$6M condos split between $0 and $40,000+ at the $1M DOF cliff</p><div class="card-bottom"><div class="card-links"><a href="papers/rental-proxies-on-a-million-dollar-notch/">Read summary →</a><a class="card-pdf" href="papers/rental-proxies-on-a-million-dollar-notch/Rental_Proxies_on_a_Million_Dollar_Notch_v1_0.pdf">PDF (20 pp.)</a><a class="card-pdf" href="stories/second-home-tax-cliff/">Story →</a></div></div></article>
+        <article class="paper-card">
+          <div class="number">01 / SECOND-HOME SURCHARGE</div>
+          <p class="card-meta">Version 1.4 · 24 Nov 2026</p>
+          <h3>Which Condos Cross New York City’s Second-Home Tax Threshold?</h3>
+          <p>How rental-income assessments drive Phase 1 liability, match November 2026 tax statements, and leave one in three $4–$6M sales misclassified under 2028 comparables.</p>
+          <p class="card-stat"><strong>39 vs. 0</strong>sampled November 2026 bills carrying a surcharge (per 100 units just above vs. below the $1M city-value cutoff)</p>
+          <div class="card-bottom"><div class="card-links"><a href="papers/rental-proxies-on-a-million-dollar-notch/">Read summary →</a><a class="card-pdf" href="papers/rental-proxies-on-a-million-dollar-notch/Which_Condos_Cross_NYCs_Second_Home_Tax_Threshold_v1_4.pdf">PDF (8 pp.)</a><a class="card-pdf" href="papers/rental-proxies-on-a-million-dollar-notch/Supplement_v1_4.pdf">Supplement (5 pp.)</a><a class="card-pdf" href="stories/first-second-home-tax-bills/">Story →</a></div></div>
+        </article>
+        <article class="paper-card">
+          <div class="number">02 / TAX DESIGN</div>
+          <p class="card-meta">Version 3.12 · 19 Nov 2026</p>
+          <h3>The Shape of the Tax</h3>
+          <p>How did recorded prices respond to the transfer-tax notches created in 2019, and what does round-number shifting mean for bunching estimates?</p>
+          <p class="card-stat"><strong>7.8 → 2.3</strong>sales at exactly $2 million relative to nearby density, before and after the 2019 reform</p>
+          <div class="card-bottom"><div class="card-links"><a href="papers/the-shape-of-the-tax/">Read summary →</a><a class="card-pdf" href="papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_12.pdf">PDF (55 pp.)</a><a class="card-pdf" href="stories/nyc-million-dollar-tax-line/">Story →</a></div></div>
+        </article>
+        <article class="paper-card">
+          <div class="number">03 / DEED AMOUNTS</div>
+          <p class="card-meta">Measurement note v1.0.20 · 24 Nov 2026</p>
+          <h3>When a Deed Is Not a Market Sale</h3>
+          <p>When does recorded consideration follow a statutory bid or discharged-debt rule rather than a market price, and how does that shift price indices?</p>
+          <p class="card-stat"><strong>16,655</strong>transfers to lenders flagged in 2003–2025 ACRIS deeds</p>
+          <div class="card-bottom"><div class="card-links"><a href="papers/when-a-deed-is-not-a-market-sale/">Read summary →</a><a class="card-pdf" href="papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_Measurement_Note_v1_0_20.pdf">Note (16 pp.)</a><a class="card-pdf" href="papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1_0_15.pdf">Paper (26 pp.)</a><a class="card-pdf" href="stories/foreclosure-deed-price/">Story →</a></div></div>
+        </article>
+        <article class="paper-card">
+          <div class="number">04 / FINANCING LABELS</div>
+          <p class="card-meta">Version 5.7 · 19 Nov 2026</p>
+          <h3>Who Gets the House?</h3>
+          <p>Does a recorded cash–mortgage price gap reflect closing certainty, or which buyers and related-party transfers appear in each group?</p>
+          <p class="card-stat"><strong>9.25 → 4.87</strong>log-point house gap, before and after excluding same-surname deeds</p>
+          <div class="card-bottom"><div class="card-links"><a href="papers/who-gets-the-house/">Read summary →</a><a class="card-pdf" href="papers/who-gets-the-house/who_gets_the_house_v5_7.pdf">PDF (33 pp.)</a><a class="card-pdf" href="stories/cash-buyer-discount/">Story →</a></div></div>
+        </article>
       </div>
-      <article class="theory-card"><div class="theory-head"><div class="number">COMPANION SIMULATION</div><p class="card-meta" style="margin-top:-6px">Version 7.12 · 19 Nov 2026</p><h3>When the Benchmark Moves with the Policy</h3></div><div class="theory-body"><p>Audits the published LivSim allocation simulator alongside exact discrete examples, a controlled housing illustration and an executable reporting check, showing why changing denominators and cohorts alter policy rankings.</p><div class="card-bottom"><div class="card-links"><a href="papers/when-the-benchmark-moves-with-the-policy/">Read summary &amp; audit files →</a><a class="card-pdf" href="papers/when-the-benchmark-moves-with-the-policy/When_the_Benchmark_Moves_with_the_Policy_v7_12.pdf">PDF (15 pp.)</a><a class="card-pdf" href="papers/when-the-benchmark-moves-with-the-policy/#replication-verification">Run checks</a></div></div></div></article>
-      <div class="home-intro-video" id="research-film">
+
+      <article class="theory-card">
+        <div class="theory-head">
+          <div class="number">COMPANION SIMULATION</div>
+          <p class="card-meta" style="margin-top:-6px">Version 7.12 · 19 Nov 2026</p>
+          <h3>When the Benchmark Moves with the Policy</h3>
+        </div>
+        <div class="theory-body">
+          <p>Audits the published LivSim allocation simulator alongside exact discrete examples, a controlled housing illustration, and a two-class discrete-event triage benchmark, showing why changing denominators and cohorts alter policy rankings.</p>
+          <div class="card-bottom"><div class="card-links"><a href="papers/when-the-benchmark-moves-with-the-policy/">Read summary &amp; audit files →</a><a class="card-pdf" href="papers/when-the-benchmark-moves-with-the-policy/When_the_Benchmark_Moves_with_the_Policy_v7_12.pdf">PDF (15 pp.)</a><a class="card-pdf" href="papers/when-the-benchmark-moves-with-the-policy/#replication-verification">Run checks</a></div></div>
+        </div>
+      </article>
+
+      <details class="home-details home-film-toggle" id="research-film">
+        <summary>Watch the 5-minute visual introduction (NotebookLM companion film)</summary>
         <section class="paper-video-intro" aria-labelledby="research-film-title">
           <div>
             <p class="eyebrow">Short film · 5 min 20 sec</p>
             <h3 id="research-film-title">Reading New York’s housing records</h3>
-            <p>Follow the records behind a New York sale, from the price on the deed to the search for a mortgage. The film ties together all four studies—transfer-tax notches, foreclosure deed prices, cash–mortgage buyer gaps, and simulation benchmarks.</p>
-            <p class="fine-print">Cinematic overview made with NotebookLM. See the papers for the exact figures and methods.</p>
+            <p>Follow the records behind a New York sale, from the price on the deed to the search for a mortgage, across transfer-tax notches, foreclosure deed rules, cash–mortgage buyer gaps, and benchmark shifts.</p>
+            <p class="fine-print">Cinematic overview made with NotebookLM. The papers and data notes remain the reference for exact figures and sample scopes.</p>
             <a href="assets/media/reading-nyc-housing-records-nov-2026.mp4?v=20261123" download>Download the original (MP4)</a>
           </div>
           <figure>
-            <video controls playsinline preload="metadata" width="1280" height="720" poster="assets/media/reading-nyc-housing-records-nov-2026-poster.jpg?v=20261123" src="assets/media/reading-nyc-housing-records-stream-v2.mp4" aria-label="Reading New York’s housing records">
+            <video controls playsinline preload="none" width="1280" height="720" poster="assets/media/reading-nyc-housing-records-nov-2026-poster.jpg?v=20261123" src="assets/media/reading-nyc-housing-records-stream-v2.mp4" aria-label="Reading New York’s housing records">
               <a href="assets/media/reading-nyc-housing-records-nov-2026.mp4?v=20261123">Download the MP4</a>
             </video>
           </figure>
         </section>
+      </details>
+    </div></section>
+
+    <section class="section home-latest" id="latest-stories"><div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Housing Stories</p>
+          <h2>Plain-language guides to the records</h2>
+        </div>
+        <p><a href="stories/">All 9 stories →</a></p>
+      </div>
+      <div class="story-grid home-latest-grid">
+        <article class="story-card">
+          <a class="story-card-image" href="stories/first-second-home-tax-bills/" tabindex="-1" aria-hidden="true"><img src="papers/rental-proxies-on-a-million-dollar-notch/fig1_cutoff_and_comps.png" alt="" loading="lazy" width="1200" height="580"></a>
+          <div class="story-card-copy"><p class="eyebrow">Real estate &amp; taxes</p><h3><a href="stories/first-second-home-tax-bills/">NYC’s first second-home tax bills are out. Two $5 million condos show who pays.</a></h3><p>Checking 200 November property tax statements shows 39 of 100 billed above $1M ($48,609 median) and 0 of 100 below.</p><p class="story-card-meta">New story · 4 min read</p></div>
+        </article>
+        <article class="story-card">
+          <a class="story-card-image" href="stories/second-home-tax-cliff/" tabindex="-1" aria-hidden="true"><img src="assets/stories/second-home-surcharge.svg?v=20261107c" alt="" loading="lazy" width="900" height="520"></a>
+          <div class="story-card-copy"><p class="eyebrow">Buying &amp; taxes</p><h3><a href="stories/second-home-tax-cliff/">New York’s second-home tax starts at a cliff</a></h3><p>A condo the city values at $999,999 owes nothing; at $1 million it owes $40,000 a year.</p><p class="story-card-meta">Analysis · 11 min read</p></div>
+        </article>
+        <article class="story-card">
+          <a class="story-card-image" href="stories/first-home-tax-fixes/" tabindex="-1" aria-hidden="true"><img src="assets/stories/mortgage-recording-comparison.svg" alt="" loading="lazy" width="900" height="600"></a>
+          <div class="story-card-copy"><p class="eyebrow">Buying &amp; taxes</p><h3><a href="stories/first-home-tax-fixes/">Four ways New York could make a first home cheaper to buy</a></h3><p>Shifting the mortgage recording tax, replacing transfer-tax cliffs, and fixing public sales flags.</p><p class="story-card-meta">Policy note · 7 min read</p></div>
+        </article>
+        <article class="story-card">
+          <a class="story-card-image" href="stories/nyc-million-dollar-tax-line/" tabindex="-1" aria-hidden="true"><img src="assets/stories/tax-round-prices.svg" alt="" loading="lazy" width="1200" height="700"></a>
+          <div class="story-card-copy"><p class="eyebrow">Buying &amp; taxes</p><h3><a href="stories/nyc-million-dollar-tax-line/">At $2 million, one extra dollar adds $5,000 in tax</a></h3><p>Sales at exactly $1,999,999 went from four before the 2019 tax change to 127 after it.</p><p class="story-card-meta">Data story · 5 min read</p></div>
+        </article>
       </div>
     </div></section>
-    <section class="data-section" id="data"><div class="wrap"><p class="eyebrow">The data</p><h2>Sales linked to deeds and mortgages</h2><p>The published dataset starts with 729,047 New York City sales-file rows from 2016 to 2025 and links 305,175 house and condominium sales to a deed. Different papers use different samples and date ranges.</p><p>ACRIS covers Manhattan, the Bronx, Brooklyn and Queens. Staten Island deeds are held separately, and co-ops trade as shares. A missing mortgage match does not prove a cash purchase; successful linkage does not establish accuracy.</p><div class="action-row"><a class="tool-button" href="explore/">Explore the aggregates</a><a class="tool-button secondary" href="data/">Dataset, definitions and code</a><a class="tool-button secondary" href="data/NYC_linked_dataset_data_note_v1_2_2.pdf">Data note v1.2.2 (PDF, 4 pp.)</a><a class="tool-button secondary" href="https://doi.org/10.5281/zenodo.24274709">Dataset on Zenodo</a><a class="tool-button secondary" href="https://doi.org/10.5281/zenodo.24504489">Read the linkage paper</a></div><p class="fine-print data-cite">Cite: Loschi, Pablo (2026). <em>NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025</em>, v1.2.2 (v1.2.0 data). <a href="https://doi.org/10.5281/zenodo.24274709">Zenodo DOI</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p></div></section>
+
+    <section class="data-section" id="data"><div class="wrap">
+      <p class="eyebrow">The data · Post-ZTRAX NYC benchmark</p>
+      <h2>Sales linked to deeds and mortgages (2016–2025)</h2>
+      <p>The public release retains 729,047 residential sales rows across all five boroughs and links 305,175 eligible house (97.2%) and condominium (96.0%) sales in the four ACRIS boroughs to recorded deeds and mortgage indicators.</p>
+      <div class="data-notes">
+        <div>
+          <p class="dn-label">Zero NDA or gatekeeper</p>
+          <p>CC BY 4.0 tables plus standard-library Python code that rebuilds the links offline from archived NYC Open Data extracts and manifests.</p>
+        </div>
+        <div>
+          <p class="dn-label">Current through 2025</p>
+          <p>Covers ten annual cohorts including the post-2021 rate shift, after Zillow ended direct servicing of ZTRAX in September 2023.</p>
+        </div>
+        <div>
+          <p class="dn-label">Explicit condo unit-lot rules</p>
+          <p>Recovers condominium unit lots (1001–6999) with documented coverage and caveats instead of an opaque vendor flag.</p>
+        </div>
+      </div>
+      <div class="action-row">
+        <a class="tool-button" href="explore/">Explore the aggregates</a>
+        <a class="tool-button secondary" href="data/">Dataset, rules &amp; codebook</a>
+        <a class="tool-button secondary" href="https://doi.org/10.5281/zenodo.24504489">Read the linkage paper</a>
+        <a class="tool-button secondary" href="https://doi.org/10.5281/zenodo.24274709">Dataset on Zenodo</a>
+      </div>
+      <p class="fine-print data-cite">Cite: Loschi, Pablo (2026). <em>NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025</em>, v1.2.2 (v1.2.0 tables). <a href="https://doi.org/10.5281/zenodo.24274709">Zenodo DOI</a> · <a href="data/NYC_linked_dataset_data_note_v1_2_2.pdf">Data note PDF</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+    </div></section>
 
     <section class="about-section" id="about"><div class="wrap about-grid"><div><img class="about-photo" src="assets/img/pablo-loschi.jpg" alt="Portrait of Pablo Loschi" width="160" height="160" loading="lazy"><p class="eyebrow">About</p><h2>Pablo Loschi</h2><p class="about-role">Lawyer (UBA) · Executive MBA in progress (Quantic)<br>Principal Systems Engineer · Independent researcher · Berlin</p></div><div>
       <p>Pablo Loschi is a Principal Systems Engineer at Verve in Berlin and an independent researcher in housing economics and tax design. After more than fifteen years building large-scale cloud and data platforms, first in Argentina and for the past seven years in Germany, he brings an engineer's habits to empirical work: documented linkage rules, versioned releases and replication code. The papers distinguish agreement between files from verified accuracy. Trained as a lawyer at the University of Buenos Aires, he reads the statutes behind the records, and each of these papers starts from one.</p>
@@ -70,6 +225,6 @@
     </div></div></section>
   </main>
   <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="./#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="./">Overview</a> · <a href="./calculator/">Calculator</a> · <a href="./data/">Data</a> · <a href="./reproduce/">Reproduce</a> · <a href="./guide/">Record guide</a> · <a href="./press/">Press</a> · <a href="./privacy/">Privacy</a> · <a href="./updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
-
-<script type="module" src="./assets/theme.js?v=20261116bat2"></script><script type="module" src="./assets/analytics.js"></script></body>
+  <script type="module" src="./assets/theme.js?v=20261116bat2"></script><script type="module" src="./assets/analytics.js"></script>
+</body>
 </html>

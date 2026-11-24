@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-  <meta name="description" content="A public dataset of New York City residential sales, 2016–2025, linked to their recorded deeds and mortgages, with a codebook and code.">
+  <meta name="description" content="An open, post-ZTRAX public-record benchmark for New York City: 729,047 residential sales (2016–2025) linked to ACRIS deeds and mortgages, with codebook and Python code.">
   <title>NYC Housing Sales Data (2016–2025): DOF Rolling &amp; Annualized Sales Linked to ACRIS | NYC Housing Data</title>
   <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
   <link rel="canonical" href="https://nychousingdata.com/data/">
@@ -16,14 +16,14 @@
   <meta property="og:image" content="https://nychousingdata.com/assets/stories/condo-coverage.png">
   <meta property="og:image:alt" content="Deed-link coverage among eligible condominium sales, by borough">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../assets/site.css?v=20261116bat2">
-<link rel="stylesheet" href="../assets/stories.css?v=20261116bat2">
-<link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
+  <link rel="stylesheet" href="../assets/site.css?v=20261124ux">
+  <link rel="stylesheet" href="../assets/stories.css?v=20261116bat2">
+  <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
   <!-- scholar-dc-meta-start -->
   <meta name="citation_title" content="NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025">
   <meta name="citation_author" content="Loschi, Pablo">
   <meta name="citation_publication_date" content="2026/09/26">
-  <meta name="citation_online_date" content="2026/11/16">
+  <meta name="citation_online_date" content="2026/11/24">
   <meta name="citation_publisher" content="Zenodo">
   <meta name="citation_doi" content="10.5281/zenodo.24274709">
   <meta name="citation_pdf_url" content="https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1_2_2.pdf">
@@ -42,36 +42,121 @@
   <meta name="DC.publisher" content="Zenodo">
   <meta name="DC.language" content="en">
   <meta name="DC.description" content="729,047 New York City residential sales linked to ACRIS deeds and mortgages (2016–2025), with codebook, reproducible Python code, and v1.2.2 Data Note.">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "@id": "https://nychousingdata.com/data/#work", "name": "NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025", "headline": "NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025", "description": "729,047 New York City residential sales linked to ACRIS deeds and mortgages (2016–2025), with codebook, reproducible Python code, and v1.2.2 Data Note.", "url": "https://nychousingdata.com/data/", "sameAs": ["https://doi.org/10.5281/zenodo.24274709", "https://doi.org/10.5281/zenodo.22977532"], "identifier": "https://doi.org/10.5281/zenodo.24274709", "version": "1.2.2", "datePublished": "2026-09-26", "dateModified": "2026-11-16", "inLanguage": "en", "license": "https://creativecommons.org/licenses/by/4.0/", "author": {"@type": "Person", "@id": "https://nychousingdata.com/#author", "name": "Pablo Loschi", "url": "https://nychousingdata.com/#about", "sameAs": ["https://orcid.org/0009-0004-9455-4713", "https://scholar.google.com/citations?user=bdzZzDoAAAAJ&hl=en", "https://github.com/pgold30"]}, "publisher": {"@type": "Organization", "name": "Zenodo"}, "encoding": {"@type": "MediaObject", "encodingFormat": "application/pdf", "contentUrl": "https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1_2_2.pdf"}}</script>
-  <!-- scholar-dc-meta-end --></head>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "@id": "https://nychousingdata.com/data/#work", "name": "NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025", "headline": "NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025", "description": "729,047 New York City residential sales linked to ACRIS deeds and mortgages (2016–2025), with codebook, reproducible Python code, and v1.2.2 Data Note.", "url": "https://nychousingdata.com/data/", "sameAs": ["https://doi.org/10.5281/zenodo.24274709", "https://doi.org/10.5281/zenodo.22977532"], "identifier": "https://doi.org/10.5281/zenodo.24274709", "version": "1.2.2", "datePublished": "2026-09-26", "dateModified": "2026-11-24", "inLanguage": "en", "license": "https://creativecommons.org/licenses/by/4.0/", "author": {"@type": "Person", "@id": "https://nychousingdata.com/#author", "name": "Pablo Loschi", "url": "https://nychousingdata.com/#about", "sameAs": ["https://orcid.org/0009-0004-9455-4713", "https://scholar.google.com/citations?user=bdzZzDoAAAAJ&hl=en", "https://github.com/pgold30"]}, "publisher": {"@type": "Organization", "name": "Zenodo"}, "encoding": {"@type": "MediaObject", "encodingFormat": "application/pdf", "contentUrl": "https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1_2_2.pdf"}}</script>
+  <!-- scholar-dc-meta-end -->
+</head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/" aria-current="page">Data</a><a href="../press/">Press</a><a href="../#about">About</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
   <main id="main">
     <section class="article-hero"><div class="wrap">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Overview</a><span aria-hidden="true">/</span><span>Data</span></nav>
-      <p class="eyebrow">Dataset · Public records</p><h1>NYC sales linked to deeds and mortgages</h1>
-      <p class="article-subtitle">New York City residential sales, 2016–2025, with deed links and nearby recorded mortgage matches for eligible houses and condominiums in the four ACRIS boroughs</p>
-      <div class="article-meta"><span>By Pablo Loschi</span><span>Release 1.2.2 · 16 November 2026 (data note updated; 1.2.0 dataset ZIP unchanged)</span><span>CC BY 4.0</span><span class="status public">Public dataset</span></div>
-      <div class="article-actions"><a href="https://zenodo.org/records/24274709">Get dataset and code</a><a href="NYC_linked_dataset_data_note_v1_2_2.pdf">Read the dataset note (v1.2.2) <span class="file-kind">PDF</span></a><a href="https://doi.org/10.5281/zenodo.24504489">Read the linkage paper on Zenodo</a></div>
+      <p class="eyebrow">Dataset · Public records</p>
+      <h1>NYC sales linked to deeds and mortgages</h1>
+      <p class="article-subtitle">An open, post-ZTRAX public-record benchmark for New York City: 2016–2025 residential sales linked to ACRIS deeds and recorded mortgages</p>
+      <div class="article-meta"><span>By Pablo Loschi</span><span>Release 1.2.2 · Data tables unchanged from 1.2.0</span><span>CC BY 4.0</span><span class="status public">Public dataset</span></div>
+      <div class="article-actions">
+        <a href="https://zenodo.org/records/24274709">Get dataset and code</a>
+        <a href="NYC_linked_dataset_data_note_v1_2_2.pdf">Read the dataset note (v1.2.2) <span class="file-kind">PDF</span></a>
+        <a href="https://doi.org/10.5281/zenodo.24504489">Read the linkage paper on Zenodo</a>
+      </div>
     </div></section>
     <div class="article-body"><div class="wrap article-layout">
-      <div><section class="content-section"><h2>Why these records need linking</h2><p>New York City publishes its property sales and its recorded deeds and mortgages as separate open datasets, and the two do not join directly. The Department of Finance annualized and rolling sales files give the price and date but no ACRIS document number. ACRIS, the city register, has the deeds and mortgages but not the sales. Condominiums are the hardest case: the sales file usually identifies a unit by the building's billing lot, while ACRIS records its deed and mortgage under the unit's own lot, so a join on the parcel number misses most of them.</p><p>This dataset links the records using fixed, documented rules. The studies on this site and other researchers can reuse the same matches. The public files contain no party names.</p></section>
-      <section class="content-section"><h2>In numbers</h2><ul class="stat-list"><li><span class="stat-value">729,047</span><span class="stat-label">house, condominium and co-operative sales, 2016–2025, all five boroughs</span></li><li><span class="stat-value">97.2%</span><span class="stat-label">eligible house sales with a deed link in release 1.2.0</span></li></ul><p>The release links 183,912 eligible house sales and 121,263 eligible condominium sales to deeds. Condominium coverage is 96.0%. A link identifies a candidate document under the stated rules; it does not verify the transaction or the purpose of a mortgage.</p></section>
-      <section class="content-section"><h2>Files in the deposited 1.2.0 dataset</h2><p>Three tables that share keys: <code>sales</code> joins to <code>links</code> on <code>sale_id</code>, and <code>links</code> joins to <code>deed_flags</code> on <code>deed_document_id</code>. A blank cell means not applicable or not measured, never zero.</p>
-      <details class="data-table" open><summary>Files and main columns</summary><table><thead><tr><th>File</th><th>Rows</th><th>Main columns</th></tr></thead><tbody>
-      <tr><td><code>sales.csv.gz</code></td><td>729,047</td><td>Borough, block and lot; property group (house, condo, co-op); building class; address; price; sale date; geography; flags for ACRIS coverage and the $300,000–$6 million band</td></tr>
-      <tr><td><code>links.csv.gz</code></td><td>729,047</td><td>Deed match (unique, none, ambiguous); ACRIS deed id; recovered unit lot; financed in three windows (30, 90 and 180 days); number of mortgages; largest loan amount and its document id; CEMA flag</td></tr>
-      <tr><td><code>deed_flags.csv.gz</code></td><td>304,334</td><td>Party counts; company, trust or estate buyer; same surname (and a strict version); shared mailing address; lender name; deed event from the foreclosure paper's classifier; legal-rule amount</td></tr>
-      </tbody></table></details>
-      <p>The download also includes the raw extracts and their retrieval records, Python code using the standard library, and <code>CODEBOOK.md</code>, which defines every column and rule.</p></section>
-      <section class="content-section"><h2>How the link works</h2><ul class="why-list"><li><strong>Deed.</strong> A deed matches a sale when its amount is within 0.5% of the price and its date within 45 days. Houses are matched on their own parcel. Condominiums are matched within the block among unit lots, which recovers the unit; it agrees with the sales file's own unit lot in 99.6% of single-parcel links. If several units qualify, the separate unit-lot field can resolve the choice; bulk purchases that fail the documented guards remain unlinked. If several deeds qualify on the same parcel, the lowest document identifier is kept, which picks one without showing which is correct; this happens for 946 of the 305,175 links.</li><li><strong>Mortgage.</strong> A sale receives a recorded-mortgage flag if a mortgage is recorded on its parcel (for condominiums, the recovered unit) from 15 days before to 30, 90 or 180 days after the sale. A recorded mortgage is not verified purchase finance.</li><li><strong>Flags.</strong> Computed from the ACRIS party records of each deed, with the papers' own rules. Party names were used to compute flags and are excluded from the public release. The flags are a fixed snapshot.</li></ul></section>
-      <section class="content-section"><h2>What has been checked</h2><p>The preserved extracts rebuild the sales and link tables. Computational checks cover join keys, document types, collateral parcels, amount tolerances and date windows. The included example also checks financing missingness and join completeness. These checks establish consistency with the source tables and the stated rules; they do not measure the accuracy of accepted or missed links, or establish purchase purpose.</p></section>
-      <section class="content-section"><h2>Limits</h2><ul class="why-list"><li>A financed flag of 0 means the search found no qualifying recorded mortgage in the window. It is not proof of a cash purchase.</li><li>Co-operative and Staten Island sales are listed but never linked. ACRIS real-property mortgages do not measure financing secured by co-op shares, and Staten Island deeds are outside ACRIS.</li><li>Condominium coverage remains lower at high prices: 71.6% of sales at $6 million or more link to a deed. Comparisons based on linked sales describe that selected subset.</li><li>The company, surname, address and deed-event flags are screens built from names. Existing review agreement does not establish independently verified population accuracy. The party records are not deposited, so these flags are supplied as a fixed snapshot.</li></ul></section>
-      <section class="content-section"><h2>Condominium coverage</h2><p>Version 1.2.0 corrects the unit-lot limit in my code. Coverage is 94.7% in Manhattan, 98.8% in the Bronx, 97.7% in Brooklyn and 96.1% in Queens. The former Bronx gap was caused by that code restriction, not evidence of missing public records. <a href="../stories/missing-condo-sales/">Read the correction</a>.</p><p>Coverage measures how many records link. Accuracy requires checking the links against source documents.</p></section>
-      <section class="content-section" id="try-data"><h2>Try the data</h2><p><a href="../reproduce/#dataset">Start with the small offline example</a>: one ZIP, standard Python and one command. It reproduces condominium coverage and the linked/unlinked comparison without downloading the complete archive.</p><p>Start with <a href="TRY_THE_DATA.md">the two-example guide</a>. Extract the 1.2.0 archive, then run the included examples with standard Python to produce annual condominium coverage and a comparison of linked and unlinked sales. If you try it, <a href="mailto:loschi.pablo@gmail.com?subject=NYC%20dataset%20example">tell me what worked or where you got stuck</a>.</p><div class="cite-box"><pre>python3 examples/recorded_mortgage_example.py build --output annual_condo_coverage.csv
-python3 examples/condo_selection.py build --output selection</pre></div></section>
-      <section class="content-section"><h2>How to cite</h2><p>Loschi, P. (2026). <em>NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025</em> (Version 1.2.2; data tables unchanged from Version 1.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24274709</p><div class="cite-box"><button class="copy-btn" type="button" data-target="bib-data">Copy</button><pre id="bib-data">@misc{loschi2026linked,
+      <div>
+        <section class="content-section">
+          <h2>Why these records need linking</h2>
+          <p>New York City publishes its property sales and its recorded deeds and mortgages as separate open datasets, and the two do not join directly. The Department of Finance annualized and rolling sales files give the price and date but no ACRIS document number. ACRIS, the city register, holds the deeds and mortgages but not the sales. Condominiums are the hardest case: the sales file usually identifies a unit by the building’s billing lot, while ACRIS records its deed and mortgage under the unit’s own lot, so a direct parcel join misses most of them.</p>
+          <p>This dataset links the records under fixed, documented rules so outside researchers can reuse the same tables without proprietary vendor licenses. Public files contain no party names or mailing addresses.</p>
+        </section>
+
+        <section class="content-section" id="post-ztrax">
+          <h2>An open, post-ZTRAX public-record benchmark for New York City</h2>
+          <p>Following Zillow’s September 2023 wind-down of direct ZTRAX servicing, empirical housing researchers have relied on closed commercial files for linked deed and mortgage indicators. This deposit is scoped specifically to New York City rather than national parcel coverage, and rests on three transparent properties:</p>
+          <div class="benchmark-pillars">
+            <div class="benchmark-pillar">
+              <strong>Zero NDA or institutional gatekeeper</strong>
+              <p>CC BY 4.0 CSV tables alongside standard-library Python code that rebuilds <code>sales</code> and <code>links</code> offline from archived public extracts and manifests.</p>
+            </div>
+            <div class="benchmark-pillar">
+              <strong>Current coverage through 2025</strong>
+              <p>Spans ten full annual cohorts (2016–2025), covering the post-2021 higher-rate housing market after the ZTRAX direct-servicing sunset.</p>
+            </div>
+            <div class="benchmark-pillar">
+              <strong>Explicit unit-lot linkage (<code>1001–6999</code>)</strong>
+              <p>Documents the exact three-rule condominium recovery logic, borough and price-band coverage, and unlinked financing missingness instead of an opaque vendor flag.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>In numbers</h2>
+          <ul class="stat-list">
+            <li><span class="stat-value">729,047</span><span class="stat-label">house, condominium, and co-operative sales retained (2016–2025, all five boroughs, including 213,457 zero-price transfers)</span></li>
+            <li><span class="stat-value">97.2%</span><span class="stat-label">of 189,279 eligible house sales linked to a deed in the four ACRIS boroughs (183,912 links)</span></li>
+            <li><span class="stat-value">96.0%</span><span class="stat-label">of 126,251 eligible condominium sales linked to a deed (121,263 links; falls to 71.6% at $6M+)</span></li>
+            <li><span class="stat-value">99.7% / 99.0%</span><span class="stat-label">street-address agreement (1,993 of 1,999 comparable links) and condo-unit agreement (1,432 of 1,446) in a 2,000-link stratified sample</span></li>
+          </ul>
+          <p class="fine">A link identifies a candidate document under the stated rules; it does not establish accuracy against unverified source images or confirm that a recorded mortgage financed the purchase.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>Files in the deposited 1.2.0 dataset</h2>
+          <p>Three compressed CSV tables share keys: <code>sales</code> joins one-to-one to <code>links</code> on <code>sale_id</code>, and <code>links</code> joins to <code>deed_flags</code> on <code>deed_document_id</code> (note that 722 deeds link to 1,563 sales rows). Blank financing cells for unlinked condominiums mean unmeasured, never zero.</p>
+          <details class="data-table" open>
+            <summary>Files and main columns</summary>
+            <table>
+              <thead><tr><th>File</th><th>Rows</th><th>Main columns</th></tr></thead>
+              <tbody>
+                <tr><td><code>sales.csv.gz</code></td><td>729,047</td><td>Borough, block, and lot; property group (house, condo, co-op); building class; address; price; sale date; geography; flags for ACRIS coverage and the $300,000–$6 million band</td></tr>
+                <tr><td><code>links.csv.gz</code></td><td>729,047</td><td>Deed match (<code>unique</code>, <code>none</code>, <code>ambiguous</code>); <code>link_rule</code>; ACRIS deed ID; recovered unit lot; mortgage indicators (30, 90, 180 days); loan count; largest base-window amount and document ID; CEMA flag</td></tr>
+                <tr><td><code>deed_flags.csv.gz</code></td><td>304,334</td><td>Party counts; company, trust, or estate buyer; same surname (loose and strict); shared mailing address; lender acquisition name; deed event and legal-rule amount</td></tr>
+              </tbody>
+            </table>
+          </details>
+          <p>The archive (<a href="https://doi.org/10.5281/zenodo.24274709">10.5281/zenodo.24274709</a>) also includes archived NYC Open Data extracts and manifests, standard-library Python code, offline worked examples, and <code>CODEBOOK.md</code>.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How the link works</h2>
+          <ul class="why-list">
+            <li><strong>Deed.</strong> A deed qualifies when its consideration lies within 0.5% of recorded sale price and its document date (falling back to recording date) falls within 45 days of sale. Houses match on their own parcel. Condominiums search within borough and block across unit lots <code>1001–6999</code> under three hierarchical rules, agreeing with the sales file’s own unit lot in 99.6% of single-parcel links (98,661 of 99,086). Bulk purchases failing documented guards remain unlinked (4,046 rows); where multiple qualifying deeds sit on one recovered parcel (946 of 305,175 links), the lowest document ID is retained.</li>
+            <li><strong>Mortgage.</strong> A sale receives a recorded-mortgage indicator if a mortgage sits on its parcel (for condominiums, the recovered unit lot) from 15 days before to 30, 90, or 180 days after the sale. An indicator marks a filing in the window, not verified purchase debt.</li>
+            <li><strong>Flags.</strong> Computed from ACRIS Parties records using documented string and surname rules. Because party names and frequent-surname tables are excluded from the public deposit, <code>deed_flags.csv.gz</code> is supplied as a fixed snapshot.</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>What has been checked</h2>
+          <p>The archived extracts rebuild the sales and linkage tables offline, passing checks on join keys, document types, collateral parcels, amount tolerances, and date windows. Beyond structural checks, the companion linkage paper (<a href="https://doi.org/10.5281/zenodo.24504489">Loschi, 2026</a>) reports a stratified validation sample of 2,000 retained links (finding 99.7% building-address agreement and 99.0% condominium-unit agreement on unused ACRIS address records) alongside a blind research-assistant check of source deeds and mortgages for 40 house sales (with author review).</p>
+        </section>
+
+        <section class="content-section">
+          <h2>Limits</h2>
+          <ul class="why-list">
+            <li>A mortgage indicator of <code>0</code> means no qualifying mortgage appeared in the search window; it is not proof of an all-cash purchase.</li>
+            <li>Co-operative apartments and Staten Island transfers are listed in <code>sales.csv.gz</code> but never linked: co-op share loans do not enter ACRIS real-property filings, and Staten Island deeds reside with the Richmond County Clerk.</li>
+            <li>Condominium deed coverage drops at high prices (71.6% at $6 million or more), leaving linked condominiums cheaper than unlinked sales (median $978,000 vs. $4 million). Users analyzing linked subsets should report coverage beside estimates.</li>
+            <li>Company, surname, address, and foreclosure-event flags are rule-based name screens with unmeasured population error rates.</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Condominium coverage</h2>
+          <p>Version 1.2.0 expanded the unit-lot search upper bound from <code>1999</code> to <code>6999</code>, lifting condominium coverage to 94.7% in Manhattan, 98.8% in the Bronx, 97.7% in Brooklyn, and 96.1% in Queens. The earlier Bronx gap reflected that code boundary rather than missing public filings. <a href="../stories/missing-condo-sales/">Read the correction note</a>.</p>
+        </section>
+
+        <section class="content-section" id="try-data">
+          <h2>Try the data</h2>
+          <p>Run the <a href="../reproduce/#dataset">small offline quickstart (1.47 MB)</a> with standard-library Python to reproduce annual condominium coverage and the linked/unlinked price comparison without downloading the full archive. Or extract the complete 1.2.2 deposit (<a href="TRY_THE_DATA.md">see the two-example guide</a>) and run:</p>
+          <div class="cite-box"><pre>python3 examples/recorded_mortgage_example.py build --output annual_condo_coverage.csv
+python3 examples/condo_selection.py build --output selection</pre></div>
+          <p class="fine">If you test either script, <a href="mailto:loschi.pablo@gmail.com?subject=NYC%20dataset%20example">email me what worked or where you got stuck</a>.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to cite</h2>
+          <p>Loschi, P. (2026). <em>NYC residential sales linked to ACRIS deeds and mortgages, 2016–2025</em> (Version 1.2.2; data tables unchanged from Version 1.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24274709</p>
+          <div class="cite-box"><button class="copy-btn" type="button" data-target="bib-data">Copy</button><pre id="bib-data">@misc{loschi2026linked,
   author       = {Loschi, Pablo},
   title        = {NYC residential sales linked to ACRIS deeds and
                   mortgages, 2016--2025},
@@ -80,20 +165,32 @@ python3 examples/condo_selection.py build --output selection</pre></div></sectio
   publisher    = {Zenodo},
   howpublished = {Data set},
   doi          = {10.5281/zenodo.24274709}
-}</pre></div><p class="fine">This DOI identifies the current release. Please also cite the NYC Open Data sources: DOF annualized sales (w2pb-icbu) and ACRIS Master, Legals and Parties (bnx9-e6tj, 8h5j-fqxa, 636b-3b5g).</p></section></div>
-      <aside class="sidebar" aria-label="Dataset links"><h2>Get the data</h2><div class="sidebar-block"><strong>Download</strong><p>Tables, codebook, raw extracts and code in one archive, plus worked examples that run offline.</p><a href="https://zenodo.org/records/24274709">Download dataset and examples ↗</a></div><div class="sidebar-block"><strong>Used by</strong><p>The recording-tax table and condominium costing of the tax paper, and the deed and financing links of the house paper.</p><a href="../papers/the-shape-of-the-tax/">The Shape of the Tax →</a><br><a href="../papers/who-gets-the-house/">Who Gets the House? →</a></div><div class="sidebar-block"><strong>Explore &amp; reproduce</strong><p>Filter NYC aggregates interactively or run the standalone offline quickstart check.</p><a href="../explore/">Open NYC data explorer →</a><br><a href="../reproduce/#dataset">Run quickstart example →</a></div><div class="sidebar-block"><strong>Audio &amp; source notebook</strong><p>Narrated visual walkthrough and interactive source corpus.</p><a href="../press/#video-audio">Video and audio overviews →</a><br><a href="https://notebook.google.com/notebook/03f7c0bc-cb7a-4132-938f-e05ece1dd6f0" target="_blank" rel="noopener">Explore on NotebookLM ↗</a></div><div class="sidebar-block"><strong>Next</strong><p>The data note (v1.2.2) documents the unchanged 1.2.0 dataset ZIP, its linking rules, worked example, reuse limits, and current companion paper citations.</p></div></aside>
+}</pre></div>
+          <p class="fine">This DOI identifies the current release (Concept DOI <a href="https://doi.org/10.5281/zenodo.22977532">10.5281/zenodo.22977532</a>). Please also credit NYC Open Data sources: DOF Annualized Sales (<code>w2pb-icbu</code>) and ACRIS Master, Legals, and Parties (<code>bnx9-e6tj</code>, <code>8h5j-fqxa</code>, <code>636b-3b5g</code>).</p>
+        </section>
+      </div>
+
+      <aside class="sidebar" aria-label="Dataset links">
+        <h2>Get the data</h2>
+        <div class="sidebar-block"><strong>Download</strong><p>Tables, codebook, archived extracts, and offline Python scripts in one deposit.</p><a href="https://zenodo.org/records/24274709">Dataset on Zenodo (v1.2.2) ↗</a><br><a href="https://doi.org/10.5281/zenodo.24504489">Linkage paper (preprint) ↗</a></div>
+        <div class="sidebar-block"><strong>Used by</strong><p>The four empirical studies built on this crosswalk and its ACRIS deed screens.</p><a href="../papers/rental-proxies-on-a-million-dollar-notch/">Second-Home Threshold →</a><br><a href="../papers/the-shape-of-the-tax/">The Shape of the Tax →</a><br><a href="../papers/when-a-deed-is-not-a-market-sale/">When a Deed Is Not a Market Sale →</a><br><a href="../papers/who-gets-the-house/">Who Gets the House? →</a></div>
+        <div class="sidebar-block"><strong>Explore &amp; reproduce</strong><p>Filter NYC aggregates in your browser or run the offline quickstart check.</p><a href="../explore/">Open NYC data explorer →</a><br><a href="../reproduce/#dataset">Run quickstart example →</a></div>
+        <div class="sidebar-block"><strong>Audio &amp; source notebook</strong><p>Companion overview and interactive source corpus.</p><a href="../press/#video-audio">Video and audio overviews →</a><br><a href="https://notebook.google.com/notebook/03f7c0bc-cb7a-4132-938f-e05ece1dd6f0" target="_blank" rel="noopener">Explore on NotebookLM ↗</a></div>
+      </aside>
     </div></div>
-    <section class="related"><div class="wrap"><p class="eyebrow">Within the program</p><h2>The papers</h2><div class="related-links"><a href="../papers/when-a-deed-is-not-a-market-sale/">When a Deed Is Not a Market Sale →</a><a href="../papers/who-gets-the-house/">Who Gets the House? →</a><a href="../papers/the-shape-of-the-tax/">The Shape of the Tax →</a></div></div></section>
+
+    <section class="related"><div class="wrap"><p class="eyebrow">Within the program</p><h2>Papers using this dataset</h2><div class="related-links"><a href="../papers/rental-proxies-on-a-million-dollar-notch/">Second-Home Tax Threshold →</a><a href="../papers/the-shape-of-the-tax/">The Shape of the Tax →</a><a href="../papers/when-a-deed-is-not-a-market-sale/">When a Deed Is Not a Market Sale →</a><a href="../papers/who-gets-the-house/">Who Gets the House? →</a></div></div></section>
   </main>
   <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="../calculator/">Calculator</a> · <a href="../data/">Data</a> · <a href="../reproduce/">Reproduce</a> · <a href="../guide/">Record guide</a> · <a href="../press/">Press</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
-<script>
-document.querySelectorAll('.copy-btn').forEach(function (b) {
-  b.addEventListener('click', function () {
-    var t = document.getElementById(b.dataset.target).innerText;
-    var done = function () { b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
-    if (navigator.clipboard) { navigator.clipboard.writeText(t).then(done, function () {}); }
+  <script>
+  document.querySelectorAll('.copy-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = document.getElementById(b.dataset.target).innerText;
+      var done = function () { b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+      if (navigator.clipboard) { navigator.clipboard.writeText(t).then(done, function () {}); }
+    });
   });
-});
-</script>
-<script type="module" src="../assets/theme.js?v=20261116bat2"></script><script type="module" src="../assets/analytics.js"></script></body>
+  </script>
+  <script type="module" src="../assets/theme.js?v=20261116bat2"></script><script type="module" src="../assets/analytics.js"></script>
+</body>
 </html>

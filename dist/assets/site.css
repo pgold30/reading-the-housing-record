@@ -613,3 +613,73 @@ figure.chart:has(svg) { max-width: 100%; overflow-x: auto; }
     filter: brightness(.92) contrast(1.04);
   }
 }
+
+/* --- 2026-11-24 UX/IA cleanup: tools strip, why-it-matters section, post-ZTRAX benchmark --- */
+.home-tools-band {
+  padding: 28px 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.home-tools-band .home-paths {
+  padding: 0;
+}
+.home-tool-kicker {
+  display: block;
+  margin-bottom: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .72rem;
+  font-weight: 760;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.home-paths a strong {
+  color: var(--ink);
+  font-size: 1.28rem;
+  margin-bottom: 8px;
+}
+.why-section {
+  border-bottom: 1px solid var(--line);
+}
+.why-grid > div {
+  border-top: 2px solid var(--blue);
+  padding-top: 16px;
+}
+.home-film-toggle {
+  margin-top: 26px;
+}
+.home-film-toggle .paper-video-intro {
+  margin: 0;
+  border: 0;
+  padding: 4px 0 0;
+}
+.benchmark-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.benchmark-pillar {
+  padding: 18px 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--blue);
+  border-radius: 5px;
+}
+.benchmark-pillar strong {
+  display: block;
+  font-size: .96rem;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.benchmark-pillar p {
+  font-size: .9rem !important;
+  line-height: 1.55 !important;
+  color: var(--muted);
+  margin: 0;
+}
+@media (max-width: 850px) {
+  .benchmark-pillars {
+    grid-template-columns: 1fr;
+  }
+}
