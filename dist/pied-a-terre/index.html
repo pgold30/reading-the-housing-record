@@ -24,12 +24,12 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/">Data</a><a href="../press/">Press</a><a href="../#about">About</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/">Data</a><a href="../press/">Press</a><a href="../#about">About</a><a class="nav-cta" href="../pied-a-terre/" style="background:#d49a62;color:#142a3a;border-radius:999px;padding:5px 13px;text-decoration:none;font-weight:700;white-space:nowrap">Pied-à-terre tax</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
 
   <nav class="hub-subnav" aria-label="Pied-à-Terre Hub">
     <div class="wrap hub-subnav-inner">
       <span class="hub-kicker">Pied-à-Terre Hub</span>
-      <a href="./" aria-current="page">Live Unit &amp; BBL Checker</a>
+      <a href="./" aria-current="page">Tax checker</a>
       <a href="../tc107-guide/">Form TC107 Guide</a>
       <a href="../condo-rental-comps/">Rental Comps (581)</a>
       <a href="../march-1-deadline/">Appeal deadlines</a>
@@ -40,10 +40,10 @@
 
   <main id="main" class="pat-app">
     <section class="hero-card">
-      <div class="hero-kicker">FY2027 DOF Final Assessment Roll</div>
-      <p class="muted-line">NY Tax Law Article 30-C (§§ 1350–1356), enacted as Part HH of Chapter 59 of the Laws of 2026.</p>
-      <h1>NYC Pied-à-Terre Surcharge &amp; Assessment Checker</h1>
-      <p class="hero-sub">Search the FY2027 final assessment roll by street address, ZIP code or 10-digit borough-block-lot number (BBL). See the recorded value, the Phase 1 surcharge calculation and, for co-ops, an estimate based on unit shares.</p>
+      <div class="hero-kicker">Pied-à-terre tax · FY2027 city values</div>
+      <h1>NYC pied-à-terre tax checker</h1>
+      <p class="hero-sub">Is your condo, co-op or one- to three-family house over the line? Search by street address, ZIP code or BBL to see the city's value, the surcharge bracket and, for a co-op, an estimate from your shares.</p>
+      <p class="muted-line"><strong>First bills due January 1, 2027.</strong> Challenge the value with Form TC107 by <strong>March 1</strong> (condos and co-ops) or <strong>March 15</strong> (houses). Tax Law Article 30-C, §§ 1350–1356.</p>
 
       <div class="search-shell">
         <label class="sr-only" for="parcelSearch">Search by address, BBL or ZIP</label>
@@ -70,7 +70,6 @@
 
       <div id="examplePills" class="preset-row" aria-label="Sample lookups"></div>
       <p class="privacy-line"><strong>Privacy &amp; Security:</strong> Lookups are anonymous — we do not store searched addresses, names, emails, or payment cards on our server. All $79 checkouts run directly on Stripe.</p>
-      <p class="privacy-line">Also: <a href="buildings/">buildings over the $1 million line</a> · <a href="what-is-the-pied-a-terre-tax/">what the tax is</a> · <a href="tax-list/">is there a tax list?</a> · <a href="out-of-town-owners/">owners outside NYC</a> · <a href="for-buildings/">for managing agents and boards</a></p>
     </section>
 
     <section id="errorBanner" class="alert-banner" hidden></section>
@@ -186,31 +185,40 @@
       </article>
     </section>
 
+    <section class="card b2b-card" aria-labelledby="next-heading">
+      <div class="hero-kicker">Where to go next</div>
+      <h2 id="next-heading">More on the pied-à-terre tax</h2>
+      <div class="b2b-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+        <a class="b2b-item" href="buildings/" style="text-decoration:none;color:inherit"><h3>Buildings over the $1M line →</h3><p>661 condos and 396 co-ops, building by building: units in each bracket and how the city valued them.</p></a>
+        <a class="b2b-item" href="what-is-the-pied-a-terre-tax/" style="text-decoration:none;color:inherit"><h3>What the tax is →</h3><p>Who pays, the rates, who is exempt, the deadlines and what changes in 2028, in short answers.</p></a>
+        <a class="b2b-item" href="out-of-town-owners/" style="text-decoration:none;color:inherit"><h3>Owners outside New York →</h3><p>Living in New Jersey, Connecticut, Florida or abroad? What to check from out of town.</p></a>
+        <a class="b2b-item" href="../tc107-guide/" style="text-decoration:none;color:inherit"><h3>Challenging the value →</h3><p>How Form TC107 works, what it can and cannot do, and the March 1 and March 15 deadlines.</p></a>
+      </div>
+    </section>
+
     <section id="for-firms" class="card b2b-card" aria-labelledby="for-firms-heading">
-      <div class="hero-kicker">For Law Firms, Co-op Boards &amp; Brokers</div>
-      <h2 id="for-firms-heading">Bulk assessment datasets, building packs, API access &amp; season sponsorship</h2>
-      <p class="hero-sub">
-        Built from the full 968,294-parcel FY2027 NYC DOF roll linked to 720,498 ACRIS sales and prior DOF protest codes — licensed on flat-fee terms only.
-      </p>
+      <div class="hero-kicker">For managing agents, boards and firms</div>
+      <h2 id="for-firms-heading">Building summaries and building-level data</h2>
+      <p class="hero-sub">When the bills arrive, owners ask their managing agent, board or accountant the same questions. These answer them for a whole building at once, from public city records.</p>
       <div class="b2b-grid">
         <div class="b2b-item">
-          <h3>Building &amp; Co-op Board Packs</h3>
-          <p>Unit-by-unit CSV &amp; PDF audit across a condo declaration, co-op building, or portfolio (<code>finmkttot</code>, threshold distances, peer disparity, and share-threshold tables).</p>
+          <h3>Building summary</h3>
+          <p>One or two pages per building: units in each bracket and near each line, co-op share thresholds, recorded sales and the city's valuation, with a March 1 checklist. $149 a building, or $99 each for five or more.</p>
         </div>
         <div class="b2b-item">
-          <h3>Assessment Datasets &amp; API</h3>
-          <p>Flat-fee access to the 19,162 parcels at or above the entry threshold, including 5,678 within 15% of the current bracket’s lower boundary. Co-op and condop counts use equal-share estimates.</p>
+          <h3>Building-level data</h3>
+          <p>A table of the 1,057 condo and co-op buildings with apartments over the $1 million line, refreshed when the tentative roll comes out in January. $1,500 for the year.</p>
         </div>
         <div class="b2b-item">
-          <h3>Flat-Fee Season Sponsorship</h3>
-          <p>Fixed monthly or seasonal placement on our Pied-à-Terre Hub &amp; Form TC107 guides for licensed NY tax-certiorari counsel. Strictly flat-fee advertising — no referral fees or fee-splitting.</p>
+          <h3>API access</h3>
+          <p>Address and BBL lookups for intake or client tools, on a flat monthly fee. Write with what you need.</p>
         </div>
       </div>
       <div class="b2b-actions">
-        <a class="btn-primary" href="mailto:loschi.pablo@gmail.com?subject=NYC%20Pied-a-Terre%20Institutional%20Data%20%2F%20Building%20Pack%20Inquiry&amp;body=Hi%20Pablo%2C%0A%0AWe%20are%20interested%20in%20(building%20pack%20%2F%20assessment%20dataset%20%2F%20API%20access%20%2F%20flat-fee%20sponsorship).%0A%0AFirm%20or%20Building%3A%20%0AApproximate%20unit%20count%20or%20scope%3A%20">Request Sample CSV &amp; Pricing</a>
-        <a class="btn-secondary" href="../papers/rental-proxies-on-a-million-dollar-notch/">Read Working Paper v1.6</a>
+        <a class="btn-primary" href="for-buildings/">Order a building summary</a>
+        <a class="btn-secondary" href="mailto:loschi.pablo@gmail.com?subject=Pied-%C3%A0-terre%20data%20or%20API">Ask about data or the API</a>
       </div>
-      <p class="muted-line" style="margin-top:12px">Public NYC DOF &amp; ACRIS records only — zero client PII stored on our server; NYRPC-compliant flat-fee licensing only (no legal representation, contingency splits, or referral fees).</p>
+      <p class="muted-line" style="margin-top:12px">Public city records only: no owner names and no unit lists. No referral or per-case fees.</p>
     </section>
   </main>
 
