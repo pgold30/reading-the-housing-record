@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <title>Recover your assessment report | NYC Housing Data</title>
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/pied-a-terre/checker.css?v=20261125patfix2">
+  <script src="../../assets/pied-a-terre/checker.js?v=20261125patfix2" defer></script>
+</head>
+<body>
+  <main class="pat-app" id="main">
+    <section class="hero-card recovery-card">
+      <p><a href="../">← Surcharge checker</a></p>
+      <h1>Recover your assessment report</h1>
+      <p>Enter the email you used at Checkout and the 10-digit parcel number (BBL) from your receipt. If the purchase matches, you’ll get a download link that works for one hour.</p>
+      <form id="reportRecoveryForm" class="recovery-form" method="post">
+        <label for="email">Checkout email</label>
+        <input id="email" name="email" type="email" maxlength="254" autocomplete="email" required>
+        <label for="bbl">Parcel number (BBL)</label>
+        <input id="bbl" name="bbl" type="text" inputmode="numeric" pattern="[1-5][0-9]{9}" maxlength="10" required>
+        <button type="submit" class="btn-primary">Get my download link</button>
+      </form>
+      <p id="reportRecoveryStatus" role="status"></p>
+      <noscript><p>Enable JavaScript to request a download link.</p></noscript>
+      <p class="muted">Public-record data, not legal, tax or appraisal advice. <a href="../../privacy/">Privacy</a></p>
+    </section>
+  </main>
+</body>
+</html>

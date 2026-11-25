@@ -605,3 +605,33 @@
   align-items: flex-start;
   gap: 10px;
 }
+
+.recovery-card {
+  width: min(100%, 42rem);
+  margin-inline: auto;
+}
+
+.recovery-form {
+  display: grid;
+  gap: .55rem;
+  width: min(100%, 25rem);
+}
+
+.recovery-form input {
+  width: 100%;
+  min-width: 0;
+  padding: .6rem .75rem;
+  border: 1px solid currentColor;
+  border-radius: .3rem;
+  font: inherit;
+}
+
+.recovery-form button {
+  justify-self: start;
+  margin-top: .6rem;
+}
+
+#paymentRecovery:not([hidden]) {
+  flex-basis: 100%;
+  margin-block: .25rem 0;
+}

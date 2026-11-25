@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta name="referrer" content="no-referrer">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme")||localStorage.getItem("nch_theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-  <title>NYC Pied-à-Terre Tax Cliff &amp; Live Unit / BBL Checker | NYC Housing Data</title>
-  <meta name="description" content="Check any NYC condo, co-op building, or 1–3 family home across 968,294 FY2027 DOF parcels for Phase 1 pied-à-terre surcharge cliffs (July 2026–June 2028) and Form TC107 appeal thresholds.">
+  <title>NYC Pied-à-Terre Surcharge &amp; Live Unit / BBL Checker | NYC Housing Data</title>
+  <meta name="description" content="Check any NYC condo, co-op building, or 1–3 family home across 968,294 FY2027 DOF parcels for Phase 1 pied-à-terre surcharge brackets (July 2026–June 2028).">
   <link rel="canonical" href="https://nychousingdata.com/pied-a-terre/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NYC Housing Data">
-  <meta property="og:title" content="NYC Pied-à-Terre Tax Cliff &amp; Live Unit / BBL Checker">
-  <meta property="og:description" content="Search any NYC street address, apartment, or 10-digit BBL across 968,294 FY2027 DOF parcels to inspect Phase 1 surcharge brackets, cliff margins, co-op unit shares, and ACRIS sales context.">
+  <meta property="og:title" content="NYC Pied-à-Terre Surcharge &amp; Live Unit / BBL Checker">
+  <meta property="og:description" content="Search any NYC street address, apartment, or 10-digit BBL across 968,294 FY2027 DOF parcels to inspect Phase 1 surcharge brackets, threshold distances, co-op unit shares, and ACRIS sales context.">
   <meta property="og:url" content="https://nychousingdata.com/pied-a-terre/">
   <meta property="og:image" content="https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/fig1_cutoff_and_comps.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -18,8 +19,8 @@
   <link rel="stylesheet" href="../assets/site.css?v=20261125ux5">
   <link rel="stylesheet" href="../assets/stories.css?v=20261125ux5">
   <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
-  <link rel="stylesheet" href="../assets/pied-a-terre/checker.css?v=20261125ux5">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NYC Pied-a-Terre Tax Cliff & Live Unit Checker","url":"https://nychousingdata.com/pied-a-terre/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Live parcel-level NYC FY2026-27 Department of Finance Final Roll lookup covering 968,294 properties for enacted Phase 1 pied-a-terre surcharge brackets and Form TC107 cliff margins.","creator":{"@type":"Person","name":"Pablo Loschi","sameAs":"https://orcid.org/0009-0004-9455-4713"},"isBasedOn":"https://doi.org/10.5281/zenodo.24516899"}</script>
+  <link rel="stylesheet" href="../assets/pied-a-terre/checker.css?v=20261125patfix2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NYC Pied-a-Terre Surcharge & Live Unit Checker","url":"https://nychousingdata.com/pied-a-terre/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Live parcel-level NYC FY2026-27 Department of Finance Final Roll lookup covering 968,294 properties for enacted Phase 1 pied-a-terre surcharge brackets and threshold distances.","creator":{"@type":"Person","name":"Pablo Loschi","sameAs":"https://orcid.org/0009-0004-9455-4713"},"isBasedOn":"https://doi.org/10.5281/zenodo.24516899"}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -31,31 +32,27 @@
       <a href="./" aria-current="page">Live Unit &amp; BBL Checker</a>
       <a href="../tc107-guide/">Form TC107 Guide</a>
       <a href="../condo-rental-comps/">Rental Comps (581)</a>
-      <a href="../march-1-deadline/">March 1 Deadline</a>
+      <a href="../march-1-deadline/">Appeal deadlines</a>
       <a href="../stories/second-home-tax-cliff/">Policy Brief</a>
     </div>
   </nav>
 
   <main id="main" class="pat-app">
     <section class="hero-card">
-      <div class="hero-kicker">FY 2026–27 DOF Final Assessment Roll · NY Tax Law §§ 1350–1353</div>
-      <h1>NYC Pied-à-Terre Cliff &amp; DOF Valuation Checker</h1>
-      <p class="hero-sub">
-        Look up any NYC parcel by street address, 10-digit BBL, ZIP code, or owner name to inspect
-        FY2026–27 DOF final market value (<code>finmkttot</code>), enacted Phase 1 pied-à-terre
-        whole-value surcharge brackets (July 2026–June 2028), co-op unit share allocations, and
-        Tax Commission <strong>Form TC107</strong> cliff margins.
-      </p>
+      <div class="hero-kicker">FY2027 DOF Final Assessment Roll</div>
+      <p class="muted-line">NY Tax Law Article 30-C (§§ 1350–1356), enacted as Part HH of Chapter 59 of the Laws of 2026.</p>
+      <h1>NYC Pied-à-Terre Surcharge &amp; Assessment Checker</h1>
+      <p class="hero-sub">Search the FY2027 final assessment roll by street address, ZIP code or 10-digit borough-block-lot number (BBL). See the recorded value, the Phase 1 surcharge calculation and, for co-ops, an estimate based on unit shares.</p>
 
       <div class="search-shell">
-        <label class="sr-only" for="parcelSearch">Search address, BBL, ZIP, or owner</label>
+        <label class="sr-only" for="parcelSearch">Search by address, BBL or ZIP</label>
         <div class="search-input-row">
           <input
             id="parcelSearch"
             type="search"
             autocomplete="off"
             spellcheck="false"
-            placeholder="Try street address (e.g. 20 WEST STREET), 10-digit BBL (1000151102), or owner..."
+            placeholder="Try street address (e.g. 20 WEST STREET), 10-digit BBL (1000151102), or ZIP code"
             aria-autocomplete="list"
             aria-controls="autocompleteList"
             aria-expanded="false"
@@ -77,8 +74,9 @@
     <section id="errorBanner" class="alert-banner" hidden></section>
 
     <section id="paymentBanner" class="success-banner" hidden>
-      <span id="paymentBannerText">Payment verified. Your full Valuation &amp; TC107 Prep PDF is ready:</span>
-      <a id="paymentDownloadBtn" class="btn-primary btn-sm" href="#" target="_blank" rel="noopener">Download Full Valuation &amp; TC107 Prep PDF</a>
+      <span id="paymentBannerText">Your Public-Record Assessment Report is ready.</span>
+      <a id="paymentDownloadBtn" class="btn-primary btn-sm" href="#" target="_blank" rel="noopener">Download report</a>
+      <p id="paymentRecovery" hidden>If this page closes before your download starts, <a href="https://nychousingdata.com/pied-a-terre/recover/">request a new link</a> with your Checkout email and BBL.</p>
     </section>
 
     <section id="citywidePanel" class="card stats-strip" hidden>
@@ -89,13 +87,13 @@
       <div class="value-grid">
         <div class="value-col">
           <div class="hero-kicker">Free On-Screen Check</div>
-          <h3>Verify exposure &amp; cliff risk in 5 seconds</h3>
-          <p>See your parcel’s FY2027 DOF market value (<code>finmkttot</code>), statutory Phase 1 rate ($0 vs. 4.00%–6.50% / 0.80%–1.30%), annual &amp; 2-year exposure, 15% TC107 cliff status, co-op share allocation, and building counts across all 968,294 NYC parcels.</p>
+          <h3>Look up the city's recorded value</h3>
+          <p>See the applicable Phase 1 rate and illustrative annual charge for a covered non-primary residence. Co-op estimates use unit shares.</p>
         </div>
         <div class="value-col">
           <div class="hero-kicker">Optional $39 Prep PDF · Only If Above Threshold</div>
-          <h3>Evidence packet for Form TC107 &amp; counsel review</h3>
-          <p>For units facing a $40,000+ annual surcharge: get the itemized <strong>12-unit building peer disparity table</strong> (RPTL § 581), up to <strong>8 ACRIS deed/mortgage comps</strong> + July 2028 Phase-2 preview, prior DOF protest code, and the <strong>1 Centre St wet-signature checklist</strong>. <a href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener">View Sample PDF (Example Unit) →</a></p>
+          <h3>Public-Record Assessment Report (with TC107 reference checklist)</h3>
+          <p>The $39 PDF includes public assessment records, nearby recorded sales where available and the TC107 filing checklist.</p>
         </div>
       </div>
     </section>
@@ -123,7 +121,7 @@
 
       <div class="two-col-grid">
         <article class="card cliff-card">
-          <h3>Phase 1 Surcharge &amp; Cliff Margin</h3>
+          <h3>Phase 1 surcharge and thresholds</h3>
           <div id="cliffDetails"></div>
         </article>
 
@@ -139,7 +137,7 @@
             <h3>Co-op Unit Share Estimator</h3>
             <p class="muted-line">
               NYC DOF assesses cooperative buildings as a single parcel. Enter your apartment shares
-              or ownership percentage to estimate unit exposure against the $1,000,000 co-op cliff.
+              or ownership percentage to estimate unit exposure against the $1,000,000 co-op threshold.
             </p>
           </div>
         </div>
@@ -188,18 +186,18 @@
 
     <section id="for-firms" class="card b2b-card" aria-labelledby="for-firms-heading">
       <div class="hero-kicker">For Law Firms, Co-op Boards &amp; Brokers</div>
-      <h2 id="for-firms-heading">Bulk cliff-zone datasets, building packs, API access &amp; season sponsorship</h2>
+      <h2 id="for-firms-heading">Bulk assessment datasets, building packs, API access &amp; season sponsorship</h2>
       <p class="hero-sub">
         Built from the full 968,294-parcel FY2027 NYC DOF roll linked to 720,498 ACRIS sales and prior DOF protest codes — licensed on flat-fee terms only.
       </p>
       <div class="b2b-grid">
         <div class="b2b-item">
           <h3>Building &amp; Co-op Board Packs</h3>
-          <p>Unit-by-unit CSV &amp; PDF audit across a condo declaration, co-op building, or portfolio (<code>finmkttot</code>, cliff margins, peer disparity, and share-threshold tables).</p>
+          <p>Unit-by-unit CSV &amp; PDF audit across a condo declaration, co-op building, or portfolio (<code>finmkttot</code>, threshold distances, peer disparity, and share-threshold tables).</p>
         </div>
         <div class="b2b-item">
-          <h3>TC107 Cliff Datasets &amp; API</h3>
-          <p>Flat-fee license for the 5,494 cliff-zone units (1%–15% above $1M/$3M/$5M cliffs) and 20,116 above-threshold parcels, including prior DOF protest/attorney flags and 600 req/min API access.</p>
+          <h3>Assessment Datasets &amp; API</h3>
+          <p>Flat-fee access to the 19,162 parcels at or above the entry threshold, including 5,678 within 15% of the current bracket’s lower boundary. Co-op and condop counts use equal-share estimates.</p>
         </div>
         <div class="b2b-item">
           <h3>Flat-Fee Season Sponsorship</h3>
@@ -207,20 +205,20 @@
         </div>
       </div>
       <div class="b2b-actions">
-        <a class="btn-primary" href="mailto:loschi.pablo@gmail.com?subject=NYC%20Pied-a-Terre%20Institutional%20Data%20%2F%20Building%20Pack%20Inquiry&amp;body=Hi%20Pablo%2C%0A%0AWe%20are%20interested%20in%20(building%20pack%20%2F%20TC107%20cliff%20dataset%20%2F%20API%20access%20%2F%20flat-fee%20sponsorship).%0A%0AFirm%20or%20Building%3A%20%0AApproximate%20unit%20count%20or%20scope%3A%20">Request Sample CSV &amp; Pricing</a>
+        <a class="btn-primary" href="mailto:loschi.pablo@gmail.com?subject=NYC%20Pied-a-Terre%20Institutional%20Data%20%2F%20Building%20Pack%20Inquiry&amp;body=Hi%20Pablo%2C%0A%0AWe%20are%20interested%20in%20(building%20pack%20%2F%20assessment%20dataset%20%2F%20API%20access%20%2F%20flat-fee%20sponsorship).%0A%0AFirm%20or%20Building%3A%20%0AApproximate%20unit%20count%20or%20scope%3A%20">Request Sample CSV &amp; Pricing</a>
         <a class="btn-secondary" href="../papers/rental-proxies-on-a-million-dollar-notch/">Read Working Paper v1.6</a>
       </div>
       <p class="muted-line" style="margin-top:12px">Public NYC DOF &amp; ACRIS records only — zero client PII stored on our server; NYRPC-compliant flat-fee licensing only (no legal representation, contingency splits, or referral fees).</p>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="./">Live Lookup</a> · <a href="../tc107-guide/">TC107 Guide</a> · <a href="../condo-rental-comps/">Rental Comps</a> · <a href="../march-1-deadline/">March 1 Deadline</a> · <a href="../data/">Data</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="./">Live Lookup</a> · <a href="../tc107-guide/">TC107 Guide</a> · <a href="../condo-rental-comps/">Rental Comps</a> · <a href="../march-1-deadline/">Appeal deadlines</a> · <a href="../data/">Data</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
 
   <script>
     window.PIED_A_TERRE_API_BASE = "https://api.nychousingdata.com";
   </script>
   <script type="module" src="../assets/theme.js?v=20261116bat2"></script>
-  <script src="../assets/pied-a-terre/checker.js?v=20261125ux4"></script>
+  <script src="../assets/pied-a-terre/checker.js?v=20261125patfix2"></script>
   <script type="module" src="../assets/analytics.js"></script>
 </body>
 </html>
