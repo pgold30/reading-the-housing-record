@@ -164,3 +164,6 @@
     border-radius: 4px;
   }
 }
+
+/* Avoid one-word last lines in story prose */
+.story-text p, .story-deck, .story-figure figcaption, .reader-takeaway p { text-wrap: pretty; }
