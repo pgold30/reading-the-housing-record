@@ -248,7 +248,7 @@
         previewEnabled: health.report_preview_enabled !== false,
         priceUsd: health.report_price_usd || 39,
         url: health.report_checkout_url || "",
-        label: health.report_button_label || "Download Public-Record Assessment Report ($39)",
+        label: health.report_button_label || "Download Public-Record Assessment Report ($79)",
       };
       apiFlags = {
         evidenceGated: health.evidence_gating_enabled !== false,
