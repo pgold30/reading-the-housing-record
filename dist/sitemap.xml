@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nychousingdata.com/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/calculator/</loc>
@@ -22,7 +22,19 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/lookup/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/tc107-guide/</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/condo-rental-comps/</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/march-1-deadline/</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/</loc>
@@ -94,7 +106,7 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/updates/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_12.pdf</loc>
