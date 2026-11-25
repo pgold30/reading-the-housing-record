@@ -252,8 +252,9 @@
 }
 
 .pat-app .success-banner[hidden],
-.pat-app .alert-banner[hidden] {
-  display: none;
+.pat-app .alert-banner[hidden],
+.pat-app [hidden] {
+  display: none !important;
 }
 
 .pat-app .stats-grid,
