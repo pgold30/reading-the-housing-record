@@ -683,3 +683,58 @@ figure.chart:has(svg) { max-width: 100%; overflow-x: auto; }
     grid-template-columns: 1fr;
   }
 }
+
+/* --- 2026-11-25 Pied-a-Terre Hub sub-nav & tighter desktop/mobile vertical rhythm --- */
+.hero { padding: clamp(42px, 5vw, 72px) 0 46px; }
+.section { padding: 48px 0; }
+.why-section { padding: 46px 0 50px; }
+.data-section { padding: 48px 0 52px; }
+.about-section { padding: 46px 0 52px; }
+.paper-card { min-height: 310px; padding: 24px; }
+@media (max-width: 560px) {
+  .hero, .section, .why-section, .data-section, .about-section, .note-section { padding: 34px 0; }
+  .paper-card { padding: 20px; min-height: 0; }
+  .home-tools-band { padding: 20px 0; }
+}
+
+.hub-subnav {
+  background: var(--pale);
+  border-bottom: 1px solid var(--line);
+}
+.hub-subnav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  padding: 10px 0;
+}
+.hub-kicker {
+  font-size: .72rem;
+  font-weight: 760;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 4px;
+}
+.hub-subnav a {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  font-size: .84rem;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.hub-subnav a:hover { border-color: var(--blue); color: var(--blue-dark); }
+.hub-subnav a[aria-current="page"] {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #ffffff;
+}
+:root[data-theme="dark"] .hub-subnav a[aria-current="page"] { color: #0e1418; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hub-subnav a[aria-current="page"] { color: #0e1418; }
+}

@@ -15,14 +15,25 @@
   <meta property="og:image" content="https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/fig1_cutoff_and_comps.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
-  <link rel="stylesheet" href="../assets/site.css?v=20261124ux">
-  <link rel="stylesheet" href="../assets/stories.css?v=20261116bat2">
+  <link rel="stylesheet" href="../assets/site.css?v=20261125ux">
+  <link rel="stylesheet" href="../assets/stories.css?v=20261125ux">
   <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Why NYC Values Condos Using Rental Comps (RPTL Section 581), Not Sale Prices","description":"Empirical analysis of New York RPTL Section 581 rental-income proxy assessments on Class 2 condominiums under NYC's pied-a-terre surcharge, covering 26,317 matched condo sales and 200 November 14, 2026 tax bills.","author":{"@type":"Person","name":"Pablo Loschi","url":"https://nychousingdata.com/#about"},"datePublished":"2026-11-25","dateModified":"2026-11-25","mainEntityOfPage":"https://nychousingdata.com/condo-rental-comps/","isBasedOn":"https://doi.org/10.5281/zenodo.24516899","license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is my NYC condo's Department of Finance market value far below what I paid?","acceptedAnswer":{"@type":"Answer","text":"New York Real Property Tax Law Section 581 prohibits NYC DOF from valuing Class 2 condominiums directly by unit sale prices. Instead, DOF capitalizes net income from comparable rental buildings. Across 26,317 matched condo sales, the median DOF market value sits at 23.4% of sale price versus 105.5% for 1-to-3 family houses."}},{"@type":"Question","name":"Can I use comparable condo sales prices in a Phase 1 TC107 appeal?","acceptedAnswer":{"@type":"Answer","text":"Because Phase 1 (July 2026 through June 2028) relies on RPTL Section 581 Class 2 assessments, comparable apartment sale prices alone do not control a Class 2 DOF valuation review. Challenges focus on DOF's comparable rental income and expense capitalization figures on the Notice of Property Value, alongside primary-residence or rental exemptions."}},{"@type":"Question","name":"When do condo sale prices start affecting the pied-a-terre tax?","acceptedAnswer":{"@type":"Answer","text":"Phase 2 takes effect in July 2028, replacing the Phase 1 rental-proxy schedule for condos and co-ops with a comparable-sales valuation framework starting at $5,000,000 (with lower rates starting at 0.80%)."}}]}]}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/">Data</a><a href="../press/">Press</a><a href="../#about">About</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
+
+  <nav class="hub-subnav" aria-label="Pied-à-Terre Hub">
+    <div class="wrap hub-subnav-inner">
+      <span class="hub-kicker">Pied-à-Terre Hub</span>
+      <a href="../pied-a-terre/">Live Unit &amp; BBL Checker</a>
+      <a href="../tc107-guide/">Form TC107 Guide</a>
+      <a href="./" aria-current="page">Rental Comps (581)</a>
+      <a href="../march-1-deadline/">March 1 Deadline</a>
+      <a href="../stories/second-home-tax-cliff/">Policy Brief</a>
+    </div>
+  </nav>
 
   <main id="main">
     <section class="story-head"><div class="wrap">
@@ -34,7 +45,7 @@
 
     <article class="story-text">
       <div class="scope-box">
-        <p><strong>Check your condo building &amp; unit right now:</strong> Search any unit or BBL on our <a href="https://api.nychousingdata.com/"><strong>Live NYC Unit &amp; BBL Pied-à-Terre Checker →</strong></a> to see its FY2027 DOF value (<code>finmkttot</code>), peer units in the same declaration/block, and July 2028 Phase-2 comparison.</p>
+        <p><strong>Check your condo building &amp; unit right now:</strong> Search any unit or BBL on our <a href="../pied-a-terre/"><strong>Live NYC Unit &amp; BBL Pied-à-Terre Checker →</strong></a> to see its FY2027 DOF value (<code>finmkttot</code>), peer units in the same declaration/block, and July 2028 Phase-2 comparison.</p>
       </div>
 
       <h2>What RPTL § 581 actually does</h2>
@@ -54,11 +65,11 @@
       <ol>
         <li><strong>Check primary-residence &amp; long-term lease exemptions first</strong> (<a href="../tc107-guide/">Form TC107 Step-by-Step Guide</a>) — an exempt unit owes $0 regardless of DOF’s rental model.</li>
         <li><strong>Pull your building’s NOPV rental-income comps &amp; capitalization sheet:</strong> Qualified tax-certiorari counsel evaluate the rental comparables, gross income, and expense assumptions DOF used to set the building’s § 581 value, alongside unit-allocation shares.</li>
-        <li><strong>Inspect peer units in the same declaration or block:</strong> On <a href="https://api.nychousingdata.com/">api.nychousingdata.com</a>, you can check whether neighboring units inside your building already sit in the 15% appeal zone above $1M, $3M, or $5M — and see how clean ACRIS sales point to your building’s Phase-2 shift starting <strong>July 2028</strong> (when a simple historical comparable-sales backtest still shows 33.8% near-cutoff misclassification around the future $5M rule, and 44.0% when thin buildings fall back to neighborhood or borough averages).</li>
+        <li><strong>Inspect peer units in the same declaration or block:</strong> On our <a href="../pied-a-terre/">Live Unit &amp; BBL Checker</a>, you can check whether neighboring units inside your building already sit in the 15% appeal zone above $1M, $3M, or $5M — and see how clean ACRIS sales point to your building’s Phase-2 shift starting <strong>July 2028</strong> (when a simple historical comparable-sales backtest still shows 33.8% near-cutoff misclassification around the future $5M rule, and 44.0% when thin buildings fall back to neighborhood or borough averages).</li>
       </ol>
 
       <div class="action-row" style="margin-bottom:24px">
-        <a class="tool-button" href="https://api.nychousingdata.com/">Check your condo &amp; building peers →</a>
+        <a class="tool-button" href="../pied-a-terre/">Check your condo &amp; building peers →</a>
         <a class="tool-button secondary" href="../papers/rental-proxies-on-a-million-dollar-notch/">Read Working Paper v1.6</a>
         <a class="tool-button secondary" href="../tc107-guide/">Form TC107 Guide</a>
       </div>
@@ -67,7 +78,7 @@
     </article>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="https://api.nychousingdata.com/">Live Lookup</a> · <a href="../tc107-guide/">TC107 Guide</a> · <a href="../condo-rental-comps/">Rental Comps</a> · <a href="../march-1-deadline/">March 1 Deadline</a> · <a href="../data/">Data</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="../pied-a-terre/">Live Lookup</a> · <a href="../tc107-guide/">TC107 Guide</a> · <a href="../condo-rental-comps/">Rental Comps</a> · <a href="../march-1-deadline/">March 1 Deadline</a> · <a href="../data/">Data</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
   <script type="module" src="../assets/theme.js?v=20261116bat2"></script>
   <script type="module" src="../assets/analytics.js"></script>
 </body>

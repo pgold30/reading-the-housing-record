@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme")||localStorage.getItem("nch_theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <title>NYC Pied-à-Terre Tax Cliff &amp; Live Unit / BBL Checker | NYC Housing Data</title>
+  <meta name="description" content="Check any NYC condo, co-op building, or 1–3 family home across 968,294 FY2027 DOF parcels for Phase 1 pied-à-terre surcharge cliffs (July 2026–June 2028) and Form TC107 appeal thresholds.">
+  <link rel="canonical" href="https://nychousingdata.com/pied-a-terre/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NYC Housing Data">
+  <meta property="og:title" content="NYC Pied-à-Terre Tax Cliff &amp; Live Unit / BBL Checker">
+  <meta property="og:description" content="Search any NYC street address, apartment, or 10-digit BBL across 968,294 FY2027 DOF parcels to inspect Phase 1 surcharge brackets, cliff margins, co-op unit shares, and ACRIS sales context.">
+  <meta property="og:url" content="https://nychousingdata.com/pied-a-terre/">
+  <meta property="og:image" content="https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/fig1_cutoff_and_comps.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+  <link rel="stylesheet" href="../assets/site.css?v=20261125ux">
+  <link rel="stylesheet" href="../assets/stories.css?v=20261125ux">
+  <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
+  <link rel="stylesheet" href="../assets/pied-a-terre/checker.css?v=20261125ux">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NYC Pied-a-Terre Tax Cliff & Live Unit Checker","url":"https://nychousingdata.com/pied-a-terre/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Live parcel-level NYC FY2026-27 Department of Finance Final Roll lookup covering 968,294 properties for enacted Phase 1 pied-a-terre surcharge brackets and Form TC107 cliff margins.","creator":{"@type":"Person","name":"Pablo Loschi","sameAs":"https://orcid.org/0009-0004-9455-4713"},"isBasedOn":"https://doi.org/10.5281/zenodo.24516899"}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><img src="../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../explore/">Explore</a><a href="../stories/">Stories</a><a href="../#papers">Research</a><a href="../data/">Data</a><a href="../press/">Press</a><a href="../#about">About</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
+
+  <nav class="hub-subnav" aria-label="Pied-à-Terre Hub">
+    <div class="wrap hub-subnav-inner">
+      <span class="hub-kicker">Pied-à-Terre Hub</span>
+      <a href="./" aria-current="page">Live Unit &amp; BBL Checker</a>
+      <a href="../tc107-guide/">Form TC107 Guide</a>
+      <a href="../condo-rental-comps/">Rental Comps (581)</a>
+      <a href="../march-1-deadline/">March 1 Deadline</a>
+      <a href="../stories/second-home-tax-cliff/">Policy Brief</a>
+    </div>
+  </nav>
+
+  <main id="main" class="pat-app">
+    <section class="hero-card">
+      <div class="hero-kicker">FY 2026–27 DOF Final Assessment Roll · NY Tax Law §§ 1350–1353</div>
+      <h1>NYC Pied-à-Terre Cliff &amp; DOF Valuation Checker</h1>
+      <p class="hero-sub">
+        Look up any NYC parcel by street address, 10-digit BBL, ZIP code, or owner name to inspect
+        FY2026–27 DOF final market value (<code>finmkttot</code>), enacted Phase 1 pied-à-terre
+        whole-value surcharge brackets (July 2026–June 2028), co-op unit share allocations, and
+        Tax Commission <strong>Form TC107</strong> cliff margins.
+      </p>
+
+      <div class="search-shell">
+        <label class="sr-only" for="parcelSearch">Search address, BBL, ZIP, or owner</label>
+        <div class="search-input-row">
+          <input
+            id="parcelSearch"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Try street address (e.g. 20 WEST STREET), 10-digit BBL (1000151102), or owner..."
+            aria-autocomplete="list"
+            aria-controls="autocompleteList"
+            aria-expanded="false"
+          >
+          <button id="clearSearchBtn" class="clear-btn" type="button" hidden>Clear</button>
+        </div>
+        <ul id="autocompleteList" class="autocomplete-list" role="listbox" hidden></ul>
+      </div>
+
+      <div class="search-meta-row">
+        <span id="statusBadge" class="status-pill">Connecting to NYC Valuation API...</span>
+        <span class="meta-summary"><span id="citywideMeta"></span> · <a href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener">View Sample PDF (Example Unit)</a></span>
+      </div>
+
+      <div id="examplePills" class="preset-row" aria-label="Sample lookups"></div>
+    </section>
+
+    <section id="errorBanner" class="alert-banner" hidden></section>
+
+    <section id="paymentBanner" class="success-banner" hidden>
+      <span id="paymentBannerText">Payment verified. Your full Valuation &amp; TC107 Prep PDF is ready:</span>
+      <a id="paymentDownloadBtn" class="btn-primary btn-sm" href="#" target="_blank" rel="noopener">Download Full Valuation &amp; TC107 Prep PDF</a>
+    </section>
+
+    <section id="citywidePanel" class="card stats-strip" hidden>
+      <div class="stats-grid" id="citywideStatsGrid"></div>
+    </section>
+
+    <section id="resultSection" class="results-stack" hidden>
+      <article class="card parcel-header-card">
+        <div class="parcel-top">
+          <div>
+            <div class="badge-row" id="parcelBadges"></div>
+            <h2 id="parcelAddressTitle">Parcel Address</h2>
+            <p id="parcelSubline" class="muted-line"></p>
+          </div>
+          <div class="action-buttons">
+            <button id="copyCitationBtn" class="btn-secondary" type="button">Copy Citation &amp; Link</button>
+            <a id="reportPreviewBtn" class="btn-secondary" href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener" hidden>View Sample PDF (Example Unit)</a>
+            <a id="reportCheckoutBtn" class="btn-primary" href="#" target="_blank" rel="noopener" hidden></a>
+            <a id="partnerInquiryBtn" class="btn-secondary" href="#" target="_blank" rel="noopener" hidden></a>
+          </div>
+        </div>
+
+        <div class="kpi-grid" id="primaryKpiGrid"></div>
+      </article>
+
+      <div class="two-col-grid">
+        <article class="card cliff-card">
+          <h3>Phase 1 Surcharge &amp; Cliff Margin</h3>
+          <div id="cliffDetails"></div>
+        </article>
+
+        <article class="card assessment-card">
+          <h3>DOF Assessment &amp; Protest Record</h3>
+          <div id="assessmentDetails"></div>
+        </article>
+      </div>
+
+      <article id="coopCalculatorCard" class="card coop-card" hidden>
+        <div class="card-head-split">
+          <div>
+            <h3>Co-op Unit Share Estimator</h3>
+            <p class="muted-line">
+              NYC DOF assesses cooperative buildings as a single parcel. Enter your apartment shares
+              or ownership percentage to estimate unit exposure against the $1,000,000 co-op cliff.
+            </p>
+          </div>
+        </div>
+        <form id="coopForm" class="coop-form">
+          <div class="field">
+            <label for="unitSharesInput">Unit Shares</label>
+            <input id="unitSharesInput" type="number" min="0.01" step="any" placeholder="e.g. 250">
+          </div>
+          <div class="field">
+            <label for="totalSharesInput">Total Building Shares</label>
+            <input id="totalSharesInput" type="number" min="0.01" step="any" placeholder="e.g. 10000">
+          </div>
+          <div class="field-or">OR</div>
+          <div class="field">
+            <label for="sharePctInput">Ownership %</label>
+            <input id="sharePctInput" type="number" min="0.0001" max="100" step="any" placeholder="e.g. 2.5">
+          </div>
+          <div class="field field-btn">
+            <button class="btn-primary" type="submit">Calculate Unit Exposure</button>
+          </div>
+        </form>
+        <div id="coopEstimateOutput" class="coop-output"></div>
+      </article>
+
+      <div class="two-col-grid">
+        <article class="card building-card">
+          <div class="card-head-split">
+            <h3>Building &amp; Block Exposure</h3>
+            <button id="loadBlockUnitsBtn" class="btn-secondary btn-sm" type="button">Inspect Block Units</button>
+          </div>
+          <div id="buildingContextSummary"></div>
+          <div id="blockUnitsTableWrap" class="table-wrap" hidden></div>
+        </article>
+
+        <article class="card acris-card">
+          <h3>Linked ACRIS Deed &amp; Mortgage Sales</h3>
+          <div id="acrisSalesWrap"></div>
+        </article>
+      </div>
+
+      <article class="card caveats-card">
+        <h3>Statutory Scope &amp; Important Disclaimers</h3>
+        <ul id="disclaimersList" class="caveat-list"></ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../">Overview</a> · <a href="./">Live Lookup</a> · <a href="../tc107-guide/">TC107 Guide</a> · <a href="../condo-rental-comps/">Rental Comps</a> · <a href="../march-1-deadline/">March 1 Deadline</a> · <a href="../data/">Data</a> · <a href="../privacy/">Privacy</a> · <a href="../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
+
+  <script>
+    window.PIED_A_TERRE_API_BASE = "https://api.nychousingdata.com";
+  </script>
+  <script type="module" src="../assets/theme.js?v=20261116bat2"></script>
+  <script src="../assets/pied-a-terre/checker.js?v=20261125ux"></script>
+  <script type="module" src="../assets/analytics.js"></script>
+</body>
+</html>
