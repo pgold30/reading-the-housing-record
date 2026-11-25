@@ -645,13 +645,10 @@ figure.chart:has(svg) { max-width: 100%; overflow-x: auto; }
   border-top: 2px solid var(--blue);
   padding-top: 16px;
 }
-.home-film-toggle {
-  margin-top: 26px;
-}
-.home-film-toggle .paper-video-intro {
-  margin: 0;
-  border: 0;
-  padding: 4px 0 0;
+.home-film-card {
+  margin: 22px 0 0;
+  border-top: 4px solid var(--blue);
+  box-shadow: 0 2px 12px rgba(20, 42, 58, .04);
 }
 .benchmark-pillars {
   display: grid;
