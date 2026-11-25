@@ -39,12 +39,12 @@
 }
 
 .pat-app {
-  width: min(1180px, calc(100% - 2 * var(--page-gutter)));
+  width: min(1220px, calc(100% - 2 * var(--page-gutter)));
   margin: 0 auto;
-  padding: 24px 0 48px;
+  padding: 16px 0 34px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .pat-app code {
@@ -57,7 +57,7 @@
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 22px 24px;
+  padding: 16px 20px;
   box-shadow: var(--shadow);
 }
 
@@ -70,17 +70,17 @@
 }
 
 .pat-app .hero-card h1 {
-  margin: 8px 0 10px;
-  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  margin: 4px 0 6px;
+  font-size: clamp(1.5rem, 2.5vw, 2.05rem);
   line-height: 1.15;
 }
 
 .pat-app .hero-sub {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   color: var(--muted);
-  max-width: 82ch;
-  font-size: 0.98rem;
-  line-height: 1.55;
+  max-width: 96ch;
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .pat-app .search-shell {
@@ -268,7 +268,7 @@
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 7px;
-  padding: 12px 14px;
+  padding: 10px 12px;
 }
 
 .pat-app .kpi-label {
@@ -536,7 +536,15 @@
 }
 
 .pat-app .value-strip {
-  padding: 18px 22px;
+  padding: 14px 18px;
+}
+.pat-app .privacy-line {
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  font-size: 0.81rem;
+  color: var(--muted);
+  line-height: 1.45;
 }
 .pat-app .value-grid {
   display: grid;
