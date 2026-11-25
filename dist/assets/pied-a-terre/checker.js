@@ -948,6 +948,10 @@
       verifyStripeSession(checkoutSessionId);
     } else if (initialBbl) {
       loadParcel(initialBbl);
+    } else if (params.get("q")) {
+      els.searchInput.value = params.get("q").slice(0, 120);
+      els.searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+      els.searchInput.focus();
     }
   });
 })();
