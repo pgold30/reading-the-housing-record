@@ -494,3 +494,43 @@
   .pat-app .ac-right { white-space: normal; }
   .pat-app .action-buttons > * { width: 100%; }
 }
+
+.pat-app .b2b-card {
+  border-top: 3px solid var(--blue);
+}
+.pat-app .b2b-card h2 {
+  margin: 6px 0 8px;
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  line-height: 1.2;
+}
+.pat-app .b2b-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.pat-app .b2b-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 14px 16px;
+}
+.pat-app .b2b-item h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+.pat-app .b2b-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.pat-app .b2b-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+@media (max-width: 820px) {
+  .pat-app .b2b-grid { grid-template-columns: minmax(0, 1fr); }
+}
