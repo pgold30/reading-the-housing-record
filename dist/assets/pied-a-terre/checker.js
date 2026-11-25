@@ -26,6 +26,7 @@
     parcelBadges: document.getElementById("parcelBadges"),
     parcelAddressTitle: document.getElementById("parcelAddressTitle"),
     parcelSubline: document.getElementById("parcelSubline"),
+    verdictCallout: document.getElementById("verdictCallout"),
     copyCitationBtn: document.getElementById("copyCitationBtn"),
     reportPreviewBtn: document.getElementById("reportPreviewBtn"),
     reportCheckoutBtn: document.getElementById("reportCheckoutBtn"),
@@ -58,6 +59,10 @@
     priceUsd: 39,
     url: "",
     label: "",
+  };
+  let apiFlags = {
+    evidenceGated: true,
+    bulkRequiresKey: true,
   };
 
   function escapeHtml(value) {
@@ -193,6 +198,27 @@
         url: health.report_checkout_url || "",
         label: health.report_button_label || "Download Valuation & TC107 Prep PDF ($39)",
       };
+      apiFlags = {
+        evidenceGated: health.evidence_gating_enabled !== false,
+        bulkRequiresKey: health.bulk_requires_api_key !== false,
+      };
+      if (health.parcel_count >= 1000 && els.examplePills) {
+        const curated = [
+          { bbl: "1011714520", label: "1 WEST END AVE, Apt 20A (Condo Cliff)" },
+          { bbl: "1011230029", label: "101-105 CENTRAL PARK WEST (Co-op)" },
+          { bbl: "1012460142", label: "324 WEST 85 STREET (Townhouse Cliff)" },
+        ];
+        els.examplePills.innerHTML = curated
+          .map(function (c) {
+            return `<button class="preset-pill" type="button" data-bbl="${escapeHtml(c.bbl)}">${escapeHtml(c.label)}</button>`;
+          })
+          .join("");
+        els.examplePills.querySelectorAll(".preset-pill").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            loadParcel(btn.getAttribute("data-bbl"));
+          });
+        });
+      }
     } catch (err) {
       els.statusBadge.textContent = "API offline or unreachable";
       els.statusBadge.className = "status-pill err";
@@ -233,26 +259,28 @@
       // Optional summary card silently skipped if index not built yet
     }
 
-    try {
-      const sampleQueries = ["WEST", "BEAVER", "BEACH"];
-      const pillButtons = [];
-      for (const q of sampleQueries) {
-        const res = await apiGet(`/v1/autocomplete?q=${encodeURIComponent(q)}&limit=1`);
-        if (res.results && res.results.length > 0) {
-          const item = res.results[0];
-          pillButtons.push(
-            `<button class="preset-pill" type="button" data-bbl="${escapeHtml(item.bbl)}">${escapeHtml(item.full_address)} (${escapeHtml(item.bldg_class || "NYC")})</button>`
-          );
+    if (!els.examplePills.children.length) {
+      try {
+        const sampleQueries = ["WEST", "BEAVER", "BEACH"];
+        const pillButtons = [];
+        for (const q of sampleQueries) {
+          const res = await apiGet(`/v1/autocomplete?q=${encodeURIComponent(q)}&limit=1`);
+          if (res.results && res.results.length > 0) {
+            const item = res.results[0];
+            pillButtons.push(
+              `<button class="preset-pill" type="button" data-bbl="${escapeHtml(item.bbl)}">${escapeHtml(item.full_address)} (${escapeHtml(item.bldg_class || "NYC")})</button>`
+            );
+          }
         }
-      }
-      els.examplePills.innerHTML = pillButtons.join("");
-      els.examplePills.querySelectorAll(".preset-pill").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          loadParcel(btn.getAttribute("data-bbl"));
+        els.examplePills.innerHTML = pillButtons.join("");
+        els.examplePills.querySelectorAll(".preset-pill").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            loadParcel(btn.getAttribute("data-bbl"));
+          });
         });
-      });
-    } catch (_err) {
-      // No sample pills needed if empty DB
+      } catch (_err) {
+        // No sample pills needed if empty DB
+      }
     }
   }
 
@@ -361,9 +389,37 @@
 
     els.parcelBadges.innerHTML = badges.join("");
     els.parcelAddressTitle.textContent = p.full_address;
-    els.parcelSubline.textContent = `Block ${p.block} · Lot ${p.lot} · ZIP ${p.zip_code || "N/A"} · Owner: ${p.owner || "Not listed"}`;
+    els.parcelSubline.textContent = `Block ${p.block} · Lot ${p.lot} · ZIP ${p.zip_code || "N/A"}${p.owner ? ` · Owner: ${p.owner}` : ""}`;
 
-    if (reportCfg.previewEnabled) {
+    const displayExposure = scope.is_coop_building && data.coop_default_estimate
+      ? data.coop_default_estimate.exposure
+      : exp;
+    const needsAppealKit = Boolean(
+      displayExposure.above_entry_threshold || (scope.is_coop_building && exp.above_entry_threshold)
+    );
+
+    if (els.verdictCallout) {
+      if (!displayExposure.in_scope) {
+        els.verdictCallout.className = "verdict-box verdict-safe";
+        els.verdictCallout.innerHTML = `<strong>Outside Residential Surcharge Schedule ($0):</strong> ${escapeHtml(scope.scope_reason)} No Phase 1 pied-à-terre surcharge or Form TC107 appeal applies.`;
+      } else if (!needsAppealKit) {
+        const headroom = displayExposure.next_threshold_above
+          ? fmtUsd(displayExposure.next_threshold_above.headroom_dollars)
+          : "below cutoff";
+        els.verdictCallout.className = "verdict-box verdict-safe";
+        els.verdictCallout.innerHTML = `<strong>Good news — $0 Phase 1 Surcharge:</strong> This parcel’s FY2027 DOF market value (${fmtUsd(assess.finmkttot)}) sits <strong>${headroom} below</strong> the ${fmtUsd(displayExposure.entry_threshold)} statutory threshold. No Form TC107 pied-à-terre appeal is needed unless DOF’s July supplemental roll valued this parcel above the cutoff.`;
+      } else if (displayExposure.cliff && displayExposure.cliff.in_tc107_appeal_zone) {
+        const c = displayExposure.cliff;
+        els.verdictCallout.className = "verdict-box verdict-cliff";
+        els.verdictCallout.innerHTML = `<strong>High-Leverage TC107 Cliff Zone (${fmtUsd(displayExposure.annual_surcharge_if_non_primary)}/yr · ${fmtUsd(displayExposure.phase1_two_year_total)} over Phase 1):</strong> Crossing below the ${fmtUsd(c.boundary)} cliff requires a ${fmtUsd(c.reduction_needed_dollars)} (${fmtPct(c.pct_above_target)}) DOF reduction and cuts illustrative liability by <strong>${fmtUsd(c.annual_tax_savings_at_target)}/yr (${fmtUsd(c.two_year_tax_savings_at_target)} over 2 years)</strong>. Check $0 primary-residence or lease exemptions first; the optional <strong>$${reportCfg.priceUsd} Prep Dossier</strong> compiles your building’s peer disparity table, ACRIS comps, RPTL § 581 framing, and 1 Centre St wet-signature TC107 checklist to review yourself or hand directly to NY counsel.`;
+      } else {
+        els.verdictCallout.className = "verdict-box verdict-above";
+        els.verdictCallout.innerHTML = `<strong>Above Phase 1 Threshold (${fmtUsd(displayExposure.annual_surcharge_if_non_primary)}/yr · ${fmtUsd(displayExposure.phase1_two_year_total)} over 2 years if non-primary):</strong> Step 1: verify whether a $0 primary-residence, family-occupied, or 1-year lease exemption applies. Step 2: before ${escapeHtml(scope.tc107_deadline_label)}, the optional <strong>$${reportCfg.priceUsd} Prep Dossier</strong> packages up to 12 building peer units, up to 8 ACRIS sales comps, and the 1 Centre St paper TC107 checklist for review with NY counsel.`;
+      }
+      els.verdictCallout.hidden = false;
+    }
+
+    if (needsAppealKit && reportCfg.previewEnabled) {
       els.reportPreviewBtn.href = `${apiBase}/v1/report/sample.pdf`;
       els.reportPreviewBtn.textContent = "View Sample PDF (Example Unit)";
       els.reportPreviewBtn.hidden = false;
@@ -371,13 +427,13 @@
       els.reportPreviewBtn.hidden = true;
     }
 
-    if (reportCfg.dynamic) {
+    if (needsAppealKit && reportCfg.dynamic) {
       els.reportCheckoutBtn.href = "#";
       els.reportCheckoutBtn.removeAttribute("target");
       els.reportCheckoutBtn.removeAttribute("rel");
       els.reportCheckoutBtn.textContent = reportCfg.label;
       els.reportCheckoutBtn.hidden = false;
-    } else if (reportCfg.enabled) {
+    } else if (needsAppealKit && reportCfg.enabled) {
       const sep = reportCfg.url.includes("?") ? "&" : "?";
       els.reportCheckoutBtn.href = `${reportCfg.url}${sep}client_reference_id=${encodeURIComponent(p.bbl)}&bbl=${encodeURIComponent(p.bbl)}`;
       els.reportCheckoutBtn.setAttribute("target", "_blank");
@@ -395,10 +451,6 @@
     } else {
       els.partnerInquiryBtn.hidden = true;
     }
-
-    const displayExposure = scope.is_coop_building && data.coop_default_estimate
-      ? data.coop_default_estimate.exposure
-      : exp;
 
     const surchargeNote = scope.is_coop_building
       ? `Illustrative equal-split unit (${fmtNum(p.coop_apts || p.units || 1)} units) if non-primary`
@@ -430,7 +482,7 @@
     renderCliffPanel(scope, exp);
     renderAssessmentPanel(p, assess, scope);
     renderCoopPanel(p, scope, data.coop_default_estimate);
-    renderBuildingContext(p, data.building_context);
+    renderBuildingContext(p, data.building_context, Boolean(data.evidence_gated));
     renderAcrisSales(data.acris_sales);
     renderDisclaimers(data.disclaimers);
 
@@ -481,6 +533,12 @@
   }
 
   function renderAssessmentPanel(p, assess, scope) {
+    const unitRow = scope.is_coop_building
+      ? `<tr><th>Units / Co-op Apts</th><td>${p.units ?? "N/A"} / ${p.coop_apts ?? "N/A"}</td></tr>`
+      : `<tr><th>Residential Units</th><td>${p.units ?? "N/A"}</td></tr>`;
+    const protestVal = assess.protest_details_gated
+      ? `Yes — code &amp; attorney group in $${reportCfg.priceUsd} PDF`
+      : `${escapeHtml(assess.protest_1 || "None")} / ${escapeHtml(assess.attorney_group1 || "None")}`;
     els.assessmentDetails.innerHTML = `
       <table class="kv-table">
         <tr><th>Roll Year / Period</th><td>${escapeHtml(p.year)} / Period ${escapeHtml(p.period)} (Final)</td></tr>
@@ -489,8 +547,8 @@
         <tr><th>Final Taxable Total</th><td>${fmtUsd(assess.fintxbtot)}</td></tr>
         <tr><th>Assessed / Market Ratio</th><td>${assess.assessed_to_market_ratio !== null ? fmtPct(assess.assessed_to_market_ratio * 100, 2) : "N/A"}</td></tr>
         <tr><th>Year Built / Gross SqFt</th><td>${p.yrbuilt || "N/A"} / ${p.gross_sqft ? fmtNum(p.gross_sqft) : "N/A"} sqft</td></tr>
-        <tr><th>Units / Co-op Apts</th><td>${p.units ?? "N/A"} / ${p.coop_apts ?? "N/A"}</td></tr>
-        <tr><th>DOF Protest / Atty Group</th><td>${escapeHtml(assess.protest_1 || "None")} / ${escapeHtml(assess.attorney_group1 || "None")}</td></tr>
+        ${unitRow}
+        <tr><th>DOF Protest / Atty Group</th><td>${protestVal}</td></tr>
         <tr><th>TC107 Filing Window</th><td>${escapeHtml(scope.tc107_deadline_label)}</td></tr>
       </table>
     `;
@@ -535,9 +593,24 @@
     `;
   }
 
-  function renderBuildingContext(p, ctx) {
+  function renderBuildingContext(p, ctx, evidenceGated) {
     els.blockUnitsTableWrap.hidden = true;
     els.blockUnitsTableWrap.innerHTML = "";
+    const hideBulk = Boolean(evidenceGated || apiFlags.bulkRequiresKey);
+    els.loadBlockUnitsBtn.hidden = hideBulk;
+
+    let extraHtml = "";
+    if (evidenceGated) {
+      extraHtml = `
+        <div class="locked-box">
+          <div><strong>Unit-by-unit peer table included in the $${reportCfg.priceUsd} Prep PDF:</strong> Unlock up to 12 comparable building units (unit numbers, DOF market values, statutory rates, and cliff gaps for RPTL § 581 review) — or request full-building CSV / API access below.</div>
+          <button type="button" class="btn-primary btn-sm js-unlock-pdf">Unlock Full Unit PDF ($${reportCfg.priceUsd})</button>
+        </div>
+      `;
+    } else if (apiFlags.bulkRequiresKey) {
+      extraHtml = `<p class="muted-line" style="margin-top:10px">Block-level unit exports are available for full-building audits or via B2B API key (<a href="#for-firms">see below</a>).</p>`;
+    }
+
     els.buildingContextSummary.innerHTML = `
       <table class="kv-table">
         <tr><th>Grouping Key</th><td><code>${escapeHtml(ctx.grouping)}</code></td></tr>
@@ -546,10 +619,24 @@
         <tr><th>TC107 Appeal-Zone Units</th><td>${fmtNum(ctx.tc107_zone_count)}</td></tr>
         <tr><th>Aggregate Illustrative Annual Surcharge</th><td>${fmtUsd(ctx.total_illustrative_annual_surcharge)}</td></tr>
       </table>
+      ${extraHtml}
     `;
   }
 
   function renderAcrisSales(acris) {
+    if (acris && acris.gated) {
+      const ratioNote = acris.finmkttot_to_last_sale_ratio
+        ? `<p class="muted-line">Latest DOF Market Value / Last Sale Ratio: <strong>${Number(acris.finmkttot_to_last_sale_ratio).toFixed(2)}x</strong> (${fmtNum(acris.sale_count)} indexed parcel sale${acris.sale_count === 1 ? "" : "s"})</p>`
+        : `<p class="muted-line">${fmtNum(acris.sale_count || 0)} direct parcel sale(s) plus building/ZIP comparable sales indexed in this roll.</p>`;
+      els.acrisSalesWrap.innerHTML = `
+        ${ratioNote}
+        <div class="locked-box">
+          <div><strong>Itemized ACRIS sales &amp; peer comps included in the $${reportCfg.priceUsd} Prep PDF:</strong> Unlock deed dates, recorded prices, mortgage/CEMA flags, ACRIS document IDs, up to 8 building/ZIP comps, and the July 2028 Phase-2 preview.</div>
+          <button type="button" class="btn-primary btn-sm js-unlock-pdf">Unlock Full Unit PDF ($${reportCfg.priceUsd})</button>
+        </div>
+      `;
+      return;
+    }
     if (!acris || !acris.recent_sales || acris.recent_sales.length === 0) {
       els.acrisSalesWrap.innerHTML = `
         <p class="muted-line">
@@ -748,6 +835,12 @@
       }, 1800);
     } catch (_err) {
       showError(`Citation text ready: ${text}`);
+    }
+  });
+
+  els.resultSection.addEventListener("click", function (evt) {
+    if (evt.target.closest(".js-unlock-pdf") && els.reportCheckoutBtn && !els.reportCheckoutBtn.hidden) {
+      els.reportCheckoutBtn.click();
     }
   });
 

@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="../assets/site.css?v=20261125ux">
   <link rel="stylesheet" href="../assets/stories.css?v=20261125ux">
   <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
-  <link rel="stylesheet" href="../assets/pied-a-terre/checker.css?v=20261125ux3">
+  <link rel="stylesheet" href="../assets/pied-a-terre/checker.css?v=20261125ux4">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NYC Pied-a-Terre Tax Cliff & Live Unit Checker","url":"https://nychousingdata.com/pied-a-terre/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Live parcel-level NYC FY2026-27 Department of Finance Final Roll lookup covering 968,294 properties for enacted Phase 1 pied-a-terre surcharge brackets and Form TC107 cliff margins.","creator":{"@type":"Person","name":"Pablo Loschi","sameAs":"https://orcid.org/0009-0004-9455-4713"},"isBasedOn":"https://doi.org/10.5281/zenodo.24516899"}</script>
 </head>
 <body>
@@ -84,6 +84,21 @@
       <div class="stats-grid" id="citywideStatsGrid"></div>
     </section>
 
+    <section id="valueStrip" class="card value-strip" aria-label="Free lookup vs optional $39 PDF">
+      <div class="value-grid">
+        <div class="value-col">
+          <div class="hero-kicker">Free On-Screen Check</div>
+          <h3>Verify exposure &amp; cliff risk in 5 seconds</h3>
+          <p>See your parcel’s FY2027 DOF market value (<code>finmkttot</code>), statutory Phase 1 rate ($0 vs. 4.00%–6.50% / 0.80%–1.30%), annual &amp; 2-year exposure, 15% TC107 cliff status, co-op share allocation, and building counts across all 968,294 NYC parcels.</p>
+        </div>
+        <div class="value-col">
+          <div class="hero-kicker">Optional $39 Prep PDF · Only If Above Threshold</div>
+          <h3>Evidence packet for Form TC107 &amp; counsel review</h3>
+          <p>For units facing a $40,000+ annual surcharge: get the itemized <strong>12-unit building peer disparity table</strong> (RPTL § 581), up to <strong>8 ACRIS deed/mortgage comps</strong> + July 2028 Phase-2 preview, prior DOF protest code, and the <strong>1 Centre St wet-signature checklist</strong>. <a href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener">View Sample PDF (Example Unit) →</a></p>
+        </div>
+      </div>
+    </section>
+
     <section id="resultSection" class="results-stack" hidden>
       <article class="card parcel-header-card">
         <div class="parcel-top">
@@ -99,6 +114,8 @@
             <a id="partnerInquiryBtn" class="btn-secondary" href="#" target="_blank" rel="noopener" hidden></a>
           </div>
         </div>
+
+        <div id="verdictCallout" class="verdict-box" hidden></div>
 
         <div class="kpi-grid" id="primaryKpiGrid"></div>
       </article>
@@ -202,7 +219,7 @@
     window.PIED_A_TERRE_API_BASE = "https://api.nychousingdata.com";
   </script>
   <script type="module" src="../assets/theme.js?v=20261116bat2"></script>
-  <script src="../assets/pied-a-terre/checker.js?v=20261125ux"></script>
+  <script src="../assets/pied-a-terre/checker.js?v=20261125ux4"></script>
   <script type="module" src="../assets/analytics.js"></script>
 </body>
 </html>
