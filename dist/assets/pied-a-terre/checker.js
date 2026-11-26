@@ -76,6 +76,8 @@
     parcelAddressTitle: document.getElementById("parcelAddressTitle"),
     parcelSubline: document.getElementById("parcelSubline"),
     verdictCallout: document.getElementById("verdictCallout"),
+    paidReportBox: document.getElementById("paidReportBox"),
+    paidReportBuyBtn: document.getElementById("paidReportBuyBtn"),
     bundleReview: document.getElementById("bundleReview"),
     bundleToggle: document.getElementById("bundleToggle"),
     bundleDetails: document.getElementById("bundleDetails"),
@@ -532,11 +534,22 @@
       const boundary = !scope.is_coop_building && exp.cliff
         ? ` DOF value is ${fmtUsd(exp.cliff.distance_above_threshold_dollars)} (${fmtPct(exp.cliff.distance_above_threshold_pct, 1)}) above the ${fmtUsd(exp.entry_threshold)} threshold.`
         : "";
-      els.verdictCallout.innerHTML = `<p>${message}${boundary}${warning}</p><p>Public-record data, not legal, tax or appraisal advice. This report does not suggest any value to claim or whether to appeal.</p>`;
+      const belowNote = !reportApplies && exp.in_scope
+        ? `<p>No $${reportCfg.priceUsd} unit report is needed because this parcel sits below the statutory threshold. For a building-wide summary, see <a href="./for-buildings/">For Buildings &amp; Boards</a>.</p>`
+        : "";
+      els.verdictCallout.innerHTML = `<p>${message}${boundary}${warning}</p>${belowNote}<p>Public-record data, not legal, tax or appraisal advice. This report does not suggest any value to claim or whether to appeal.</p>`;
       if (needsReview) {
         els.verdictCallout.textContent = "Confirm which apartments the city treats as one residence before estimating the surcharge.";
       }
       els.verdictCallout.hidden = false;
+    }
+
+    if (els.paidReportBox) {
+      const canBuy = reportApplies && (reportCfg.dynamic || reportCfg.enabled);
+      els.paidReportBox.hidden = !canBuy;
+      if (canBuy && els.paidReportBuyBtn) {
+        els.paidReportBuyBtn.textContent = `Order $${reportCfg.priceUsd} Public-Record PDF (Stripe)`;
+      }
     }
 
     if (reportApplies && reportCfg.previewEnabled) {

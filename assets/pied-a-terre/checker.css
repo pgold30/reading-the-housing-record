@@ -682,6 +682,9 @@
   display: block;
   width: 100%;
   height: auto;
+  max-height: 230px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .pat-app .sample-preview-card span {
@@ -689,6 +692,75 @@
   padding: 5px 8px;
   font-size: 0.76rem;
   font-weight: 600;
+}
+
+.pat-app .value-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.pat-app .value-list li + li {
+  margin-top: 6px;
+}
+
+.pat-app .how-to-buy {
+  margin-top: 12px;
+  padding: 11px 13px;
+  border-radius: 7px;
+  border: 1px solid var(--line);
+  background: var(--paper-2, var(--paper));
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.85rem;
+  line-height: 1.48;
+}
+
+.pat-app .how-to-buy-links {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.pat-app .paid-report-box {
+  margin: 12px 0 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1.5px solid var(--blue);
+  background: var(--blue-soft);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pat-app .paid-report-box[hidden] {
+  display: none;
+}
+
+.pat-app .paid-report-copy {
+  flex: 1 1 320px;
+}
+
+.pat-app .paid-report-copy strong {
+  display: block;
+  font-size: 0.96rem;
+  margin-bottom: 4px;
+}
+
+.pat-app .paid-report-copy .muted-line {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.pat-app .paid-report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
 }
 
 .pat-app .card-accordion {
