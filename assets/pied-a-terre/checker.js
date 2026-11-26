@@ -76,6 +76,13 @@
     parcelAddressTitle: document.getElementById("parcelAddressTitle"),
     parcelSubline: document.getElementById("parcelSubline"),
     verdictCallout: document.getElementById("verdictCallout"),
+    bundleReview: document.getElementById("bundleReview"),
+    bundleToggle: document.getElementById("bundleToggle"),
+    bundleDetails: document.getElementById("bundleDetails"),
+    bundleLots: document.getElementById("bundleLots"),
+    bundleForm: document.getElementById("bundleForm"),
+    bundleLotInput: document.getElementById("bundleLotInput"),
+    bundleStatus: document.getElementById("bundleStatus"),
     copyCitationBtn: document.getElementById("copyCitationBtn"),
     reportPreviewBtn: document.getElementById("reportPreviewBtn"),
     reportCheckoutBtn: document.getElementById("reportCheckoutBtn"),
@@ -98,6 +105,12 @@
 
   let checkoutPending = false;
   let currentParcel = null;
+  let bundleReview = null;
+  // Listings warranting review. The paired roll entries do not establish joint assessment.
+  const possibleCompanionLots = new Map([
+    ["1011381009", "1011381010"],
+    ["1011381010", "1011381009"],
+  ]);
   let acMatches = [];
   let activeAcIndex = -1;
   let debounceTimer = null;
@@ -348,6 +361,7 @@
 
     els.acList.innerHTML = items
       .map(function (item, idx) {
+        const reviewRequired = possibleCompanionLots.has(item.bbl);
         return `
           <li class="autocomplete-item" role="option" data-index="${idx}" aria-selected="false">
             <div>
@@ -355,8 +369,10 @@
               <div class="ac-sub">${escapeHtml(item.borough_name)} · BBL ${escapeHtml(item.bbl)} · Class ${escapeHtml(item.bldg_class || "?")}</div>
             </div>
             <div class="ac-right">
-              <div><strong>${fmtUsd(item.finmkttot)}</strong></div>
-              <div class="ac-sub">${fmtPct(item.statutory_rate_pct)}</div>
+              ${reviewRequired
+                ? '<div class="ac-sub">Possible combined residence</div>'
+                : `<div><strong>${fmtUsd(item.finmkttot)}</strong></div>
+                   <div class="ac-sub">${fmtPct(item.statutory_rate_pct)}</div>`}
             </div>
           </li>
         `;
@@ -401,11 +417,50 @@
       renderAutocomplete([]);
       return;
     }
+    if (/^150\s+columbus(?:\s+(?:avenue|ave\.?))?\s*,?\s+(?:#\s*|(?:apt\.?|unit)\s+)?5ab$/i.test(trimmed)) {
+      renderAutocomplete([{bbl: "1011381009", full_address: "150 Columbus Avenue #5AB", borough_name: "Manhattan", bldg_class: "R4"}]);
+      return;
+    }
     try {
       const data = await apiGet(`/v1/autocomplete?q=${encodeURIComponent(trimmed)}&limit=10`);
       renderAutocomplete(data.results || []);
     } catch (_err) {
       renderAutocomplete([]);
+    }
+  }
+
+  function renderBundleLots() {
+    els.bundleLots.innerHTML = Array.from(bundleReview.lots.values(), function (lot) {
+      const basis = lot.parcel.bbl === bundleReview.bbl ? "Selected lot" : "Additional lot";
+      return `<li>${basis}: ${escapeHtml(lot.parcel.full_address)} (BBL ${escapeHtml(lot.parcel.bbl)}) · ${fmtUsd(lot.assessment.finmkttot)}</li>`;
+    }).join("");
+  }
+
+  async function lookUpBundleLot(bbl) {
+    const review = bundleReview;
+    if (!review?.enabled || review.loading) return;
+    if (!/^[1-5]\d{9}$/.test(bbl) || review.lots.has(bbl)) {
+      els.bundleStatus.textContent = "Enter a different 10-digit BBL.";
+      return;
+    }
+    review.loading = true;
+    els.bundleStatus.textContent = "Looking up the lot…";
+    try {
+      const data = await apiGet(`/v1/parcel/${encodeURIComponent(bbl)}`);
+      if (data.parcel.bbl !== bbl || !Number.isFinite(data.assessment.finmkttot)) {
+        throw new Error("The returned parcel or value could not be verified.");
+      }
+      if (bundleReview !== review) return;
+      review.lots.set(bbl, data);
+      els.bundleLotInput.value = "";
+      els.bundleStatus.textContent = "";
+      renderBundleLots();
+    } catch {
+      if (bundleReview === review) {
+        els.bundleStatus.textContent = "Could not verify this lot on the city roll. Check the BBL and try again.";
+      }
+    } finally {
+      review.loading = false;
     }
   }
 
@@ -418,12 +473,29 @@
     const scope = data.scope;
     const assess = data.assessment;
     const exp = data.exposure;
+    const newParcel = bundleReview?.bbl !== p.bbl;
+    if (newParcel) {
+      const companion = possibleCompanionLots.get(p.bbl);
+      bundleReview = { bbl: p.bbl, companion, enabled: Boolean(companion), lots: new Map([[p.bbl, data]]) };
+      els.bundleLotInput.value = companion || "";
+      els.bundleStatus.textContent = "";
+    }
+    const eligibleForReview = scope.schedule_type === "condo_coop";
+    const needsReview = eligibleForReview && bundleReview.enabled;
+    els.bundleReview.hidden = !eligibleForReview;
+    els.bundleDetails.hidden = !needsReview;
+    els.bundleToggle.checked = needsReview;
+    els.bundleToggle.disabled = Boolean(bundleReview.companion);
+    if (needsReview) renderBundleLots();
+
     const badges = [
       `<span class="badge badge-blue">BBL ${escapeHtml(p.bbl)}</span>`,
       `<span class="badge badge-blue">${escapeHtml(p.borough_name)}</span>`,
       `<span class="badge badge-blue">Class ${escapeHtml(p.bldg_class || "N/A")} (Tax Class ${escapeHtml(p.curtaxclass || "?")})</span>`,
     ];
-    if (!exp.in_scope) {
+    if (needsReview) {
+      badges.push('<span class="badge badge-blue">Combined residence needs review</span>');
+    } else if (!exp.in_scope) {
       badges.push(`<span class="badge badge-green">Outside Pied-a-Terre Residential Schedule</span>`);
     } else if (scope.is_coop_building) {
       badges.push('<span class="badge badge-blue">Unit share estimate</span>');
@@ -443,7 +515,7 @@
     const displayExposure = scope.is_coop_building && data.coop_default_estimate
       ? data.coop_default_estimate.exposure
       : exp;
-    const reportApplies = Boolean(
+    const reportApplies = !needsReview && Boolean(
       displayExposure.above_entry_threshold || (scope.is_coop_building && exp.above_entry_threshold)
     );
 
@@ -461,6 +533,9 @@
         ? ` DOF value is ${fmtUsd(exp.cliff.distance_above_threshold_dollars)} (${fmtPct(exp.cliff.distance_above_threshold_pct, 1)}) above the ${fmtUsd(exp.entry_threshold)} threshold.`
         : "";
       els.verdictCallout.innerHTML = `<p>${message}${boundary}${warning}</p><p>Public-record data, not legal, tax or appraisal advice. This report does not suggest any value to claim or whether to appeal.</p>`;
+      if (needsReview) {
+        els.verdictCallout.textContent = "Confirm which apartments the city treats as one residence before estimating the surcharge.";
+      }
       els.verdictCallout.hidden = false;
     }
 
@@ -524,18 +599,31 @@
       </div>
     `;
 
+    els.primaryKpiGrid.hidden = needsReview;
+    els.cliffDetails.closest(".cliff-card").hidden = needsReview;
     renderCliffPanel(scope, displayExposure);
     renderAssessmentPanel(p, assess, scope);
     renderCoopPanel(p, scope, data.coop_default_estimate);
+    if (needsReview) els.coopCalculatorCard.hidden = true;
     renderBuildingContext(p, data.building_context, Boolean(data.evidence_gated));
     renderAcrisSales(data.acris_sales);
     renderDisclaimers(data.disclaimers);
+    const collapseMobile = Boolean(window.matchMedia && window.matchMedia("(max-width: 760px)").matches);
+    els.resultSection.querySelectorAll("details.card-accordion").forEach((det) => {
+      det.open = !collapseMobile;
+    });
+    if (needsReview) {
+      els.resultSection.querySelectorAll(".locked-box").forEach((box) => { box.hidden = true; });
+    }
 
     const nextUrl = new URL(window.location.href);
     nextUrl.searchParams.set("bbl", p.bbl);
     nextUrl.searchParams.delete("session_id");
     nextUrl.searchParams.delete("checkout");
     window.history.replaceState({}, "", nextUrl.toString());
+    if (newParcel && needsReview && bundleReview.companion) {
+      lookUpBundleLot(bundleReview.companion);
+    }
   }
 
   function renderCliffPanel(scope, exp) {
@@ -739,6 +827,16 @@
     }
   }
 
+  els.bundleToggle.addEventListener("change", function () {
+    bundleReview.enabled = els.bundleToggle.checked;
+    renderParcel(currentParcel);
+  });
+
+  els.bundleForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    lookUpBundleLot(els.bundleLotInput.value.trim());
+  });
+
   els.searchInput.addEventListener("input", function () {
     els.clearBtn.hidden = !els.searchInput.value.trim();
     clearTimeout(debounceTimer);
@@ -885,6 +983,10 @@
   });
 
   els.reportCheckoutBtn.addEventListener("click", async function (evt) {
+    if (bundleReview?.enabled) {
+      evt.preventDefault();
+      return;
+    }
     if (!currentParcel || !reportCfg.dynamic) {
       return;
     }

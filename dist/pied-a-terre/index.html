@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../assets/site.css?v=20261125ux5">
   <link rel="stylesheet" href="../assets/stories.css?v=20261125ux5">
   <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
-  <link rel="stylesheet" href="../assets/pied-a-terre/checker.css?v=20261125patfix2">
+  <link rel="stylesheet" href="../assets/pied-a-terre/checker.css?v=20261126combo">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NYC Pied-a-Terre Surcharge & Live Unit Checker","url":"https://nychousingdata.com/pied-a-terre/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Live parcel-level NYC FY2026-27 Department of Finance Final Roll lookup covering 968,294 properties for enacted Phase 1 pied-a-terre surcharge brackets and threshold distances.","creator":{"@type":"Person","name":"Pablo Loschi","sameAs":"https://orcid.org/0009-0004-9455-4713"},"isBasedOn":"https://doi.org/10.5281/zenodo.24516899"}</script>
 </head>
 <body>
@@ -94,7 +94,17 @@
         <div class="value-col">
           <div class="hero-kicker">Optional $79 Assessment Report · Only If Above Threshold</div>
           <h3>Public-Record Assessment Report (with TC107 reference checklist)</h3>
-          <p>The $79 PDF includes public assessment records, how the city valued the building, nearby recorded sales where available and the TC107 filing checklist.</p>
+          <p>The $79 PDF includes public assessment records, how the city valued the building (comparable rental income, expenses, and implied cap rate), nearby recorded sales where available, and the TC107 filing checklist. <a href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener">Open full 2-page Sample PDF →</a></p>
+          <div class="sample-preview-grid">
+            <a class="sample-preview-card" href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener">
+              <img src="../assets/pied-a-terre/sample-unit-page1.png?v=20261126n" alt="Sample unit report page 1: DOF assessment and comparable rental income approach" loading="lazy" width="935" height="1210">
+              <span>Page 1: DOF value &amp; rental income →</span>
+            </a>
+            <a class="sample-preview-card" href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener">
+              <img src="../assets/pied-a-terre/sample-unit-page2.png?v=20261126n" alt="Sample unit report page 2: ACRIS sales context and TC107 checklist" loading="lazy" width="935" height="1210">
+              <span>Page 2: Sales &amp; TC107 checklist →</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -116,6 +126,23 @@
         </div>
 
         <div id="verdictCallout" class="verdict-box" hidden></div>
+
+        <section id="bundleReview" class="bundle-review" aria-label="Combined residence check" hidden>
+          <label><input id="bundleToggle" type="checkbox"> This home may combine multiple apartments</label>
+          <div id="bundleDetails" hidden>
+            <p class="muted-line">Compare the city’s recorded values by lot. Check your DOF notice to confirm which apartments it covers.</p>
+            <ul id="bundleLots"></ul>
+            <form id="bundleForm" class="bundle-form">
+              <label for="bundleLotInput">Another lot’s 10-digit BBL</label>
+              <div>
+                <input id="bundleLotInput" type="text" inputmode="numeric" pattern="[1-5][0-9]{9}" maxlength="10" required>
+                <button class="btn-secondary" type="submit">Look up lot</button>
+              </div>
+            </form>
+            <p id="bundleStatus" class="muted-line" role="status"></p>
+            <p class="muted-line"><a href="https://www.nyc.gov/assets/taxcommission/downloads/pdf/TC107%20Non-Primary%20Resident%20Surcharge%20Appeal%20Instructions.pdf">Tax Commission instructions for combined residences</a></p>
+          </div>
+        </section>
 
         <div class="kpi-grid" id="primaryKpiGrid"></div>
       </article>
@@ -165,23 +192,36 @@
 
       <div class="two-col-grid">
         <article class="card building-card">
-          <div class="card-head-split">
-            <h3>Building &amp; Block Exposure</h3>
-            <button id="loadBlockUnitsBtn" class="btn-secondary btn-sm" type="button">Inspect Block Units</button>
-          </div>
-          <div id="buildingContextSummary"></div>
-          <div id="blockUnitsTableWrap" class="table-wrap" hidden></div>
+          <details class="card-accordion" open>
+            <summary class="card-accordion-summary">Building &amp; Block Exposure</summary>
+            <div class="card-accordion-body">
+              <div class="card-head-split">
+                <span class="small-note">Compare neighboring units and block exposure.</span>
+                <button id="loadBlockUnitsBtn" class="btn-secondary btn-sm" type="button">Inspect Block Units</button>
+              </div>
+              <div id="buildingContextSummary"></div>
+              <div id="blockUnitsTableWrap" class="table-wrap" hidden></div>
+            </div>
+          </details>
         </article>
 
         <article class="card acris-card">
-          <h3>Linked ACRIS Deed &amp; Mortgage Sales</h3>
-          <div id="acrisSalesWrap"></div>
+          <details class="card-accordion" open>
+            <summary class="card-accordion-summary">Linked ACRIS Deed &amp; Mortgage Sales</summary>
+            <div class="card-accordion-body">
+              <div id="acrisSalesWrap"></div>
+            </div>
+          </details>
         </article>
       </div>
 
       <article class="card caveats-card">
-        <h3>Statutory Scope &amp; Important Disclaimers</h3>
-        <ul id="disclaimersList" class="caveat-list"></ul>
+        <details class="card-accordion" open>
+          <summary class="card-accordion-summary">Statutory Scope &amp; Important Disclaimers</summary>
+          <div class="card-accordion-body">
+            <ul id="disclaimersList" class="caveat-list"></ul>
+          </div>
+        </details>
       </article>
     </section>
 
@@ -228,7 +268,7 @@
     window.PIED_A_TERRE_API_BASE = "https://api.nychousingdata.com";
   </script>
   <script type="module" src="../assets/theme.js?v=20261116bat2"></script>
-  <script src="../assets/pied-a-terre/checker.js?v=20261125bq"></script>
+  <script src="../assets/pied-a-terre/checker.js?v=20261126combo"></script>
   <script type="module" src="../assets/analytics.js"></script>
 </body>
 </html>

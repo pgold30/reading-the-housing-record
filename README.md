@@ -31,6 +31,8 @@ GitHub Pages serves `main` at the repository root. `dist/` mirrors the public fi
 
 ## Paper page conventions
 
+The `pied-a-terre/` checker offers a combined-residence review for condos and co-ops. It shows the roll values of the selected and additional lots separately and pauses the checker estimate and report checkout. The alias for 150 Columbus Avenue #5AB flags a possible pairing based on the [listing](https://streeteasy.com/building/150-columbus-avenue-new_york/5ab) and two FY2027 entries in the property's condominium declaration. Treat additional parcel pairs as candidates until the DOF notice confirms the billing unit.
+
 Each paper page presents a short finding, one PDF action, one replication action and section navigation. Replication links identify the fixed public release behind the displayed findings. Citation metadata retains the paper DOI. Keep substantive interpretation limits in a short scope note; document audit detail and revision history belong in the linked manuscript/archive. Do not describe audit agreement as independently verified accuracy. New review scenarios remain off the public site until incorporated into a public paper release.
 
 The primary navigation is Explore data, Stories, Research, Press and About. Paper sidebars link to the matching general-reader story and shared dataset page, avoiding repeated Zenodo links. LinkedIn, Medium and the generic Zenodo-profile link are omitted from the About links at Pablo's request.
