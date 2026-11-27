@@ -531,7 +531,11 @@
             ? "At or above the threshold, the Phase 1 rate applies to the whole value."
             : "The recorded value is below the entry threshold.";
       const warning = exp.unusual_value_flag ? ` <strong>${escapeHtml(exp.unusual_value_note)}.</strong>` : "";
-      const boundary = "";
+      const inPhaseWindow = !scope.is_coop_building && displayExposure.above_entry_threshold
+        && Number.isFinite(assess.finmkttot) && assess.finmkttot < exp.entry_threshold + 50000;
+      const boundary = inPhaseWindow
+        ? ' For values up to $50,000 above the threshold, the first bills appear to phase the charge in, so the bill can be lower than the illustrative amount (<a href="https://comptroller.nyc.gov/newsroom/newsletter/new-york-by-the-numbers-monthly-economic-and-fiscal-outlook-no-119-nov-2026/">NYC Comptroller, November 2026</a>).'
+        : "";
       const belowNote = !reportApplies && exp.in_scope
         ? `<p>No $${reportCfg.priceUsd} unit report is needed because this parcel sits below the statutory threshold. For a building-wide summary, see <a href="./for-buildings/">For Buildings &amp; Boards</a>.</p>`
         : "";
