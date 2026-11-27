@@ -531,9 +531,7 @@
             ? "At or above the threshold, the Phase 1 rate applies to the whole value."
             : "The recorded value is below the entry threshold.";
       const warning = exp.unusual_value_flag ? ` <strong>${escapeHtml(exp.unusual_value_note)}.</strong>` : "";
-      const boundary = !scope.is_coop_building && exp.cliff
-        ? ` DOF value is ${fmtUsd(exp.cliff.distance_above_threshold_dollars)} (${fmtPct(exp.cliff.distance_above_threshold_pct, 1)}) above the ${fmtUsd(exp.entry_threshold)} threshold.`
-        : "";
+      const boundary = "";
       const belowNote = !reportApplies && exp.in_scope
         ? `<p>No $${reportCfg.priceUsd} unit report is needed because this parcel sits below the statutory threshold. For a building-wide summary, see <a href="./for-buildings/">For Buildings &amp; Boards</a>.</p>`
         : "";
@@ -653,9 +651,7 @@
     ];
     if (cliff) {
       rows.push(
-        `<tr><th>Above Entry Threshold By</th><td>${fmtUsd(cliff.distance_above_threshold_dollars)} (${fmtPct(cliff.distance_above_threshold_pct, 1)})</td></tr>`,
-        `<tr><th>Next Lower Bracket Boundary</th><td>${fmtUsd(cliff.next_lower_bracket_boundary)}</td></tr>`,
-        `<tr><th>Distance to Next Lower Bracket</th><td>${fmtUsd(cliff.distance_to_next_lower_bracket_dollars)}</td></tr>`
+        `<tr><th>Next Lower Bracket Boundary</th><td>${fmtUsd(cliff.next_lower_bracket_boundary)}</td></tr>`
       );
     }
     if (next) {
@@ -728,7 +724,7 @@
         <div class="kpi-box">
           <div class="kpi-label">Illustrative Unit Tax / Yr</div>
           <div class="kpi-value">${fmtUsd(exp.annual_surcharge_if_non_primary)}</div>
-          <div class="kpi-note">${cliff ? `${fmtUsd(cliff.distance_above_threshold_dollars)} above the entry threshold` : "Below $1M entry threshold"}</div>
+          <div class="kpi-note">${cliff ? `At or above the ${fmtUsd(exp.entry_threshold)} entry threshold` : `Below the ${fmtUsd(exp.entry_threshold)} entry threshold`}</div>
         </div>
       </div>
     `;

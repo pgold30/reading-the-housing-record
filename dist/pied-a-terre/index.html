@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NYC Housing Data">
   <meta property="og:title" content="NYC pied-à-terre tax checker">
-  <meta property="og:description" content="Search any NYC street address, apartment, or 10-digit BBL across 968,294 FY2027 DOF parcels to inspect Phase 1 surcharge brackets, threshold distances, co-op unit shares, and ACRIS sales context.">
+  <meta property="og:description" content="Search any NYC street address, apartment, or 10-digit BBL across 968,294 FY2027 DOF parcels to inspect Phase 1 surcharge brackets, threshold status, co-op unit shares, and ACRIS sales context.">
   <meta property="og:url" content="https://nychousingdata.com/pied-a-terre/">
   <meta property="og:image" content="https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/fig1_cutoff_and_comps.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="../assets/stories.css?v=20261125ux5">
   <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
   <link rel="stylesheet" href="../assets/pied-a-terre/checker.css?v=20261126ux6">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NYC Pied-a-Terre Surcharge & Live Unit Checker","url":"https://nychousingdata.com/pied-a-terre/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Live parcel-level NYC FY2026-27 Department of Finance Final Roll lookup covering 968,294 properties for enacted Phase 1 pied-a-terre surcharge brackets and threshold distances.","creator":{"@type":"Person","name":"Pablo Loschi","sameAs":"https://orcid.org/0009-0004-9455-4713"},"isBasedOn":"https://doi.org/10.5281/zenodo.24605004"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"NYC Pied-a-Terre Surcharge & Live Unit Checker","url":"https://nychousingdata.com/pied-a-terre/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Live parcel-level NYC FY2026-27 Department of Finance Final Roll lookup covering 968,294 properties for enacted Phase 1 pied-a-terre surcharge brackets and threshold status.","creator":{"@type":"Person","name":"Pablo Loschi","sameAs":"https://orcid.org/0009-0004-9455-4713"},"isBasedOn":"https://doi.org/10.5281/zenodo.24605004"}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -221,7 +221,7 @@
           <h3>Look up any NYC parcel free</h3>
           <p>See what the city's FY2027 roll says for any condo, co-op, or 1–3 family house before opening anything paid.</p>
           <ul class="value-list">
-            <li><strong>Included free:</strong> DOF market value, Phase 1 rate, illustrative annual surcharge, distance above the $1M/$5M line, and the co-op share calculator.</li>
+            <li><strong>Included free:</strong> DOF market value, Phase 1 rate, illustrative annual surcharge, whether the value is at or above the $1M/$5M line, and the co-op share calculator.</li>
             <li><strong>Server-locked for the $79 PDF:</strong> DOF rental-income &amp; expense comparables, 12-unit peer table, prior protest code &amp; attorney group, and nearby ACRIS sales.</li>
           </ul>
           <div class="how-to-buy">
@@ -295,7 +295,7 @@
     window.PIED_A_TERRE_API_BASE = "https://api.nychousingdata.com";
   </script>
   <script type="module" src="../assets/theme.js?v=20261116bat2"></script>
-  <script src="../assets/pied-a-terre/checker.js?v=20261126ux6"></script>
+  <script src="../assets/pied-a-terre/checker.js?v=20261127a"></script>
   <script type="module" src="../assets/analytics.js"></script>
 </body>
 </html>
