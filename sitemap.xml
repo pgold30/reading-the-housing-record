@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nychousingdata.com/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/calculator/</loc>
@@ -26,19 +26,47 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/pied-a-terre/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/pied-a-terre/tax-list/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/pied-a-terre/what-is-the-pied-a-terre-tax/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/pied-a-terre/out-of-town-owners/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/pied-a-terre/for-buildings/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/pied-a-terre/coop-shares/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/pied-a-terre/exemptions/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/pied-a-terre/houses/</loc>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/tc107-guide/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/condo-rental-comps/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/march-1-deadline/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/</loc>
@@ -55,6 +83,10 @@
   <url>
     <loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/</loc>
     <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/</loc>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://nychousingdata.com/press/</loc>
@@ -118,68 +150,6 @@
   </url>
   <url>
     <loc>https://nychousingdata.com/updates/</loc>
-    <lastmod>2026-11-25</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_v3_12.pdf</loc>
-    <lastmod>2026-11-16</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/the-shape-of-the-tax/The_Shape_of_the_Tax_supplement_v3_12.pdf</loc>
-    <lastmod>2026-11-16</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_v1_0_15.pdf</loc>
-    <lastmod>2026-11-10</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/when-a-deed-is-not-a-market-sale/When_a_Deed_Is_Not_a_Market_Sale_Measurement_Note_v1_0_20.pdf</loc>
-    <lastmod>2026-11-24</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/who-gets-the-house/who_gets_the_house_v5_9.pdf</loc>
-    <lastmod>2026-11-19</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/When_the_Benchmark_Moves_with_the_Policy_v7_4.pdf</loc>
-    <lastmod>2026-11-16</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/Auditing_policy_dependent_benchmarks_v1_0_2.pdf</loc>
-    <lastmod>2026-10-16</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/data/NYC_linked_dataset_data_note_v1_2_2.pdf</loc>
-    <lastmod>2026-11-16</lastmod>
-  </url>
-  <url><loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/When_the_Benchmark_Moves_with_the_Policy_v7_13.pdf</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://nychousingdata.com/papers/when-the-benchmark-moves-with-the-policy/Supplement_v7_12.pdf</loc><lastmod>2026-11-19</lastmod></url>
-  <url>
-    <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/</loc>
-    <lastmod>2026-11-24</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/Which_Condos_Cross_NYCs_Second_Home_Tax_Threshold_v1_6.pdf</loc>
-    <lastmod>2026-11-24</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/Supplement_v1_6.pdf</loc>
-    <lastmod>2026-11-24</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/pied-a-terre/tax-list/</loc>
-    <lastmod>2026-11-25</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/pied-a-terre/what-is-the-pied-a-terre-tax/</loc>
-    <lastmod>2026-11-25</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/pied-a-terre/out-of-town-owners/</loc>
-    <lastmod>2026-11-25</lastmod>
-  </url>
-  <url>
-    <loc>https://nychousingdata.com/pied-a-terre/for-buildings/</loc>
     <lastmod>2026-11-25</lastmod>
   </url>
 </urlset>

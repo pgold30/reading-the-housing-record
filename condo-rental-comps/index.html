@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-  <title>Why NYC Values Condos Using Rental Comps (RPTL § 581), Not Sale Prices | NYC Housing Data</title>
-  <meta name="description" content="Under New York RPTL § 581, NYC DOF values Class 2 condos and co-ops using comparable rental-building income rather than unit sale prices — splitting similarly priced $4M–$6M apartments across the $1M pied-à-terre tax cliff.">
+  <title>NYC Condo Rental Comps (RPTL § 581) &amp; Pied-à-Terre Tax | NYC Housing Data</title>
+  <meta name="description" content="Under NY RPTL § 581, NYC DOF values condos and co-ops from comparable rental buildings, not sale prices. See why similar apartments cross the $1M tax line.">
   <link rel="canonical" href="https://nychousingdata.com/condo-rental-comps/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="NYC Housing Data">
-  <meta property="og:title" content="Why NYC Values Condos Using Rental Comps (RPTL § 581), Not Sale Prices">
-  <meta property="og:description" content="How New York RPTL § 581 drives NYC's Phase 1 pied-à-terre tax bills on condos, why sale comps fail in Class 2 TC107 challenges, and what our November 14 billing check found.">
+  <meta property="og:title" content="NYC Condo Rental Comps (RPTL § 581) &amp; Pied-à-Terre Tax">
+  <meta property="og:description" content="Under NY RPTL § 581, NYC DOF values condos and co-ops from comparable rental buildings, not sale prices. See why similar apartments cross the $1M tax line.">
   <meta property="og:url" content="https://nychousingdata.com/condo-rental-comps/">
   <meta property="og:image" content="https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/fig1_cutoff_and_comps.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="../assets/site.css?v=20261125ux5">
   <link rel="stylesheet" href="../assets/stories.css?v=20261125ux5">
   <link rel="stylesheet" href="../assets/tools.css?v=20261119calc">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Overview","item":"https://nychousingdata.com/"},{"@type":"ListItem","position":2,"name":"Pied-à-terre checker","item":"https://nychousingdata.com/pied-a-terre/"},{"@type":"ListItem","position":3,"name":"Rental Comps (RPTL § 581)","item":"https://nychousingdata.com/condo-rental-comps/"}]},{"@type":"Article","headline":"Why NYC values condos using rental comps on Phase 1 pied-à-terre bills","description":"Under NY RPTL § 581, NYC DOF values condos and co-ops from comparable rental buildings, not sale prices. See why similar apartments cross the $1M tax line.","author":{"@type":"Person","name":"Pablo Loschi"},"publisher":{"@type":"Organization","name":"NYC Housing Data","url":"https://nychousingdata.com/"}}]}</script>
   </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -27,11 +28,14 @@
     <div class="wrap hub-subnav-inner">
       <span class="hub-kicker">Pied-à-Terre Hub</span>
       <a href="../pied-a-terre/">Tax checker</a>
-      <a href="../tc107-guide/">Form TC107 Guide</a>
-      <a href="./" aria-current="page">Rental Comps (581)</a>
-      <a href="../march-1-deadline/">Appeal deadlines</a>
+      <a href="../pied-a-terre/tax-list/">Tax list</a>
       <a href="../pied-a-terre/buildings/">Buildings</a>
-      <a href="../stories/second-home-tax-cliff/">Policy Brief</a>
+      <a href="../pied-a-terre/houses/">Houses ($5M+)</a>
+      <a href="../pied-a-terre/coop-shares/">Co-op shares</a>
+      <a href="../pied-a-terre/exemptions/">Exemptions</a>
+      <a href="../tc107-guide/">TC107 Guide</a>
+      <a href="./" aria-current="page">Rental Comps</a>
+      <a href="../march-1-deadline/">Deadlines</a>
     </div>
   </nav>
 
@@ -39,24 +43,24 @@
     <section class="story-head"><div class="wrap">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Overview</a><span>/</span><span>RPTL § 581 Rental Comps</span></nav>
       <p class="eyebrow">Valuation Explainer · NY RPTL § 581</p>
-      <h1>Why NYC values condos using rental comps — not sale prices — on Phase 1 pied-à-terre bills</h1>
+      <h1>Why NYC values condos using rental comps, not sale prices, on Phase 1 pied-à-terre bills</h1>
       <p class="story-deck">Two similarly priced condominium sales can have very different assessed market values. New York Real Property Tax Law § 581 uses rental properties as the valuation benchmark.</p>
     </div></section>
 
     <article class="story-text">
       <div class="scope-box">
-        <p><strong>Look up a condo:</strong> Search any unit or BBL on our <a href="../pied-a-terre/"><strong>Live NYC Unit &amp; BBL Pied-à-Terre Checker →</strong></a> to see its FY2027 DOF value (<code>finmkttot</code>), and the Phase 1 surcharge schedule.</p>
+        <p><strong>Look up a condo:</strong> Search any unit or BBL on our <a href="../pied-a-terre/"><strong>Live NYC Unit &amp; BBL Pied-à-Terre Checker →</strong></a> to see its FY2027 DOF value (<code>finmkttot</code>) and Phase 1 bracket, or inspect a <a href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener">2-page Sample Assessment Report PDF ($79)</a>.</p>
       </div>
 
       <h2>What RPTL § 581 actually does</h2>
-      <p>Unlike one- to three-family Class 1 homes — which NYC Department of Finance (DOF) values close to recent market sales — Tax Class 2 condominiums and cooperatives are governed by <strong>New York Real Property Tax Law § 581</strong>. Under § 581, DOF must value the building as though it were a comparable rental apartment building, capitalizing net rental income from selected rental comparables printed on each Notice of Property Value (NOPV), and then apportioning that whole-building figure across units.</p>
+      <p>Unlike one- to three-family Class 1 homes, which NYC Department of Finance (DOF) values close to recent market sales, Tax Class 2 condominiums and cooperatives are governed by <strong>New York Real Property Tax Law § 581</strong>. Under § 581, DOF must value the building as though it were a comparable rental apartment building, capitalizing net rental income from selected rental comparables printed on each Notice of Property Value (NOPV), and then apportioning that whole-building figure across units (see also the <a href="../pied-a-terre/coop-shares/">co-op share guide</a> and <a href="../pied-a-terre/buildings/">building index</a>).</p>
       <p>Linking all 968,294 FY2027 roll rows and the July 24 supplemental surcharge roll to 26,317 matched condominium sales and 36,352 Class 1 house sales (<a href="https://doi.org/10.5281/zenodo.24516899">Working Paper v1.6</a>), median DOF market values sit at <strong>23.4% of sale price</strong> for condos versus <strong>105.5%</strong> for houses.</p>
 
       <h2>What that rental-proxy distortion produces in Phase 1 (2026–2028)</h2>
       <ul class="stat-list">
         <li><span class="stat-value">479 / 1,244 (38.5%)</span><span class="stat-label">$4M–$6M condominiums whose DOF rental-proxy value reaches the $1,000,000 surcharge cutoff; the other 765 sit below $1M ($0).</span></li>
         <li><span class="stat-value">39 vs. 0 per 100</span><span class="stat-label">sampled November 14, 2026 tax statements carrying a surcharge ($48,609 median) at or above $1M vs. below $1M.</span></li>
-        <li><span class="stat-value">77.1%</span><span class="stat-label">of condo log assessment-ratio variance absorbed by condo declaration fixed effects — showing building-level rental-comp assignments drive the gap.</span></li>
+        <li><span class="stat-value">77.1%</span><span class="stat-label">of condo log assessment-ratio variance absorbed by condo declaration fixed effects, showing building-level rental-comp assignments drive the gap.</span></li>
         <li><span class="stat-value">0.70% → 0.44%</span><span class="stat-label">inversion in median gross effective surcharge rate across all 26,317 matched condos as sale prices climb from $5–$7.5M to $20M+.</span></li>
       </ul>
 
@@ -67,11 +71,12 @@
         <a class="tool-button" href="../pied-a-terre/">Check your condo &amp; building peers →</a>
         <a class="tool-button secondary" href="../papers/rental-proxies-on-a-million-dollar-notch/">Read Working Paper v1.6</a>
         <a class="tool-button secondary" href="../tc107-guide/">Form TC107 Guide</a>
+        <a class="tool-button secondary" href="https://api.nychousingdata.com/v1/report/sample.pdf" target="_blank" rel="noopener">Sample $79 Report PDF</a>
       </div>
 
       <p class="fine-print"><strong>For NYC tax-certiorari law firms, co-op boards &amp; brokers:</strong> <a href="../pied-a-terre/#for-firms">Request a sample assessment CSV, full-building audit pack, API key, or flat-fee season sponsorship →</a></p>
 
-      <p class="fine-print"><strong>Self-help &amp; non-advice notice:</strong> Public-data research and statutory explanation only — not legal advice, tax advice, or a licensed real estate appraisal. Consult qualified New York tax-certiorari counsel regarding Class 2 RPTL § 581 evidence.</p>
+      <p class="fine-print"><strong>Self-help &amp; non-advice notice:</strong> Public-data research and statutory explanation only, not legal advice, tax advice, or a licensed real estate appraisal. Consult qualified New York tax-certiorari counsel regarding Class 2 RPTL § 581 evidence.</p>
     </article>
   </main>
 

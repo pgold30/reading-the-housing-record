@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark"><script id="nyhd-theme-init">(function(){try{var t=localStorage.getItem("nyhd-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <title>NYC Co-op Pied-à-Terre Tax: Share Calculator | NYC Housing Data</title>
+  <meta name="description" content="How NYC&#x27;s pied-à-terre tax applies to co-ops under RPTL § 581, share-fraction calculator against the $1M/$3M/$5M brackets, and March 1 board filing rules.">
+  <link rel="canonical" href="https://nychousingdata.com/pied-a-terre/coop-shares/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="NYC Housing Data">
+  <meta property="og:title" content="NYC Co-op Pied-à-Terre Tax: Share Calculator">
+  <meta property="og:description" content="How NYC&#x27;s pied-à-terre tax applies to co-ops under RPTL § 581, share-fraction calculator against the $1M/$3M/$5M brackets, and March 1 board filing rules.">
+  <meta property="og:url" content="https://nychousingdata.com/pied-a-terre/coop-shares/">
+  <meta property="og:image" content="https://nychousingdata.com/papers/rental-proxies-on-a-million-dollar-notch/fig1_cutoff_and_comps.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="../../assets/logo.svg">
+  <link rel="stylesheet" href="../../assets/site.css?v=20261125ux5">
+  <link rel="stylesheet" href="../../assets/stories.css?v=20261125wrap">
+  <link rel="stylesheet" href="../../assets/tools.css?v=20261119calc">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Overview", "item": "https://nychousingdata.com/"}, {"@type": "ListItem", "position": 2, "name": "Pied-à-terre checker", "item": "https://nychousingdata.com/pied-a-terre/"}, {"@type": "ListItem", "position": 3, "name": "Co-op shares", "item": "https://nychousingdata.com/pied-a-terre/coop-shares/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does NYC calculate a co-op apartment's value for the pied-à-terre tax?", "acceptedAnswer": {"@type": "Answer", "text": "DOF values the entire co-op building under RPTL § 581 as if it were a rental building. An individual apartment's city market value for the surcharge is its proportionate share of the whole building value based on its shares in the cooperative corporation."}}, {"@type": "Question", "name": "How many co-ops cross the $1 million line on average?", "acceptedAnswer": {"@type": "Answer", "text": "On the FY2027 roll, 396 residential co-ops (with at least 5 apartments) average $1 million or more per apartment. However, apartments with large share allocations in other buildings can still cross $1 million individually."}}, {"@type": "Question", "name": "Can a co-op board file Form TC107 for an apartment owner?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. NYC Tax Commission instructions allow a cooperative housing corporation to file Form TC107 on behalf of a shareholder unit owner by the March 1, 2027 deadline."}}]}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../../"><span class="brand-mark" aria-hidden="true"><img src="../../assets/logo.svg" width="43" height="43" alt=""></span><span class="brand-name">NYC Housing Data</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../../explore/">Explore</a><a href="../../stories/">Stories</a><a href="../../#papers">Research</a><a href="../../data/">Data</a><a href="../../press/">Press</a><a href="../../#about">About</a><a class="nav-cta" href="../../pied-a-terre/" style="background:#d49a62;color:#142a3a;border-radius:999px;padding:5px 13px;text-decoration:none;font-weight:700;white-space:nowrap">Pied-à-terre tax</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Summon night mode (Gotham signal)" title="Summon night mode (Gotham signal)"><svg class="bat-signal-icon" viewBox="0 0 28 24" width="23" height="20" aria-hidden="true"><polygon class="signal-beam" points="4.2,18.2 12.2,4.5 23.6,13.6 6.2,21.0" fill="currentColor"/><rect x="2.4" y="17.5" width="4.4" height="4.4" rx="1" fill="currentColor"/><path d="M1.8 22h5.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse class="signal-disc" cx="18.2" cy="9.2" rx="7.6" ry="6.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="signal-bat" d="M12.6 8.9 Q14.2 7.5 15.6 8.2 Q16.3 8.4 16.9 6.2 L17.6 7.3 L18.2 7.3 L18.8 7.3 L19.5 6.2 Q20.1 8.4 20.8 8.2 Q22.2 7.5 23.8 8.9 Q22.8 9.9 22.1 10.7 Q21.2 10.0 20.4 10.2 Q19.2 10.8 18.2 12.1 Q17.2 10.8 16.0 10.2 Q15.2 10.0 14.3 10.7 Q13.6 9.9 12.6 8.9 Z" fill="currentColor"/></svg></button></div></header>
+
+  <nav class="hub-subnav" aria-label="Pied-à-Terre Hub">
+    <div class="wrap hub-subnav-inner">
+      <span class="hub-kicker">Pied-à-Terre Hub</span>
+      <a href="../../pied-a-terre/">Tax checker</a>
+      <a href="../../pied-a-terre/tax-list/">Tax list</a>
+      <a href="../../pied-a-terre/buildings/">Buildings</a>
+      <a href="../../pied-a-terre/houses/">Houses ($5M+)</a>
+      <a href="../../pied-a-terre/coop-shares/">Co-op shares</a>
+      <a href="../../pied-a-terre/exemptions/">Exemptions</a>
+      <a href="../../tc107-guide/">TC107 Guide</a>
+      <a href="../../condo-rental-comps/">Rental Comps</a>
+      <a href="../../march-1-deadline/">Deadlines</a>
+    </div>
+  </nav>
+
+  <main id="main" class="pat-guide">
+    <section class="story-head"><div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Overview</a><span>/</span><a href="../../pied-a-terre/">Pied-à-terre checker</a><span>/</span><span>Co-op shares</span></nav>
+      <p class="eyebrow">Pied-à-terre tax · Co-op shares</p>
+      <h1>Co-op shares and the pied-à-terre tax</h1>
+      <p class="story-deck">How whole-building city values convert into an apartment figure, with an on-page share calculator.</p>
+    </div></section>
+
+    <article class="story-text">
+      <p>Cooperative apartments do not get separate tax-lot market values on the Department of Finance assessment roll. Under New York Real Property Tax Law § 581, the city values the entire co-op building as a rental property. Each apartment's figure for the non-primary residence surcharge comes from multiplying that building value by the apartment's fraction of corporate shares.</p>
+      <h2>Estimate an apartment from its shares</h2>
+      <p>Enter the co-op building's FY2027 city market value (find it on our <a href="../../pied-a-terre/">live checker</a> or in the <a href="../../pied-a-terre/buildings/">co-op building directory</a>) together with the unit's shares and total building shares (or ownership percentage).</p>
+      <div class="scope-box">
+        <div class="coop-form" style="margin-top:4px">
+          <div class="field">
+            <label for="calcBldgVal">Building FY2027 city value ($)</label>
+            <input id="calcBldgVal" type="number" min="1000" step="any" value="71230000" placeholder="e.g. 71230000">
+          </div>
+          <div class="field">
+            <label for="calcUnitShares">Unit shares</label>
+            <input id="calcUnitShares" type="number" min="0.01" step="any" value="250" placeholder="e.g. 250">
+          </div>
+          <div class="field">
+            <label for="calcTotalShares">Total building shares</label>
+            <input id="calcTotalShares" type="number" min="0.01" step="any" value="10000" placeholder="e.g. 10000">
+          </div>
+          <div class="field field-btn">
+            <button id="calcRunBtn" class="tool-button" type="button">Calculate</button>
+          </div>
+        </div>
+        <p id="calcOut" style="margin:12px 0 0;font-weight:600">2.500% of $71,230,000 = $1,780,750 ($780,750 above $1M line) · Phase 1 bracket: 4% ($71,230/yr illustrative if non-primary).</p>
+        <p class="small-note" style="margin:6px 0 0">Runs strictly in your browser; zero inputs leave this page.</p>
+      </div>
+      <h2>Important details on the co-op roll</h2>
+      <ul>
+        <li><strong>Commercial income lifts some co-op averages.</strong> When a co-op building contains ground-floor retail or offices, that value sits inside the single building BBL on the public roll.</li>
+        <li><strong>No published unit shares on DOF open data.</strong> Because public city files record total apartments (<code>coop_apts</code>) without apartment share schedules, our <a href="../../pied-a-terre/buildings/">396 listed co-op pages</a> show the plain average per apartment.</li>
+        <li><strong>Same Phase 1 brackets and exemptions as condos.</strong> $1M–$3M (4%), $3M–$5M (5.25%), over $5M (6.5%), on the whole unit share value; primary residences and 1-year tenants are exempt (<a href="../../pied-a-terre/exemptions/">full exemption rules</a>).</li>
+        <li><strong>Who can file Form TC107.</strong> A co-op corporation may file a Form TC107 surcharge appeal for a unit owner by <strong>March 1, 2027</strong> (<a href="../../tc107-guide/">TC107 guide</a>).</li>
+      </ul>
+      <aside class="reader-takeaway" aria-label="Deadline">
+        <h2>Deadline to challenge the value</h2>
+        <p>To contest the market value behind the surcharge, file Tax Commission Form TC107 by <strong>March 1, 2027</strong> for condos and co-ops, or <strong>March 15, 2027</strong> for houses. The form cannot be used to protest the assessed value. See the <a href="../../tc107-guide/">TC107 guide</a> or the <a href="../../march-1-deadline/">deadline timeline</a>.</p>
+      </aside>
+
+      <p class="stories-home-link"><a class="tool-button" href="../../pied-a-terre/">Look up a co-op building →</a> <a class="tool-button secondary" href="../../pied-a-terre/buildings/manhattan/">Browse Manhattan co-ops</a> <a class="tool-button secondary" href="../../pied-a-terre/for-buildings/">Co-op board summary ($149)</a></p>
+      <script>
+      (function(){
+        function upd(){
+          var bv=parseFloat(document.getElementById('calcBldgVal').value)||0;
+          var us=parseFloat(document.getElementById('calcUnitShares').value)||0;
+          var ts=parseFloat(document.getElementById('calcTotalShares').value)||0;
+          var out=document.getElementById('calcOut');
+          if(bv<=0||us<=0||ts<=0){out.textContent='Enter positive numbers for building value, unit shares, and total shares.';return;}
+          var pct=us/ts, val=bv*pct;
+          var rate=val<1e6?0:(val<=3e6?0.04:(val<=5e6?0.0525:0.065));
+          var chg=val*rate;
+          var fmt=function(n){return '$'+Math.round(n).toLocaleString('en-US');};
+          var diff=val>=1e6?(fmt(val-1e6)+' above $1M line'):(fmt(1e6-val)+' below $1M threshold');
+          var br=rate===0?'Below $1M ($0)':('Phase 1 bracket: '+(rate*100).toFixed(rate===0.0525?2:0)+'% ('+fmt(chg)+'/yr illustrative if non-primary)');
+          out.textContent=(pct*100).toFixed(3)+'% of '+fmt(bv)+' = '+fmt(val)+' ('+diff+') · '+br+'.';
+        }
+        ['calcBldgVal','calcUnitShares','calcTotalShares'].forEach(function(id){document.getElementById(id).addEventListener('input',upd);});
+        document.getElementById('calcRunBtn').addEventListener('click',upd);
+      })();
+      </script>
+      <section class="story-sources" id="sources">
+        <h2>Sources</h2>
+        <p>Tax Law Article 30-C, §§ 1350–1356 (Laws of 2026, Chapter 59, Part HH); NYC Department of Finance FY2027 final assessment roll; NYC Tax Commission TC107 instructions; notice and billing totals as reported by Bloomberg Tax; the November 4, 2026 Appellate Division ruling as reported by Fortune and Courthouse News. This page explains public rules and records. It is not legal or tax advice.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner footer-one-line"><p>Research by <a href="../../#about">Pablo Loschi</a> · <a href="https://orcid.org/0009-0004-9455-4713">ORCID</a> · <a href="../../">Overview</a> · <a href="../../pied-a-terre/">Live Lookup</a> · <a href="../../tc107-guide/">TC107 Guide</a> · <a href="../../condo-rental-comps/">Rental Comps</a> · <a href="../../march-1-deadline/">Appeal deadlines</a> · <a href="../../data/">Data</a> · <a href="../../privacy/">Privacy</a> · <a href="../../terms/">Terms</a> · <a href="../../refunds/">Refunds</a> · <a href="../../updates/">Updates</a> · <a href="#main">Top ↑</a></p></div></footer>
+  <script type="module" src="../../assets/theme.js?v=20261116bat2"></script>
+  <script type="module" src="../../assets/analytics.js"></script>
+</body>
+</html>
